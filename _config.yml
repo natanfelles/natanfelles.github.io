@@ -46,3 +46,8 @@ defaults:
       layout: "post"
       author: "Natan Felles"
       #category: "sem-categoria"
+
+disqus:
+  shortname: natanfelles
+
+google_analytics: UA-75463090-1
