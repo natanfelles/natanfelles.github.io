@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="760"
+   height="350"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="profile.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="401.11898"
+     inkscape:cy="126.7231"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3053"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="715"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-702.36217)">
+    <rect
+       style="fill:#191a1c;fill-opacity:1;stroke:none"
+       id="rect3004"
+       width="760"
+       height="350"
+       x="0"
+       y="702.36218" />
+    <g
+       id="g3053"
+       transform="translate(-5.4495678e-7,-3.0055804e-5)">
+      <g
+         id="g3085"
+         transform="translate(8.0618324,-8.8299183)">
+        <text
+           transform="scale(1.0003565,0.99964363)"
+           sodipodi:linespacing="125%"
+           id="text3035"
+           y="884.60602"
+           x="253.1969"
+           style="font-size:47.68288422px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+             y="884.60602"
+             x="253.1969"
+             id="tspan3037"
+             sodipodi:role="line">NATAN FELLES</tspan></text>
+        <text
+           transform="scale(0.98409796,1.016159)"
+           sodipodi:linespacing="125%"
+           id="text3039"
+           y="908.33844"
+           x="259.0416"
+           style="font-size:35.71284866px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#00a4e2;fill-opacity:1;stroke:none;font-family:Sans"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#00a4e2;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial"
+             y="908.33844"
+             x="259.0416"
+             id="tspan3041"
+             sodipodi:role="line">Creative Webmaster ∞</tspan></text>
+        <g
+           transform="matrix(0.24978292,0,0,0.24978292,189.58778,922.86643)"
+           id="g3029">
+          <rect
+             style="fill:#00a4e2;fill-opacity:1;stroke:none"
+             id="rect3005"
+             width="400"
+             height="400"
+             x="-212.22365"
+             y="-346.82474" />
+          <rect
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             id="rect3005-3"
+             width="354"
+             height="354"
+             x="-189.22365"
+             y="-323.82474" />
+          <text
+             xml:space="preserve"
+             style="font-size:287.36029053px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+             x="-115.16142"
+             y="-43.75433"
+             id="text3025"
+             sodipodi:linespacing="125%"
+             transform="scale(0.99849318,1.0015091)"><tspan
+               sodipodi:role="line"
+               id="tspan3027"
+               x="-115.16142"
+               y="-43.75433"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;font-family:Arial;-inkscape-font-specification:Arial Bold">N</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
