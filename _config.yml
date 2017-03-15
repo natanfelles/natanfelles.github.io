@@ -15,8 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Natan Felles
 email: natanfelles@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Às vezes eu programo.
+description: Às vezes eu programo.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://natanfelles.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: natanfelles
@@ -27,15 +26,16 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-paginate
+  # - jekyll-minifier
 exclude:
   - Gemfile
   - Gemfile.lock
 
 # Outputting
 permalink: none
-#paginate: 1
-#paginate_path: /p:num
-timezone: America/Sao_Paulo
+paginate: 5
+paginate_path: /page-:num.html
 
 defaults:
   -
@@ -45,9 +45,16 @@ defaults:
     values:
       layout: "post"
       author: "Natan Felles"
-      #category: "sem-categoria"
 
 disqus:
   shortname: natanfelles
 
 google_analytics: UA-75463090-1
+
+author:
+  name: Natan Felles
+  twitter_username: natanfelles
+  #facebook_username: natanfelles
+  #linkedin_username: natanfelles
+  github_username: natanfelles
+  email: natanfelles@gmail.com
