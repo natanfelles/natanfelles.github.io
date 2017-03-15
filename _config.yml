@@ -35,7 +35,7 @@ exclude:
 # Outputting
 permalink: none
 paginate: 5
-paginate_path: /page-:num.html
+paginate_path: /page-:num
 
 defaults:
   -
