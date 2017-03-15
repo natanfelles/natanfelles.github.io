@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Biblioteca IMAP para CodeIgniter"
-date:   2016-11-23
 categories: desenvolvimento
+tags: codeigniter php
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/codeigniter-imap.png)
@@ -50,4 +49,4 @@ Há mais de 20 métodos públicos, muito bem documentados, que podem ser utiliza
 Se você utiliza o PhpStorm, veja este projeto: [CodeIgniter Code Completion para PhpStorm]({{ site.baseurl }}{% post_url 2015-11-19-codeigniter-code-completion-phpstorm %}).
 
 
-Espero que esta biblioteca possa lhe ser útil e se caso você tenha alguma sugestão ou encontre algum problema, não exite em criar uma issue ou iniciar um Pull Request no [GitHub](https://github.com/natanfelles/codeigniter-imap).
+Espero que esta biblioteca possa lhe ser útil e se caso você tenha alguma sugestão ou encontre algum problema, não exite em criar uma issue ou iniciar um Pull Request no [GitHub](https://github.com/natanfelles/codeigniter-imap){:target="_blank"}.

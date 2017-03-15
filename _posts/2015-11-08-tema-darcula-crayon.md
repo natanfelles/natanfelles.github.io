@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Tema Darcula para Plugin WordPress"
-date:   2015-11-08
 categories: desenvolvimento
+tags: wordpress css
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/darcula-crayon.jpg)
@@ -13,4 +12,4 @@ Tema para o plugin WordPress Crayon Syntax Highlighter baseado no tema Darcula d
 
 Compartilhe seus códigos com o esquema de cores do seu editor favorito.
 
-[Download](https://github.com/natanfelles/crayon-darcula/archive/master.zip)
+[Download](https://github.com/natanfelles/crayon-darcula/archive/master.zip){:target="_blank" class="btn small"}

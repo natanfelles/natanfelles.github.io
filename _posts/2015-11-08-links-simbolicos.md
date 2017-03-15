@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Links Simbólicos"
-date:   2015-03-12
 categories: desenvolvimento
+tags: symlink linux windows
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/symlink.jpg)
@@ -30,7 +29,7 @@ Onde o primeiro caminho resulta no diretório existente e o segundo é o link a 
 
 No Windows, qualquer link simbólico só pode ser executado se você abrir o prompt como administrador, caso contrário o comando será recusado. Podemos seguir o seguinte exemplo:
 
-```dos
+```
 mklink /d "B:\Winginx\home\meusite.com" "W:\meusite.com"
 ```
 

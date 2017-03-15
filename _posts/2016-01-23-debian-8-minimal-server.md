@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  Debian 8 Minimal Server
-date:   2016-01-23
 categories: desenvolvimento
+tags: debian linux virtualbox
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/login-background.png)
@@ -17,12 +16,12 @@ O intuito desse tutorial é configurar o Debian para rodar posteriormente como s
 
 Para instalar o Debian 8, precisamos do CD de instalação. Você pode fazer o download através dos links abaixo conforme a arquitetura do seu sistema:
 
-- **32 Bits**: [http://cdimage.debian.org/debian-cd/8.2.0/i386/iso-cd/debian-8.2.0-i386-netinst.iso](http://cdimage.debian.org/debian-cd/8.2.0/i386/iso-cd/debian-8.2.0-i386-netinst.iso)
-- **64 Bits**: [http://cdimage.debian.org/debian-cd/8.2.0/amd64/iso-cd/debian-8.2.0-amd64-netinst.iso](http://cdimage.debian.org/debian-cd/8.2.0/amd64/iso-cd/debian-8.2.0-amd64-netinst.iso)
+- **32 Bits**: [http://cdimage.debian.org/debian-cd/8.2.0/i386/iso-cd/debian-8.2.0-i386-netinst.iso](http://cdimage.debian.org/debian-cd/8.2.0/i386/iso-cd/debian-8.2.0-i386-netinst.iso){:target="_blank"}
+- **64 Bits**: [http://cdimage.debian.org/debian-cd/8.2.0/amd64/iso-cd/debian-8.2.0-amd64-netinst.iso](http://cdimage.debian.org/debian-cd/8.2.0/amd64/iso-cd/debian-8.2.0-amd64-netinst.iso){:target="_blank"}
 
 Caso os links acima tenham sido modificados pela equipe do Debian, faça o download através da página oficial:
 
-- [Debian – Instalação via rede a partir de um CD mínimo](https://www.debian.org/CD/netinst/)
+- [Debian – Instalação via rede a partir de um CD mínimo](https://www.debian.org/CD/netinst/){:target="_blank"}
 
 Se você já possui uma ISO com a versão CD/DVD da distribuição estável, ele funcionará da mesma forma; Então não precisa baixar novamente.
 
@@ -185,7 +184,7 @@ apt-get -y install vim-nox
 - Para abrir ou criar arquivos, digite: `vi /local/nomedoarquivo`.
 - Para editar, pressione a tecla `i`, de _insert_.
 - Para salvar, pressione `Esc` e depois `:w`, de _write_, ou `:wq` para escrever e sair.
-- Dúvidas? Veja os principais comandos no [Wikipédia](https://pt.wikipedia.org/wiki/Vi). Não se preocupe, você vai se acostumar.
+- Dúvidas? Veja os principais comandos no [Wikipédia](https://pt.wikipedia.org/wiki/Vi){:target="_blank"}. Não se preocupe, você vai se acostumar.
 
 Você não precisa instalar o VIM se prefere usar outro editor.
 

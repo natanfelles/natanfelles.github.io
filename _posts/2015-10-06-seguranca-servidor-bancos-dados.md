@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Segurança em Servidor de Bancos de Dados"
-date:   2015-10-06
 categories: seguranca
+tags: linux mysql mariadb
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/mysql_secure_installation.jpg)

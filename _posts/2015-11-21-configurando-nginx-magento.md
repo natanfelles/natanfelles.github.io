@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Configurando Nginx para Magento"
-date:   2015-11-21
 categories: desenvolvimento
+tags: nginx magento linux
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/nginx-magento.png)

@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Melhorar (ainda mais) o Desempenho do Linux"
-date:   2016-01-24
 categories: desenvolvimento
+tags: swap zram linux
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/linux-performance.jpg)
@@ -15,7 +14,7 @@ Configuraremos como o Debian trabalhará com o gerenciamento da Memória RAM e d
 
 ## Ajustando o Uso da Swap
 
-A Swap é uma partição do disco criada durante a instalação do sistema e serve como uma Memória RAM extra, designada para impedir que o sistema trave caso toda a RAM seja utilizada e também na hibernação, o que é muito útil. Porém, por padrão, mesmo tendo memória disponível, o sistema acaba utilizando a Swap, acessando o disco rígido (que é mais lento) e dessa forma, todo o sistema acaba prejudicado&#8230; Resolveremos isso.
+A Swap é uma partição do disco criada durante a instalação do sistema e serve como uma Memória RAM extra, designada para impedir que o sistema trave caso toda a RAM seja utilizada e também na hibernação, o que é muito útil. Porém, por padrão, mesmo tendo memória disponível, o sistema acaba utilizando a Swap, acessando o disco rígido (que é mais lento) e dessa forma, todo o sistema acaba prejudicado. Resolveremos isso.
 
 Abra o _Monitor do Sistema_, ou use o _htop_ pelo terminal e observe a utilização da RAM e da Swap do seu sistema. Se possuir muita RAM livre e a Swap estiver sendo utilizada, há duas escolhas que podemos fazer:
 

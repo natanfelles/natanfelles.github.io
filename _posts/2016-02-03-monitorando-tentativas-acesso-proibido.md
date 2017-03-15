@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Monitorando Tentativas de Acesso Proibido"
-date:   2016-02-03
 categories: seguranca
+tags: firewall monitoramento
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/anon.png)

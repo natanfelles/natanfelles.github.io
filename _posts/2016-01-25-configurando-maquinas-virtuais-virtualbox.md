@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  Configurando Máquinas Virtuais no VirtualBox
-date:   2016-01-25
 categories: desenvolvimento
+tags: virtualbox linux
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/virtualbox.png)
@@ -13,7 +12,7 @@ O VirtualBox é um poderoso sistema de virtualização de código aberto mantido
 
 ## Instalação
 
-Podemos encontrar os arquivos de instalação no site [www.virtualbox.org](https://www.virtualbox.org/wiki/Downloads) compatíveis com várias plataformas.
+Podemos encontrar os arquivos de instalação no site [www.virtualbox.org](https://www.virtualbox.org/wiki/Downloads){:target="_blank"} compatíveis com várias plataformas.
 
 
 Nesse artigo, instalaremos o VirtualBox através da linha de comando para que possamos mantê-lo sempre atualizado através do apt-get. Vamos lá:

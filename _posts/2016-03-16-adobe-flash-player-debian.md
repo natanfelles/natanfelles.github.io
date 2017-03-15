@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Adobe Flash Player no Debian"
-date:   2016-03-16
 categories: desenvolvimento
+tags: flash-player debian linux
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/flash-player.png)
@@ -49,4 +48,4 @@ update-flashplugin-nonfree --install
 
 ## Fonte
 
-- [Debian Wiki](https://wiki.debian.org/FlashPlayer)
+- [Debian Wiki](https://wiki.debian.org/FlashPlayer){:target="_blank"}

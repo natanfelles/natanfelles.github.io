@@ -1,14 +1,12 @@
 ---
-layout: post
 title:  "Hello World"
-date:   1990-12-24
 categories: test
 tags: test
 ---
 
 # Text
 
-It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
+It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com){:target="_blank"}
 
 # Lists
 
@@ -90,9 +88,12 @@ And, of course emoji! :sparkles: :camel: :boom:
 
 # Tables
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+First Header | Second Header | Third Header
+------------ | ------------- | ------------
+Content from cell 1 | Content from cell 2 | Content from cell 3
+Content in the first column | Content in the second column | Content in the third column
+Content in the first column | Content in the second column | Content in the third column
+Content in the first column | Content in the second column | Content in the third column
+Content in the first column | Content in the second column | Content in the third column
 
 

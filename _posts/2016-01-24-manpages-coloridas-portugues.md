@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Manpages Coloridas e em Português"
-date:  2016-01-24
 categories: desenvolvimento
+tags: manpages linux
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/man-cp.png)

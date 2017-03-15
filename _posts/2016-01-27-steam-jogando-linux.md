@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Steam: Jogando no Linux"
-date:   2016-01-27
 categories: desenvolvimento
+tags: linux steam
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/steam.png)
@@ -70,5 +69,5 @@ Após finalizar as instalações você já poderá encontrar o ícone do Steam n
 
 ## Fontes
 
-- [Debian Wiki](https://wiki.debian.org/pt_BR/Steam)
-- [Steam Powered](http://store.steampowered.com/browse/linux/)
+- [Debian Wiki](https://wiki.debian.org/pt_BR/Steam){:target="_blank"}
+- [Steam Powered](http://store.steampowered.com/browse/linux/){:target="_blank"}

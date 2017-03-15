@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  Os 8 Comandos da Morte
-date:   2016-02-03
 categories: seguranca
+tags: linux shell
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/dark-hole.png)

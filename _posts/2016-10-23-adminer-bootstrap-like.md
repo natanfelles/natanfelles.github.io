@@ -1,15 +1,14 @@
 ---
-layout: post
 title:  "Adminer Bootstrap-Like Design"
-date:   2016-10-23
 categories: desenvolvimento
+tags: adminer bootstrap mysql php html css javascript
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/adminer-bootstrap-like.png)
 
 ## Sobre
 
-Este projeto é um fork do [Custom Adminer](https://github.com/pematon/adminer-theme) onde desenvolvi uma interface inspirada no Bootstrap com ícones do Font Awesome.
+Este projeto é um fork do [Custom Adminer](https://github.com/pematon/adminer-theme){:target="_blank"} onde desenvolvi uma interface inspirada no Bootstrap com ícones do Font Awesome.
 
 ## Print Screens
 
@@ -43,4 +42,4 @@ Este projeto é um fork do [Custom Adminer](https://github.com/pematon/adminer-t
 
 ## Fork, Download, Contribuição e etc
 
-Você encontra este projeto disponível no GitHub em [github.com/natanfelles/adminer-bootstrap-like](https://github.com/natanfelles/adminer-bootstrap-like).
+Você encontra este projeto disponível no GitHub em [github.com/natanfelles/adminer-bootstrap-like](https://github.com/natanfelles/adminer-bootstrap-like){:target="_blank"}.

@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "CodeIgniter Template"
-date:   2016-09-27
 categories: desenvolvimento
+tags: codeigniter php html css javascript
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/codeigniter-template.png)
@@ -185,4 +184,4 @@ class Example extends CI_Controller {
 
 Acredito que, só de analisar o código, você já consiga ter uma noção do funcionamento. Mas o melhor, mesmo, sempre é a prática. Então, que tal começar?
 
-Você pode baixar, abrir issues ou fazer um fork e contribuir com esse projeto no [GitHub](http://github.com/natanfelles/codeigniter-template).
+Você pode baixar, abrir issues ou fazer um fork e contribuir com esse projeto no [GitHub](http://github.com/natanfelles/codeigniter-template){:target="_blank"}.

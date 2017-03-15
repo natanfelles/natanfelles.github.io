@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  CodeIgniter Code Completion para PhpStorm
-date:   2015-11-19
 categories: desenvolvimento
+tags: codeigniter php
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/codeigniter-phpstorm.png)
@@ -22,4 +21,4 @@ Extraia-o no mesmo diretório do arquivo index.php e através do PhpStorm vá at
 - Funciona perfeitamente com o CodeIgniter 3.
 - Atualizações podem ser realizadas diretamente no arquivo phpstorm.php, vide CodeIgniter User Guide.
 
-[Download](https://github.com/natanfelles/codeigniter-phpstorm)
+[Download](https://github.com/natanfelles/codeigniter-phpstorm){:target="_blank" class="btn small"}

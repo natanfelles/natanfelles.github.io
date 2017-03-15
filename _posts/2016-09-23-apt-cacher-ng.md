@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Apt-Cacher-NG: Proxy de Cache de Pacotes"
-date:   2016-09-23
 categories: desenvolvimento
+tags: cache proxy debian linux
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/apt-cacher-ng.png)
