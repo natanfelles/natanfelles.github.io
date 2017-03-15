@@ -1,0 +1,24 @@
+<div style="text-align: center; margin: 2em;">
+	<a class="posts btn small" href="#" id="toTop"><i class="icon icon-arrow-up"></i></a>
+</div>
+
+<footer class="footer">
+  <span class="footer__copyright">
+  &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Direitos reservados.
+	<span class="right">Website renderizado em {{ site.time | date: "%-d.%m.%Y %T %z" }}</span>
+  </span>
+</footer>
+
+{% if jekyll.environment != "development" %}
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.6.7/jquery.lazy.min.js"></script> -->
+{% else %}
+	<script type="text/javascript" src="{{ "/assets/js/jquery.min.js" | relative_url }}"></script>
+	<!-- <script type="text/javascript" src="{{ "/assets/js/jquery.lazy.min.js" | relative_url }}"></script> -->
+{% endif %}
+
+<script type="text/javascript" src="{{ "/assets/js/main.js" | relative_url }}"></script>
+
+{% if site.google_analytics and jekyll.environment != "development" %}
+  {% include google-analytics.html %}
+{% endif %}
