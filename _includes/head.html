@@ -1,38 +1,18 @@
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>{{ site.title }}{% if page.title %} · {{ page.title }}{% endif %}</title>
-
-  <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author.name }}">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{{ site.title }}">
-  <meta name="twitter:description" content="{{ site.description }}">
-
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="{{ site.title }}">
-  <meta property="og:description" content="{{ site.description }}">
+  {% seo title=false %}
 
   <link rel="apple-touch-icon" href="{{ "/assets/img/apple-touch-icon.png" | relative_url }}">
 
   <link rel="icon" type="image/png" href="{{ "/assets/img/favicon.png" | relative_url }}">
   <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}">
 
-  <link rel="manifest" href="{{ "/assets/images/favicons/manifest.json" | relative_url }}">
-
-  <meta name="msapplication-TileColor" content="#ffc40d">
-  <meta name="msapplication-TileImage" content="{{ "/assets/images/favicons/mstile-144x144.png" | relative_url }}">
-  <meta name="theme-color" content="#ffffff">
-
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
 </head>
