@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<article class="post-container post-container--single">
+  <header class="post-header"><h1 class="post-title">{{ page.title }}</h1>
+    <div class="retangular-block">
+    <div class="post-meta">
+      <span class="post-meta__tags">
+        <a href="{{ site.url }}#show">Blog</a> ·
+        {% for category in page.categories %}
+          <a href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a> ·
+        {% endfor %}
+        <a href="#">{{ page.title }}</a>
+      </span>
+      <time datetime="{{ page.date | date: "%-d %b %Y" }}" class="post-meta__date date right">
+        {{ page.date | date: "%-d.%m.%Y" }}
+      </time>
+    </div>
+    </div>
+  </header>
+
+  <section class="post">
+    {{ content }}
+  </section>
+
+  <hr class="post-list__divider">
+
+  <section class="tags">
+    {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </section>
+
+  <section class="retangular-block">
+    <nav class="navigation--social">
+            <ul class="navigation">
+              <li class="navigation__item">Compartilhe:</li>
+              <li class="navigation__item">
+                <a href="https://twitter.com/share?text={{ page.title}} {{ site.url }}{{ page.url  }}" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a href="https://www.facebook.com/share.php?u={{ site.url }}{{ page.url  }}" target="_blank">
+                  <i class="icon icon-social-facebook"></i>
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a href="https://plusone.google.com/_/+1/confirm?url={{ site.url }}{{ page.url  }}" target="_blank">
+                  <i class="icon icon-social-google-plus"></i>
+                  <span class="label">Google Plus</span>
+                </a>
+              </li>
+            </ul>
+    </nav>
+    <a class="btn small right btn-github" href="https://github.com/{{ site.github.repository_nwo }}/edit/{{ site.branch }}/{{ page.path }}" target="_blank">
+      <i class="icon icon-social-github"></i>
+      Edite essa página no GitHub
+    </a>
+  </section>
+
+  {% if page.comments != false and site.disqus_shortname %}
+    <section id="disqus_thread"></section>
+  {% endif %}
+
+</article>
+
+{% if page.comments != false %}
+  {% include disqus.html %}
+{% endif %}
