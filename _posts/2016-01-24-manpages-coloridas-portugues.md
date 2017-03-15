@@ -2,6 +2,8 @@
 title:  "Manpages Coloridas e em Português"
 categories: desenvolvimento
 tags: manpages linux
+image: /assets/img_posts/man-cp.png
+description: No mundo Unix, a maioria dos programas possuem diversas opções  via linha de comando e é praticamente impossível lembrar-se de tudo quando você quer resolver alguma coisa através do terminal.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/man-cp.png)

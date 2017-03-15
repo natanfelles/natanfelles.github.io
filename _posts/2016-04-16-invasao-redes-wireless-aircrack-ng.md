@@ -2,6 +2,8 @@
 title:  "Invasão de Redes Wireless com Aircrack-NG"
 categories: seguranca
 tags: aircrack-ng wifi linux
+image: /assets/img_posts/aircrack-ng.png
+description: Esse tutorial deve ser usado apenas para fins educativos em uma rede com devida autorização do proprietário.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/aircrack-ng.png)

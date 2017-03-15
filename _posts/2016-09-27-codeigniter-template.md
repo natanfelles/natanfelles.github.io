@@ -2,6 +2,8 @@
 title:  "CodeIgniter Template"
 categories: desenvolvimento
 tags: codeigniter php html css javascript
+image: /assets/img_posts/codeigniter-template.png
+description: O grande ganho com esse sistema de template é que não há necessidade de duplicação de código. Acompanhe os arquivos abaixos e você entenderá melhor.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/codeigniter-template.png)

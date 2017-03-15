@@ -2,6 +2,8 @@
 title:  "Tema Darcula para Plugin WordPress"
 categories: desenvolvimento
 tags: wordpress css
+image: /assets/img_posts/darcula-crayon.png
+description: Tema para o plugin WordPress Crayon Syntax Highlighter baseado no tema Darcula do PhpStorm.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/darcula-crayon.jpg)

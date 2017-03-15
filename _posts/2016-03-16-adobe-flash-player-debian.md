@@ -2,6 +2,8 @@
 title:  "Adobe Flash Player no Debian"
 categories: desenvolvimento
 tags: flash-player debian linux
+image: /assets/img_posts/flash-player.png
+description: Uma das intempéries mais comuns que podem acontecer utilizando sistemas GNU/Linux é a ausência de softwares proprietários. Um caso muito comum é a falta do Adobe Flash Player, principalmente para executar elementos em websites que ainda não se adaptaram ao HTML5.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/flash-player.png)

@@ -2,6 +2,8 @@
 title:  "Melhorar (ainda mais) o Desempenho do Linux"
 categories: desenvolvimento
 tags: swap zram linux
+image: /assets/img_posts/linux-performance.png
+description: Neste artigo, veremos como aumentar a performance do seu sistema, sem a necessidade de comprar hardware novo, com duas configurações simples, mas que podem aumentar significativamente o tempo de resposta da sua máquina.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/linux-performance.jpg)

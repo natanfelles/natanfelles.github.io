@@ -2,6 +2,8 @@
 title:  Os 8 Comandos da Morte
 categories: seguranca
 tags: linux shell
+image: /assets/img_posts/dark-hole.png
+description: Existem comandos no Linux que são realmente perigosos e podem destruir todo o sistema. Não é incomum ver trolls recomendarem que novatos no mundo Linux executem tais comandos simplesmente para tirarem sarro.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/dark-hole.png)

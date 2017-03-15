@@ -2,6 +2,8 @@
 title:  "Steam: Jogando no Linux"
 categories: desenvolvimento
 tags: linux steam
+image: /assets/img_posts/steam.png
+description: Steam é um software proprietário que permite a interação online através de chats, transmisão de gameplays e principalmente jogar. Jogar praticamente qualquer game conhecido da atualidade (mais de 6 mil), destaque para famosos como  Counter-Strike, Half-Life e Grand Theft Auto.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/steam.png)

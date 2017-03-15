@@ -2,6 +2,8 @@
 title:  "ISPConfig Plugin para Adminer"
 categories: desenvolvimento
 tags: adminer ispconfig mysql php html css javascript
+image: /assets/img_posts/adminer-ispconfig.png
+description: Alternativamente ao phpMyAdmin prefiro trabalhar com o Adminer para gerenciar meus Bancos de Dados.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/adminer-ispconfig.png)

@@ -2,6 +2,8 @@
 title:  "Online Editor"
 categories: desenvolvimento
 tags: editor ace css javascript html
+image: /assets/img_posts/online-editor.png
+description: "Online Editor foi desenvolvido com o auxílio de 4 projetos de código aberto: jQuery, Bootstrap, Font Awesome e Ace."
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/online-editor.png)

@@ -2,6 +2,8 @@
 title:  "Configurando Nginx para Magento"
 categories: desenvolvimento
 tags: nginx magento linux
+image: /assets/img_posts/nginx-magento.png
+description: Configurando Nginx para Magento
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/nginx-magento.png)

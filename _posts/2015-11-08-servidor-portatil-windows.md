@@ -2,6 +2,8 @@
 title:  "Servidor Portátil para Windows"
 categories: desenvolvimento
 tags: windows servidor nginx php mysql nodejs memcached mongodb
+image: /assets/img_posts/winginx.jpg
+description: Para trabalhar em qualquer lugar, diretamente de um pendrive, por exemplo, podemos utilizar o Winginx.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/winginx.jpg)

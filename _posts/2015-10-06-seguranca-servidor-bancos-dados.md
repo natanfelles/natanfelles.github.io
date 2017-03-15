@@ -2,6 +2,8 @@
 title:  "Segurança em Servidor de Bancos de Dados"
 categories: seguranca
 tags: linux mysql mariadb
+image: /assets/img_posts/mysql_secure_installation.jpg
+description: Existem muitas implementações de bancos de dados com a linguagem SQL disponíveis para sistemas Linux e Unix-like. O MySQL é o Sistema Gerenciador de Bancos de Dados mais popular em nível servidor.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/mysql_secure_installation.jpg)

@@ -2,6 +2,8 @@
 title:  "Biblioteca IMAP para CodeIgniter"
 categories: desenvolvimento
 tags: codeigniter php
+image: /assets/img_posts/codeigniter-imap.png
+description: Este projeto possiblita que você use o protocolo IMAP no CodeIgniter Framework.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/codeigniter-imap.png)

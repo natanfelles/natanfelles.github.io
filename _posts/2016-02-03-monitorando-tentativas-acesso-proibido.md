@@ -2,6 +2,8 @@
 title:  "Monitorando Tentativas de Acesso Proibido"
 categories: seguranca
 tags: firewall monitoramento
+image: /assets/img_posts/anon.png
+description: Por padrão, muitos serviços executados em ambientes Unix-Like possuem portas pré-estabelecidas que podem ser vistas externamente por atacantes. Uma boa forma de iniciar com a segurança de um sistema é trabalhando através de TCP Wrappers, realização de filtragens de acesso.
 ---
 
 ![{{ post.title }}]({{ site.url }}/assets/img_posts/anon.png)
