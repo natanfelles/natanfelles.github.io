@@ -8,7 +8,7 @@ layout: default
       <span class="post-meta__tags">
         <a href="{{ site.url }}#show">Blog</a> ·
         {% for category in page.categories %}
-          <a href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a> ·
+          <a href="{{ site.baseurl }}/categories#{{ category }}">{{ category }}</a> ·
         {% endfor %}
         <a href="#">{{ page.title }}</a>
       </span>
@@ -27,7 +27,7 @@ layout: default
 
   <section class="tags">
     {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>
+      <a href="{{ site.baseurl }}/tags#{{ tag }}">{{ tag }}</a>
     {% endfor %}
   </section>
 
