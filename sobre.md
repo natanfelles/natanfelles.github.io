@@ -8,7 +8,7 @@ permalink: /sobre/
 
 Sou fascinado por programação web, neurociência, tecnologia, filosofia, psicologia e mulheres.
 
-Sou mais um pobre ~~capitalista~~ brasileiro, gaúcho, colorado, adaptável a credos e incrédulos.
+Sou mais um ~~pobre capitalista~~ brasileiro, gaúcho, colorado, adaptável a credos e incrédulos.
 
 Acredito num futuro melhor, na valorização da justiça, do amor, da ética e do respeito.
 
