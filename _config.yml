@@ -3,8 +3,6 @@ email: natanfelles@gmail.com
 description: Às vezes eu programo.
 baseurl: ""
 url: "https://natanfelles.github.io"
-twitter_username: natanfelles
-github_username:  natanfelles
 
 markdown: kramdown
 theme: minima
@@ -46,8 +44,15 @@ author:
   #linkedin_username: natanfelles
   github_username: natanfelles
   email: natanfelles@gmail.com
+  twitter: natanfelles
 
 branch: master
 
 facebook:
   app_id: 1744716995840585
+  publisher: 1007807062628320
+
+twitter:
+  username: natanfelles
+
+logo: /assets/img/logo.png
