@@ -33,8 +33,7 @@ defaults:
       layout: "post"
       image: /assets/img_posts/post.png
 
-disqus:
-  shortname: natanfelles
+disqus_shortname: natanfelles
 
 google_analytics: UA-75463090-1
 google_site_verification: 7YAsvH47ykUFB4n7rYiqT6A9mi0WF5y_DjzRtUco4IY
