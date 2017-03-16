@@ -17,9 +17,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-permalink: none
+permalink: /blog/:title
 paginate: 5
-paginate_path: /page-:num
+paginate_path: /blog/:num
 
 defaults:
   -
