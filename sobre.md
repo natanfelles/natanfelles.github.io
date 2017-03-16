@@ -4,7 +4,7 @@ title: Sobre
 permalink: /sobre/
 ---
 
-![{{ site.author }}]({{ site.url }}/assets/img/photo.png)
+![{{ site.author.name }}]({{ site.url }}/assets/img/photo.png)
 
 Sou fascinado por programação web, neurociência, tecnologia, filosofia, psicologia e mulheres.
 
