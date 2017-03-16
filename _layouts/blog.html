@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h2>Posts:</h2>
+
+<div class="docs">
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
