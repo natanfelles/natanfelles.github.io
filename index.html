@@ -16,7 +16,7 @@ layout: default
           <time datetime="{{ post.date | date: "%-d %b %Y" }}" class="post-list__meta--date date">{{ post.date | date: "%-d.%m.%Y" }}</time>
           <span class="post-meta__tags">
             {% for category in post.categories %}
-              <a href="{{ site.url }}/categories#{{ category }}">{{ category }}</a>
+              <a href="{{ site.url }}/blog/categorias/#{{ category }}">{{ category }}</a>
             {% endfor %}
           </span>
         </div>
