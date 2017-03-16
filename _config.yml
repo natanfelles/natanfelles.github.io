@@ -1,8 +1,10 @@
 title: Natan Felles
 email: natanfelles@gmail.com
-description: Às vezes eu programo.
+description: Creative Webmaster
 baseurl: ""
 url: "https://natanfelles.github.io"
+
+timezone: America/Sao_Paulo
 
 markdown: kramdown
 theme: minima
