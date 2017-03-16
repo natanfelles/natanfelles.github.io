@@ -9,7 +9,7 @@
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
         <a href="{{ site.url }}">
-          <img src="{{ "/assets/img/logo-circle.svg" | relative_url }}" class="user-image">
+          <img src="{{ "/assets/img/logo-circle.png" | relative_url }}" class="user-image">
           <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
         </a>
         <hr class="panel-cover__divider">
@@ -28,7 +28,6 @@
             <ul class="navigation">
 
             {% if site.author.twitter_username %}
-              <!-- Twitter -->
               <li class="navigation__item">
                 <a href="https://twitter.com/{{ site.author.twitter_username }}" target="_blank">
                   <i class="icon icon-social-twitter"></i>
@@ -38,7 +37,6 @@
             {% endif %}
 
             {% if site.author.facebook_username %}
-              <!-- Facebook -->
               <li class="navigation__item">
                 <a href="https://fb.me/{{ site.author.facebook_username }}" target="_blank">
                   <i class="icon icon-social-facebook"></i>
@@ -48,7 +46,6 @@
             {% endif %}
 
             {% if site.author.linkedin_username %}
-              <!-- LinkedIn -->
               <li class="navigation__item">
                 <a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}" target="_blank">
                   <i class="icon icon-social-linkedin"></i>
@@ -58,7 +55,6 @@
             {% endif %}
 
             {% if site.author.github_username %}
-              <!-- GitHub -->
               <li class="navigation__item">
                 <a href="https://github.com/{{ site.author.github_username }}" target="_blank">
                   <i class="icon icon-social-github"></i>
@@ -68,7 +64,6 @@
             {% endif %}
 
             {% if site.author.email %}
-              <!-- Email -->
               <li class="navigation__item">
                 <a href="mailto:{{ site.author.email }}" target="_blank">
                   <i class="icon icon-mail"></i>
@@ -77,7 +72,6 @@
               </li>
             {% endif %}
 
-            <!-- RSS -->
             <li class="navigation__item">
               <a href="{{ "/feed.xml" | relative_url }}" target="_blank">
                 <i class="icon icon-rss"></i>
