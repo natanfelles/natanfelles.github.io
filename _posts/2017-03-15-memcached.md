@@ -27,7 +27,7 @@ sudo apt install memcached
 
 Por padrão, o memcached vem configurado para rodar na porta 11211, listando em todas as interfaces de rede e capacidade de cachear 64 MB na RAM.
 
-Como esse servidor será exclusivo para cache, irei aumentar a capacidade de armazenamento de dados para 450 MB e modificar a interface padrão (127.0.0.1), para o IP estático dessa máquina (192.168.1.21).
+Como esse servidor será exclusivo para cache, irei aumentar a capacidade de armazenamento de dados para 450 MB e modificar a interface padrão (127.0.0.1) para o IP estático dessa máquina (192.168.1.21).
 
 O arquivo de configuração do memcached fica em _/etc/memcached.conf_ e podemos abri-lo com o _Vi_:
 
@@ -138,7 +138,7 @@ O UFW possui um manual bem explicativo e com exemplos. Veja a sua [manpage]({{ s
 
 Uma das maneiras mais práticas de monitorar o uso do seu servidor de cache, ou até mesmo de clusters, é a utilização do PHPMemcachedAdmin.
 
-Supondo que você já possua um [servidor web]({{ site.baseurl }}{% post_url 2016-09-24-lemp %}) instalado em uma das máquinas da sua rede, você pode entrar no diretório desejado em instalar o PHPMemcachedAdmin desta forma:
+Supondo que você já possua um [servidor web]({{ site.baseurl }}{% post_url 2016-09-24-lemp %}) instalado em uma das máquinas da sua rede, você pode entrar no diretório desejado e instalar o PHPMemcachedAdmin desta forma:
 
 ```sh
 wget https://github.com/elijaa/phpmemcachedadmin/archive/master.zip
