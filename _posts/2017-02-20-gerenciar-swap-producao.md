@@ -28,7 +28,7 @@ A primeira coisa a ser feita é a criação de um novo diretório, como root, pr
 sudo mkdir /swap
 ```
 
-Em seguida, com muita atenção, executa-se o comando `dd` especificando que ele deve criar um novo arquivo com caracteres nulos em _/swap/swapfile_ e 2 milhões de blocos de 1024 bytes, ou seja; um bloco de 2 GB:
+Em seguida, com muita atenção, executa-se o comando `dd` especificando que ele deve criar um novo arquivo com caracteres nulos em _/swap/swapfile_ e 2 milhões de blocos de 1024 bytes, ou seja; um arquivo de 2 GB:
 
 ```sh
 sudo dd if=/dev/zero of=/swap/swapfile bs=1024 count=2000000
