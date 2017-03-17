@@ -92,7 +92,7 @@ logfile /var/log/memcached.log
 Realizadas as alterações, podemos reiniciar o serviço:
 
 ```sh
-service memcached restart
+sudo service memcached restart
 ```
 
 ## Proteger
