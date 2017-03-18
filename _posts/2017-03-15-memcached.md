@@ -194,3 +194,4 @@ return array(
 - [memcached - a distributed memory object caching system](https://memcached.org/){:target="_blank"}
 - [How to Configure a Firewall with UFW](https://www.linode.com/docs/security/firewalls/configure-firewall-with-ufw){:target="_blank"}
 - [PHPMemcachedAdmin](https://blog.elijaa.org/phpmemcachedadmin/){:target="_blank"}
+- [Scaling memcached at Facebook](https://www.facebook.com/note.php?note_id=39391378919){:target="_blank"}
