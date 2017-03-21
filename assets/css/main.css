@@ -11,6 +11,8 @@
 pre.highlight,
 .highlight pre {
   padding: 10px;
+  overflow-wrap: normal;
+  overflow-wrap: break-word;
 }
 
 pre.highlight code,
