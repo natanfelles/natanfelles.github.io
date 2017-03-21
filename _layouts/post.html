@@ -61,6 +61,15 @@ layout: default
     </a>
   </section>
 
+  <section class="prev_next">
+      {% if post.url != page.previous.url %}
+        <a href="{{ page.previous.url }}" class="btn left">← Post Anterior</a>
+      {% endif %}
+      {% if post.url != page.next.url %}
+        <a href="{{ page.next.url }}" class="btn right">Próximo Post →</a>
+      {% endif %}
+  </section>
+
   {% if page.comments != false and site.disqus_shortname %}
     <section id="disqus_thread"></section>
   {% endif %}
