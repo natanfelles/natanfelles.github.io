@@ -1482,7 +1482,7 @@ pre code {
 
 .footer__copyright a {
 	color: #a6a6a6;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .footer__copyright a:hover {
