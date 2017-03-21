@@ -1,6 +1,6 @@
 ---
 title:  "Tema para ISPConfig 3"
-categories: desenvolvimento
+categories: desenvolvimento projetos
 tags: ispconfig html css
 image: /assets/img_posts/tema-ispconfig-websites.jpg
 description: Para utilizar este tema é necessário que você possua uma versão 3.0.5.* do ISPConfig previamente instalada em seu servidor.
