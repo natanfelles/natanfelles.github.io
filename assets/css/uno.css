@@ -1489,6 +1489,10 @@ pre code {
 	color: #00a4e2;
 }
 
+.left {
+	float: left;
+}
+
 .right {
 	float: right;
 }
@@ -1758,11 +1762,13 @@ hr {
 	color: #00a4e2;
 	-webkit-font-smoothing: antialiased;
 	text-align: center;
+	background: transparent;
 }
 
 .btn:hover, .navigation__item a:hover {
 	color: #f41249;
 	border-color: #f41249;
+	cursor: pointer;
 }
 
 .btn-secondary {
@@ -1980,9 +1986,29 @@ h2:hover .header-link, h3:hover .header-link, h4:hover .header-link, h5:hover .h
 	outline: none;
 }
 
+.form-item {
+	display: block;
+	min-height: 60px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.form-item .left, .form-item .right {
+	width: 45%;
+}
+
+label {
+	display: block;
+	padding: 6px 0;
+}
+
+textarea {
+	min-height: 80px;
+}
+
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], textarea {
-	width: 240px;
-	padding: 1em 1em;
+	width: 100%;
+	padding: 8px 12px;
 	background: #fff;
 	border: 1px solid #bbb;
 	border-radius: 3px;
@@ -2043,6 +2069,14 @@ input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-place
 }
 
 @media all and (max-width: 960px) {
+
+	.form-item .left,
+	.form-item .right {
+		float: none;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
 	.btn-mobile-menu {
 		display: block;
 	}
@@ -2166,6 +2200,7 @@ input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-place
 }
 
 @media all and (max-width: 340px) {
+
 	.panel-main__inner {
 		padding: 0 5%;
 	}
