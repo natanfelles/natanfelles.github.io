@@ -72,6 +72,6 @@ E adicionar uma nova linha especificando o caminho e opções do bloco:
 
 Obviamente a swap, que tem leitura e escrita de dados no disco rígido, é muito mais lenta que memórias voláteis mas, mesmo assim, ela é muito útil pois não vai deixar seu sistema travar por insuficiência de memória. Quando a RAM atingir o pico e começar a depender demais da swap o sistema ficará lento.
 
-Cabe a você administrar os recurso da sua máquina e tirar o melhor proveito possível.
+Cabe a você administrar os recursos da sua máquina e tirar o melhor proveito possível.
 
 Talvez isso lhe seja útil algum dia assim como foi para mim nessa semana.
