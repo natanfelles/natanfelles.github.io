@@ -4,8 +4,11 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     colorator (1.1.0)
+    cssminify2 (2.0.1)
+    execjs (2.7.0)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
+    htmlcompressor (0.3.1)
     jekyll (3.4.2)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -17,8 +20,13 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-feed (0.9.1)
+    jekyll-feed (0.9.2)
       jekyll (~> 3.3)
+    jekyll-minifier (0.1.1)
+      cssminify2 (~> 2.0)
+      htmlcompressor (~> 0.3)
+      jekyll (~> 3.0)
+      uglifier (~> 2.7)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
@@ -26,6 +34,7 @@ GEM
       jekyll (~> 3.3)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
+    json (2.0.3)
     kramdown (1.13.2)
     liquid (3.0.6)
     listen (3.0.8)
@@ -43,6 +52,9 @@ GEM
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
+    uglifier (2.7.2)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
 
 PLATFORMS
   ruby
@@ -50,13 +62,14 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.4.2)
   jekyll-feed (~> 0.6)
+  jekyll-minifier (~> 0.1.1)
   jekyll-paginate (~> 1.1.0)
   jekyll-seo-tag (~> 2.1)
   minima (~> 2.0)
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.3.3p222
 
 BUNDLED WITH
    1.14.6
