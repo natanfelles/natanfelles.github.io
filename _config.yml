@@ -12,7 +12,7 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-minifier
+  # - jekyll-minifier
 exclude:
   - Gemfile
   - Gemfile.lock
