@@ -1,0 +1,21 @@
+{% comment %}
+{% assign uri = page.url | remove: '.html' | split: '/'  %}
+<ol class="breadcrumb">
+  <li><a href="{{ site.url }}">Início</a></li>
+  {% if uri[1] != page.url %}
+  	{% for p in site.pages  %}
+  		{% assign url =  p.url | remove: '/' %}
+  		{% if url == uri[1] %}
+  			<li><a href="{{ url | relative_url }}">{{ p.title }}</a></li>
+  		{% endif %}
+  	{% endfor %}
+  {% endif %}
+  {% if uri[2]  %}
+  	<li><a href="{{ uri[1]/uri[2] | relative_url }}">{{ uri[2] }}</a></li>
+  {% endif %}
+  {% if uri[3] %}
+  	<li><a href="{{ uri[1]/uri[2]/uri[3] | relative_url }}">{{ uri[3] }}</a></li>
+  {% endif %}
+  <li class="active">{{ page.title }}</li>
+</ol>
+{% endcomment %}

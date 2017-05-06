@@ -1,0 +1,32 @@
+<header>
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
+      </div>
+      <div class="collapse navbar-collapse" id="header-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          {% assign uri = page.url | remove: '.html' | split: '/'  %}
+          <li{% if uri[1] == 'blog' %} class="active"{% endif %}>
+            <a href="{{ 'blog' | relative_url }}">Blog</a>
+          </li>
+          <li{% if uri[1] == 'servicos' %} class="active"{% endif %}>
+            <a href="{{ 'servicos' | relative_url }}">Serviços</a>
+          </li>
+          <li{% if uri[1] == 'sitemap' %} class="active"{% endif %}>
+            <a href="{{ 'sitemap' | relative_url }}">Mapa do Site</a>
+          </li>
+          <li>
+            <a href="#" data-target="#search-results" id="search-nav"><i class="fa fa-search"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

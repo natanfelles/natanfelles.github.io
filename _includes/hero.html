@@ -1,0 +1,28 @@
+<div class="panel-hero"></div>
+<div id="hero">
+	<div class="col-md-8 col-md-offset-2 text-center">
+		<a href="{{site.url}}">
+			<img src="{{'assets/img/logo-circle.png' | relative_url}}" class="img-responsive img-circle img-thumbnail logo" alt="{{site.title}}">
+		</a>
+		<h1>Natan Felles</h1>
+		<hr>
+		<p>Creative Webmaster</p>
+		<hr style="width: 30%">
+		{% assign uri = page.url | remove: '.html' | split: '/'  %}
+		<a href="{{'blog' | relative_url}}" class="btn btn-icon btn-default{% if uri[1] == 'blog' %} active{% endif %}" data-toggle="tooltip" data-placement="top" title="Blog">
+			<i class="fa fa-book"></i>
+		</a>
+		<a href="{{'servicos' | relative_url}}" class="btn btn-icon btn-default{% if uri[1] == 'servicos' %} active{% endif %}" data-toggle="tooltip" data-placement="top" title="Serviços">
+			<i class="fa fa-gears"></i>
+		</a>
+		<a href="{{'sitemap' | relative_url}}" class="btn btn-icon btn-default{% if uri[1] == 'sitemap' %} active{% endif %}" data-toggle="tooltip" data-placement="top" title="Mapa do Site">
+			<i class="fa fa-sitemap"></i>
+		</a>
+		<button class="btn btn-icon btn-default" data-toggle="tooltip" data-placement="top" title="Pesquisar" data-target="#search-results" id="search-hero">
+			<i class="fa fa-search"></i>
+		</button>
+		<a href="https://github.com/natanfelles" class="btn btn-icon btn-default" data-toggle="tooltip" data-placement="top" title="GitHub" target="_blank">
+			<i class="fa fa-github"></i>
+		</a>
+	</div>
+</div>

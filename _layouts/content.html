@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{% include header.html %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-5">
+			{% include hero.html %}
+		</div>
+		<div class="col-md-7 content">
+			<div class="col-md-12">
+				<div class="content-inner">
+					{% include breadcrumbs.html %}
+					{{ content }}
+				</div>
+			</div>
+			{% include footer.html %}
+		</div>
+	</div>
+</div>

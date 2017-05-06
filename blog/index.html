@@ -1,0 +1,54 @@
+---
+layout: content
+title: Blog
+---
+
+<h1 class="page-header">{{ page.title }}
+{% if paginator.page > 1 %}
+	<small>Página {{ paginator.page }}</small>
+{% endif %}
+</h1>
+<div class="list-group posts-list">
+	{% for post in paginator.posts %}
+		<div class="list-group-item">
+			<h2 class="list-group-item-heading">
+				<a>{{ post.title }}</a>
+			</h2>
+			<div class="well well-sm text-capitalize small">
+				{% for category in post.categories %}
+					{% if category != post.categories[0] %}·{% endif %}
+					<a href="{{ 'blog/categorias#' | append: category | relative_url }}">{{ category }}</a>
+				{% endfor %}
+				<span class="pull-right">{{ post.date | date: "%-d.%m.%Y" }}</span>
+			</div>
+			<a class="thumbnail">
+				<img alt="{{ post.title }}" src="{{ 'assets/img_posts/' | append: post.image | relative_url }}">
+			</a>
+			<p class="list-group-item-text">
+				<a class="btn btn-primary" href="{{ post.url }}">Saber mais</a>
+			</p>
+		</div>
+	{% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+	<div class="text-center">
+		<ul class="pagination">
+			{% if paginator.previous_page %}
+		    	<li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+		  	{% endif %}
+		  	{% for page in (1..paginator.total_pages) %}
+			    {% if page == paginator.page %}
+			      	<li class="active"><a>{{ page }}</a></li>
+			    {% elsif page == 1 %}
+			      	<li><a href="{{ 'blog' | relative_url }}">{{ page }}</a></li>
+			    {% else %}
+			      	<li><a href="{{ site.paginate_path| replace: ':num', page | relative_url }}">{{ page }}</a></li>
+			    {% endif %}
+		  	{% endfor %}
+			{% if paginator.next_page %}
+				<li><a href="{{ paginator.next_page_path | relative_url }}">&raquo;</a></li>
+			{% endif %}
+		</ul>
+	</div>
+{% endif %}

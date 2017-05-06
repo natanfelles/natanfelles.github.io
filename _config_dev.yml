@@ -1,0 +1,62 @@
+url: https://natanfelles.github.io
+title: Natan Felles
+description: Creative Webmaster
+keywords: natanfelles, webmaster, tutoriais, desenvolvedor web, linux, programador php, full stack developer, administrador de sistemas, Natan Felles, brasil
+image: /assets/img/social.png
+email: natanfelles@gmail.com
+timezone: America/Sao_Paulo
+lang: pt-br
+author:
+  name: Natan Felles
+  email: natanfelles@gmail.com
+twitter:
+  site: null
+  creator: natanfelles
+google:
+  site-verification: 7YAsvH47ykUFB4n7rYiqT6A9mi0WF5y_DjzRtUco4IY #OK
+  analytics: UA-75463090-1 #OK
+  cse-cx: 007355044916868045354:yoso7zf_dnw #OK
+  api-key:  AIzaSyCKn6VsmdF0mLCyN6gpmi-C-GDj43DljnU #OK
+disqus_shortname: natanfelles
+###########
+
+env: development
+
+
+# Build settings
+markdown: kramdown
+highlighter: none
+kramdown:
+  syntax_highlighter_opts:
+    disable : true
+gems:
+  - jekyll-paginate
+  #- jekyll-feed
+  #- jekyll-seo-tag
+  # - jekyll-minifier
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - serve.sh
+  - /assets/img/*.svg
+
+permalink: /blog/:title
+paginate: 5
+paginate_path: /blog/:num
+
+defaults:
+  -
+    values:
+      author: Natan Felles
+      image: /assets/img/social.png
+  -
+    scope:
+      type: posts
+    values:
+      layout: post
+      image: post.png
+
+# collections:
+#   docs:
+#     output: true
+#     permalink: /:collection/:path.html

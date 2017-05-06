@@ -1,0 +1,69 @@
+---
+layout: content
+---
+
+<h1>{{ page.title }}</h1>
+<div class="well well-sm text-capitalize small">
+	<a href="{{ 'blog' | relative_url }}">Blog</a>
+	{% for category in page.categories %}
+		· <a href="{{ 'blog/categorias#' | append: category | relative_url }}">{{ category }}</a>
+	{% endfor %}
+	<span class="pull-right">{{ page.date | date: "%-d.%m.%Y" }}</span>
+</div>
+
+<p>
+	<img src="{{ 'assets/img_posts/' | append: page.image | relative_url }}" alt="{{ page.title }}" />
+</p>
+
+
+<div id="post">
+	{{ content }}
+</div>
+
+{% if page.tags[0] %}
+	<hr>
+	<div class="tags">
+		{% for tag in page.tags %}
+		    <a class="btn btn-sm btn-primary" href="{{ 'blog/tags#' | append: tag | relative_url }}">{{ tag }}</a>
+		{% endfor %}
+	</div>
+{% endif %}
+
+<div class="well">
+	<a class="btn btn-icon btn-primary" href="https://twitter.com/share?text={{ page.title }}&url={{ site.url }}{{ page.url  }}" target="_blank">
+    	<i class="fa fa-twitter"></i>
+    </a>
+    <a class="btn btn-icon btn-primary" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url  }}" target="_blank">
+    	<i class="fa fa-facebook"></i>
+    </a>
+    <a class="btn btn-icon btn-primary" href="https://plus.google.com/share?url={{ site.url }}{{ page.url  }}" target="_blank">
+    	<i class="fa fa-google-plus"></i>
+    </a>
+	<a class="btn btn-primary pull-right" href="https://github.com/{{ site.github.repository_nwo }}/edit/{{ site.branch }}/{{ page.path }}" target="_blank">
+			<i class="fa fa-github"></i>
+			Edite essa página no GitHub
+	</a>
+</div>
+
+<div class="text-center prev_next">
+	<div class="btn-group btn-group-justified" role="group">
+		{% if page.next.url contains '/index' %}
+		{% elsif page.next.url != null %}
+			<a href="{{ page.next.url }} " class="btn btn-primary">
+				<i class="fa fa-arrow-left"></i> Próximo
+			</a>
+		{% endif %}
+		{% if page.previous.url contains '/index' %}
+		{% elsif page.previous.url != null %}
+			<a href="{{ page.previous.url }} " class="btn btn-primary">
+				Anterior <i class="fa fa-arrow-right"></i>
+			</a>
+		{% endif %}
+	</div>
+</div>
+
+{% if page.comments != false and site.disqus_shortname %}
+	<div class="comments">
+		{% include disqus.html %}
+	</div>
+{% endif %}
