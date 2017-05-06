@@ -233,8 +233,8 @@ pre {
     font-size: 16px;
     border-color: #000;
     /*border-color: #878787;*/
-    background-color: #2B2B2B;
-    color: #bababa;
+    background-color: #282c34;
+    color: #abb2bf;
 }
 
 .hljs-line-numbers {
