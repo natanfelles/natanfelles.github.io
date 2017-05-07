@@ -142,10 +142,11 @@ a.thumbnail:hover {
 }
 
 .btn-icon {
-	padding: 10px;
+	padding: 5px;
 	min-width: 42px;
 	min-height: 42px;
 	margin-left: 5px;
+    font-size: 20px;
 }
 
 .btn-sm {
