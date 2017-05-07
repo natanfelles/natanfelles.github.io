@@ -9,19 +9,19 @@
 		<p>Creative Webmaster</p>
 		<hr style="width: 30%">
 		{% assign uri = page.url | remove: '.html' | split: '/'  %}
-		<a href="{{'blog' | relative_url}}" class="btn btn-icon btn-default{% if uri[1] == 'blog' %} active{% endif %}" data-toggle="tooltip" data-placement="top" title="Blog">
+		<a href="{{'blog' | relative_url}}" class="btn btn-icon btn-default{% if uri[1] == 'blog' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Blog">
 			<i class="fa fa-book"></i>
 		</a>
-		<a href="{{'servicos' | relative_url}}" class="btn btn-icon btn-default{% if uri[1] == 'servicos' %} active{% endif %}" data-toggle="tooltip" data-placement="top" title="Serviços">
+		<a href="{{'servicos' | relative_url}}" class="btn btn-icon btn-default{% if uri[1] == 'servicos' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Serviços">
 			<i class="fa fa-gears"></i>
 		</a>
-		<a href="{{'sitemap' | relative_url}}" class="btn btn-icon btn-default{% if uri[1] == 'sitemap' %} active{% endif %}" data-toggle="tooltip" data-placement="top" title="Mapa do Site">
+		<a href="{{'sitemap' | relative_url}}" class="btn btn-icon btn-default{% if uri[1] == 'sitemap' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Mapa do Site">
 			<i class="fa fa-sitemap"></i>
 		</a>
-		<button class="btn btn-icon btn-default" data-toggle="tooltip" data-placement="top" title="Pesquisar" data-target="#search-results" id="search-hero">
+		<button class="btn btn-icon btn-default" data-toggle="tooltip" data-placement="bottom" title="Pesquisar" data-target="#search-results" id="search-hero">
 			<i class="fa fa-search"></i>
 		</button>
-		<a href="https://github.com/natanfelles" class="btn btn-icon btn-default" data-toggle="tooltip" data-placement="top" title="GitHub" target="_blank">
+		<a href="https://github.com/natanfelles" class="btn btn-icon btn-default" data-toggle="tooltip" data-placement="bottom" title="GitHub" target="_blank">
 			<i class="fa fa-github"></i>
 		</a>
 	</div>
