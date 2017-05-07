@@ -7,24 +7,24 @@
 
   {% include  meta_social.html %}
 
-  <link rel="apple-touch-icon" href="{{ 'assets/img/apple-touch-icon.png' | absolute_url }}">
-  <link rel="icon" type="image/png" href="{{ 'assets/img/favicon.png' | absolute_url }}">
-  <link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}">
+  <link rel="apple-touch-icon" href="{{ 'assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ 'assets/img/favicon.png' | relative_url }}">
+  <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
 
   <meta name="environment" content="{{ site.env }}">
 
-  {% if site.env != "development" %}
+  {% if site.env == "development" %}
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/external/css/bootstrap.min.css' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/external/css/font-awesome.min.css' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/external/js/highlightjs/styles/atom-one-dark.css' | relative_url }}">
+  {% else %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css" />
-  {% else %}
-    <link rel="stylesheet" type="text/css" href="{{ 'assets/external/css/bootstrap.min.css' | absolute_url }}">
-    <link rel="stylesheet" type="text/css" href="{{ 'assets/external/css/font-awesome.min.css' | absolute_url }}">
-    <link rel="stylesheet" type="text/css" href="{{ 'assets/external/js/highlightjs/styles/atom-one-dark.css' | absolute_url }}">
   {% endif %}
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900">
-  <link rel="stylesheet" type="text/css" href="{{ 'assets/styles.css' | absolute_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ 'assets/styles.css' | relative_url }}">
 
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ 'feed.xml' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ 'feed.xml' | relative_url }}">
 </head>
