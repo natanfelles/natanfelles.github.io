@@ -203,16 +203,6 @@ $(document).ready(function(){
         }
     });
 
-    /* Blog posts list */
-    // $('.posts-list .well').each(function (k, v) {
-    //     $(this).children('a').each(function (k, v) {
-    //         if (k === 0) {
-    //             $(this).prev().prev().remove('·');
-    //             console.log($(this).prev().prev());
-    //         }
-    //     });
-    // });
-
     $('.posts-list .list-group-item').each(function () {
         var link = $(this).children('p').children('.btn').attr('href');
         //console.log(link);
