@@ -37,6 +37,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
   - serve.sh
   - /assets/img/*.svg
 
