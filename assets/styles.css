@@ -81,6 +81,10 @@ a.thumbnail:hover {
 	margin: 20px auto;
 }
 
+.logo:hover {
+    box-shadow: 0 2px 300px rgba(255, 255, 255, .5);
+}
+
 #hero hr {
 	border-top-color: #373737;
 }
