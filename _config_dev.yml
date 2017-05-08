@@ -18,6 +18,7 @@ google:
   cse-cx: 007355044916868045354:yoso7zf_dnw #OK
   api-key:  AIzaSyCKn6VsmdF0mLCyN6gpmi-C-GDj43DljnU #OK
 disqus_shortname: natanfelles
+branch: master
 ###########
 
 env: development
