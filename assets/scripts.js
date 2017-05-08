@@ -181,7 +181,7 @@ $(document).ready(function(){
         }
     });
     if (typeof hljs == 'object') {
-        hljs.tabReplace = '  ';
+        // hljs.configure({ tabReplace: '  ' });
         hljs.initHighlightingOnLoad();
         hljs.initLineNumbersOnLoad();
     }
