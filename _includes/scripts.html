@@ -1,13 +1,13 @@
 {% if jekyll.environment == 'development' %}
-    <script src="{{'assets/external/js/jquery.min.js' | relative_url}}"></script>
-    <script src="{{'assets/external/js/bootstrap.min.js' | relative_url}}"></script>
+    <script src="{{ 'assets/external/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ 'assets/external/js/bootstrap.min.js' | relative_url }}"></script>
     {% if page.url contains 'blog' %}
-    	{% comment %}<script src="{{'assets/external/js/jquery.lazy.min.js' | relative_url}}"></script>{% endcomment %}
-    	<script type="text/javascript" src="{{ 'assets/external/js/highlightjs/highlight.pack.js' | absolute_url }}"></script>
-        <script type="text/javascript" src="{{ 'assets/external/js/highlightjs/highlightjs-line-numbers.js' | absolute_url }}"></script>
-	   {% comment %}<script type="text/javascript" src="{{ 'assets/external/js/enscroll-0.6.2.min.js' | absolute_url }}"></script>{% endcomment %}
+    	{% comment %}<script src="{{ 'assets/external/js/jquery.lazy.min.js' | relative_url }}"></script>{% endcomment %}
+    	<script type="text/javascript" src="{{ 'assets/external/js/highlightjs/highlight.pack.js' | relative_url }}"></script>
+        <script type="text/javascript" src="{{ 'assets/external/js/highlightjs/highlightjs-line-numbers.js' | relative_url }}"></script>
+	   {% comment %}<script type="text/javascript" src="{{ 'assets/external/js/enscroll-0.6.2.min.js' | relative_url }}"></script>{% endcomment %}
     {% endif %}
-    {% comment %}<script type="text/javascript" src="{{ 'assets/external/js/validator.min.js' | absolute_url }}"></script>{% endcomment %}
+    {% comment %}<script type="text/javascript" src="{{ 'assets/external/js/validator.min.js' | relative_url }}"></script>{% endcomment %}
 {% else %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,4 +15,4 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/1.1.0/highlightjs-line-numbers.min.js"></script>
 {% endif %}
-<script src="{{'assets/scripts.js' | relative_url}}"></script>
+<script src="{{ 'assets/scripts.js' | relative_url }}"></script>
