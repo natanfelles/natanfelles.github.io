@@ -25,7 +25,7 @@ env: production
 
 # Build settings
 markdown: kramdown
-highlighter: none
+highlighter: false
 kramdown:
   syntax_highlighter_opts:
     disable : true
