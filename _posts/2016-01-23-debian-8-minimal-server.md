@@ -35,131 +35,131 @@ Insira o CD de instalação e dê boot por ele. Se você estiver usando o Virtua
 
 Selecione _Graphical install_ para usar a interface gráfica de instalação:
 
-![Debian 01]({{ site.url }}/assets/img_posts/debian-install-01.png)
+![Debian 01]({{ 'assets/img_posts/debian-install-01.png' | relative_url }})
 
 Selecione o idioma padrão do sistema. Para servidores, normalmente, deixa-se em inglês, mesmo.
 
-![Debian 02]({{ site.url }}/assets/img_posts/debian-install-02.png)
+![Debian 02]({{ 'assets/img_posts/debian-install-02.png' | relative_url }})
 
 Escolha a localização da sua máquina:
 
-![Debian 03]({{ site.url }}/assets/img_posts/debian-install-03.png)
+![Debian 03]({{ 'assets/img_posts/debian-install-03.png' | relative_url }})
 
-![Debian 04]({{ site.url }}/assets/img_posts/debian-install-04.png)
+![Debian 04]({{ 'assets/img_posts/debian-install-04.png' | relative_url }})
 
-![Debian 05]({{ site.url }}/assets/img_posts/debian-install-05.png)
+![Debian 05]({{ 'assets/img_posts/debian-install-05.png' | relative_url }})
 
-![Debian 06]({{ site.url }}/assets/img_posts/debian-install-06.png)
+![Debian 06]({{ 'assets/img_posts/debian-install-06.png' | relative_url }})
 
 Selecione o layout do seu teclado:
 
-![Debian 07]({{ site.url }}/assets/img_posts/debian-install-07.png)
+![Debian 07]({{ 'assets/img_posts/debian-install-07.png' | relative_url }})
 
 O instaldor irá verificar o CD de instalação, o hardware e configurar a rede se houver um servidor DHCP:
 
-![Debian 08]({{ site.url }}/assets/img_posts/debian-install-08.png)
+![Debian 08]({{ 'assets/img_posts/debian-install-08.png' | relative_url }})
 
 Defina o hostname. Neste exemplo, o servidor se chamará debian.dominio.com, então eu coloquei debian:
 
-![Debian 09]({{ site.url }}/assets/img_posts/debian-install-09.png)
+![Debian 09]({{ 'assets/img_posts/debian-install-09.png' | relative_url }})
 
 Defina seu domínio. Neste exemplo será dominio.com:
 
-![Debian 10]({{ site.url }}/assets/img_posts/debian-install-10.png)
+![Debian 10]({{ 'assets/img_posts/debian-install-10.png' | relative_url }})
 
 Depois, defina a senha do super usuário root:
 
-![Debian 11]({{ site.url }}/assets/img_posts/debian-install-11.png)
+![Debian 11]({{ 'assets/img_posts/debian-install-11.png' | relative_url }})
 
 Crie uma conta de usuário Linux padrão, pode ser seu próprio nome. Eu escolhi colocar Administrador; com o nome de usuário administrador (não use admin pois isto é um nome reservado pelo Debian):
 
-![Debian 12]({{ site.url }}/assets/img_posts/debian-install-12.png)
+![Debian 12]({{ 'assets/img_posts/debian-install-12.png' | relative_url }})
 
-![Debian 13]({{ site.url }}/assets/img_posts/debian-install-13.png)
+![Debian 13]({{ 'assets/img_posts/debian-install-13.png' | relative_url }})
 
-![Debian 14]({{ site.url }}/assets/img_posts/debian-install-14.png)
+![Debian 14]({{ 'assets/img_posts/debian-install-14.png' | relative_url }})
 
 Selecione o fuso horário do servidor:
 
-![Debian 15]({{ site.url }}/assets/img_posts/debian-install-15.png)
+![Debian 15]({{ 'assets/img_posts/debian-install-15.png' | relative_url }})
 
 Agora, vamos particionar os disco. Para simplificar a instalação, selecionei
 	_Guided – use entire disk and set up LVM_, o que criará uma grande partição / para o sistema de arquivos e outra para a swap. Se você souber o que está fazendo, pode personalizar conforme achar necessário;
 
-![Debian 16]({{ site.url }}/assets/img_posts/debian-install-16.png)
+![Debian 16]({{ 'assets/img_posts/debian-install-16.png' | relative_url }})
 
-![Debian 17]({{ site.url }}/assets/img_posts/debian-install-17.png)
+![Debian 17]({{ 'assets/img_posts/debian-install-17.png' | relative_url }})
 
-![Debian 18]({{ site.url }}/assets/img_posts/debian-install-18.png)
+![Debian 18]({{ 'assets/img_posts/debian-install-18.png' | relative_url }})
 
-![Debian 19]({{ site.url }}/assets/img_posts/debian-install-19.png)
+![Debian 19]({{ 'assets/img_posts/debian-install-19.png' | relative_url }})
 
 Quando estiver terminado o particionamento, selecione _Finish partitioning and write changes to disk_:
 
-![Debian 20]({{ site.url }}/assets/img_posts/debian-install-20.png)
+![Debian 20]({{ 'assets/img_posts/debian-install-20.png' | relative_url }})
 
 Selecione _Yes_ quando aparecer a pergunta _Write changes to disk?_:
 
-![Debian 21]({{ site.url }}/assets/img_posts/debian-install-21.png)
+![Debian 21]({{ 'assets/img_posts/debian-install-21.png' | relative_url }})
 
 Em seguida, as novas partições serão criadas e formatadas. Enfim, o sistema base estará instalado:
 
-![Debian 22]({{ site.url }}/assets/img_posts/debian-install-22.png)
+![Debian 22]({{ 'assets/img_posts/debian-install-22.png' | relative_url }})
 
 Agora, iremos configurar o gerenciador de pacotes apt. Se você também estiver usando o CD Debian Jessie Netinstall, que possui o mínimo requerido de pacotes, deve usar um espelho de rede. Selecione o país onde o espelho de rede localiza-se (normalmente, utiliza-se o mesmo país onde o servidor está localizado por causa da baixa latência).
 
 Selecione o país e a rede espelho que você quer utilizar:
 
-![Debian 23]({{ site.url }}/assets/img_posts/debian-install-23.png)
+![Debian 23]({{ 'assets/img_posts/debian-install-23.png' | relative_url }})
 
-![Debian 24]({{ site.url }}/assets/img_posts/debian-install-24.png)
+![Debian 24]({{ 'assets/img_posts/debian-install-24.png' | relative_url }})
 
 Se você estiver usando um Proxy HTTP, configure-o agora ou simplesmente deixe em branco e clique em
 	_Continue_:
 
-![Debian 25]({{ site.url }}/assets/img_posts/debian-install-25.png)
+![Debian 25]({{ 'assets/img_posts/debian-install-25.png' | relative_url }})
 
 O Apt irá atualizar a base de pacotes através do espelho selecionado anteriormente:
 
-![Debian 26]({{ site.url }}/assets/img_posts/debian-install-26.png)
+![Debian 26]({{ 'assets/img_posts/debian-install-26.png' | relative_url }})
 
 Podemos selecionar <em>No</em> para não enviar informações anônimas sobre o uso de pacotes:
 
-![Debian 27]({{ site.url }}/assets/img_posts/debian-install-27.png)
+![Debian 27]({{ 'assets/img_posts/debian-install-27.png' | relative_url }})
 
 Selecionaremos apenas <em>SSH server</em> (para podermos logar remotamente por SSH) e _Standard system utilities_, depois pressione _Continue_.
 
-![Debian 28]({{ site.url }}/assets/img_posts/debian-install-28.png)
+![Debian 28]({{ 'assets/img_posts/debian-install-28.png' | relative_url }})
 
 Os pacotes selecionados serão baixados e instalados automaticamente através do Apt:
 
-![Debian 29]({{ site.url }}/assets/img_posts/debian-install-29.png)
+![Debian 29]({{ 'assets/img_posts/debian-install-29.png' | relative_url }})
 
 Quando questionado por _Install the GRUB boot loader to the master boot record?_, selecione _Yes_:
 
-![Debian 30]({{ site.url }}/assets/img_posts/debian-install-30.png)
+![Debian 30]({{ 'assets/img_posts/debian-install-30.png' | relative_url }})
 
 O instaldor irá perguntar em qual partição você deseja instalar o gerenciador de inicialização Grub. Neste caso, meu servidor possui apenas um disco, então escolhi /dev/sda.
 
-![Debian 31]({{ site.url }}/assets/img_posts/debian-install-31.png)
+![Debian 31]({{ 'assets/img_posts/debian-install-31.png' | relative_url }})
 
 Pressione enter para instalar o Grub e finalizar a instalação do sistema.
 
 A instalação foi concluída. Remova o CD de instalação e clique em <em>Continue</em> para reiniciar o sistema:
 
-![Debian 32]({{ site.url }}/assets/img_posts/debian-install-32.png)
+![Debian 32]({{ 'assets/img_posts/debian-install-32.png' | relative_url }})
 
 Ao iniciar o sistema você verá a tela do Grub, pressione enter ou aguarde o sistema iniciar automaticamente.
 
-![Debian 33]({{ site.url }}/assets/img_posts/debian-install-33.png)
+![Debian 33]({{ 'assets/img_posts/debian-install-33.png' | relative_url }})
 
 Logo você estará com o sistema de login carregado.
 
-![Debian 34]({{ site.url }}/assets/img_posts/debian-install-34.png)
+![Debian 34]({{ 'assets/img_posts/debian-install-34.png' | relative_url }})
 
 Entre com o nome de usuário _root_ e a senha de root que você escolheu durante a instalação. Quando quiser logar por SSH, use seu nome de usuário padrão, no meu caso _administrador_, pois o usuário root, por padrão, é desabilitado de conexões remotas via SSH. Digite _su_ (super user) e entre com a senha:
 
-![Debian 35]({{ site.url }}/assets/img_posts/debian-install-35.png)
+![Debian 35]({{ 'assets/img_posts/debian-install-35.png' | relative_url }})
 
 ## 4 – Instalação do Servidor SSH
 

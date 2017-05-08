@@ -32,7 +32,7 @@ Alternatively,
 
 If you want to embed images, this is how you do it:
 
-![Logo]({{ site.url }}/assets/img/logo.png)
+![Logo]({{ 'assets/img/logo.png' | relative_url }})
 
 ## Headers & Quotes
 

@@ -31,7 +31,7 @@ kramdown:
     disable : true
 gems:
   - jekyll-paginate
-  #- jekyll-feed
+  - jekyll-feed
   #- jekyll-seo-tag
   # - jekyll-minifier
 exclude:

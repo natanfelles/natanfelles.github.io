@@ -77,11 +77,11 @@ Para finalizar este tutorial, veremos a configuração básica para rodar qualqu
 
 Abra o VirtualBox e clique no menu &#8220;Novo&#8221;:
 
-![VirtualBox 01]({{ site.url }}/assets/img_posts/virtualbox-install-01.png)
+![VirtualBox 01]({{ 'assets/img_posts/virtualbox-install-01.png' | relative_url }})
 
 O programa é super intuitivo, dê um nome à sua Virtual Machine, escolha o tipo e a versão do sistema:
 
-![VirtualBox 02]({{ site.url }}/assets/img_posts/virtualbox-install-02.png)
+![VirtualBox 02]({{ 'assets/img_posts/virtualbox-install-02.png' | relative_url }})
 
 Em seguida, defina a quantidade de RAM dedicada ao novo SO.
 
@@ -89,55 +89,55 @@ Em seguida, defina a quantidade de RAM dedicada ao novo SO.
 
 - Cuidado para não colocar muita RAM. O sistema hospedeiro poderá travar por insuficiência de memória.
 
-![VirtualBox 03]({{ site.url }}/assets/img_posts/virtualbox-install-03.png)
+![VirtualBox 03]({{ 'assets/img_posts/virtualbox-install-03.png' | relative_url }})
 
 Acrescente um novo disco rígido:
 
-![VirtualBox 04]({{ site.url }}/assets/img_posts/virtualbox-install-04.png)
+![VirtualBox 04]({{ 'assets/img_posts/virtualbox-install-04.png' | relative_url }})
 
 O tipo de arquivo de disco rígido pode ser mantido como VDI:
 
-![VirtualBox 05]({{ site.url }}/assets/img_posts/virtualbox-install-05.png)
+![VirtualBox 05]({{ 'assets/img_posts/virtualbox-install-05.png' | relative_url }})
 
 Agora, você pode escolher o tipo de armazenamento do disco. Dinamicamente alocado permitirá que o tamanho do arquivo VDI aumente conforme você for salvando dados na VM, já o tamanho fixo deve ser pré-determinado, o que, inicialmente, ocupará mais espaço do disco físico, porém fornece um desempenho melhor ao rodar a VM. No meu caso, deixarei o armazenamento dinâmico, mesmo&#8230;
 
-![VirtualBox 06]({{ site.url }}/assets/img_posts/virtualbox-install-06.png)
+![VirtualBox 06]({{ 'assets/img_posts/virtualbox-install-06.png' | relative_url }})
 
 Defina o local onde o VDI será salvo e o seu tamanho. Se você definiu o disco virtual como Dinamicamente alocado, esse será o tamanho máximo que ele pode chegar. Se o definiu como com Tamanho Fixo, o arquivo já alocará este tamanho em seu disco físico.
 
-![VirtualBox 07]({{ site.url }}/assets/img_posts/virtualbox-install-07.png)
+![VirtualBox 07]({{ 'assets/img_posts/virtualbox-install-07.png' | relative_url }})
 
 Depois que criar o disco virtual, as definições básicas da VM estarão concluídas. Porém, podemos realizar mais configurações para adaptarmos a máquina virtual conforme necessário. Clique no menu _Configurações_:
 
-![VirtualBox 08]({{ site.url }}/assets/img_posts/virtualbox-install-08.png)
+![VirtualBox 08]({{ 'assets/img_posts/virtualbox-install-08.png' | relative_url }})
 
 Na janela de configurações, podemos ajustar as opções do Sistema. Podes mudar a quantidade de memória, ordem de boot e outros:
 
-![VirtualBox 09]({{ site.url }}/assets/img_posts/virtualbox-install-09.png)
+![VirtualBox 09]({{ 'assets/img_posts/virtualbox-install-09.png' | relative_url }})
 
 Nas opções do Monitor, ajuste as configurações 3D se o sistema convidado possui interface gráfica:
 
-![VirtualBox 10]({{ site.url }}/assets/img_posts/virtualbox-install-10.png)
+![VirtualBox 10]({{ 'assets/img_posts/virtualbox-install-10.png' | relative_url }})
 
 Em Armazenamento, você pode adicionar mais drives e já inserir a imagem de instalação:
 
-![VirtualBox 11]({{ site.url }}/assets/img_posts/virtualbox-install-11.png)
+![VirtualBox 11]({{ 'assets/img_posts/virtualbox-install-11.png' | relative_url }})
 
 No menu Rede, uma boa escolha é conectar a placa em modo bridge para usar a placa de rede física:
 
-![VirtualBox 12]({{ site.url }}/assets/img_posts/virtualbox-install-12.png)
+![VirtualBox 12]({{ 'assets/img_posts/virtualbox-install-12.png' | relative_url }})
 
 Assim que finalizar as configurações, clique no menu <em>Iniciar</em> para ligar a VM:
 
-![VirtualBox 08]({{ site.url }}/assets/img_posts/virtualbox-install-08.png)
+![VirtualBox 08]({{ 'assets/img_posts/virtualbox-install-08.png' | relative_url }})
 
 Caso não tenha sido inserido uma imagem de disco, o VirtualBox pedirá que você faça isso:
 
-![VirtualBox 13]({{ site.url }}/assets/img_posts/virtualbox-install-13.png)
+![VirtualBox 13]({{ 'assets/img_posts/virtualbox-install-13.png' | relative_url }})
 
 Com tudo pronto, agora você pode prosseguir com a instalação do SO:
 
-![VirtualBox 14]({{ site.url }}/assets/img_posts/virtualbox-install-14.png)
+![VirtualBox 14]({{ 'assets/img_posts/virtualbox-install-14.png' | relative_url }})
 
 ## Conclusão
 

@@ -1,7 +1,7 @@
 {% comment %}
 {% assign uri = page.url | remove: '.html' | split: '/'  %}
 <ol class="breadcrumb">
-  <li><a href="{{ site.url }}">Início</a></li>
+  <li><a href="{{ '/' | relative_url }}">Início</a></li>
   {% if uri[1] != page.url %}
   	{% for p in site.pages  %}
   		{% assign url =  p.url | remove: '/' %}

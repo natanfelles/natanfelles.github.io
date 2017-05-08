@@ -89,4 +89,4 @@ $this->dbforge->drop_table($this->table);
 
 Admiro, utilizo e contribuo com o projeto [Adminer](https://www.adminer.org){: target="_blank"}, principalmente pela sua interface **completa** e simples de acompanhar a integridade de bancos de dados. Então, se você quiser utilizá-lo, mas não curtir muito a interface padrão, criei uma interface para ele baseada no Twitter Bootstrap 3 e está disponível no [GitHub](https://github.com/natanfelles/adminer-bootstrap-like){: target="_blank"}.
 
-![Adminer Bootstrap-Like]({{ site.url }}/assets/img_posts/adminer-bootstrap-like.png)
+![Adminer Bootstrap-Like]({{ 'assets/img_posts/adminer-bootstrap-like.png' | relative_url }})
