@@ -3,7 +3,7 @@
 {% capture keywords %}{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}{% endcapture %}
 {% capture twitter_site %}{% if page.twitter.site %}{{ page.twitter.site }}{% else %}{{ site.twitter.site }}{% endif %}{% endcapture %}
 {% capture twitter_creator %}{% if page.twitter.creator %}{{ page.twitter.creator }}{% else %}{{ site.twitter.creator }}{% endif %}{% endcapture %}
-{% capture image %}{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}{% endcapture %}
+{% capture image %}{% if page.image contains 'img/' %}{{ site.image | relative_url }}{% else %}{{ 'assets/img_posts/' | append: page.image | relative_url }}{% endif %}{% endcapture %}
 
 <meta name="description" content="{{ description }}">
 <meta name="keywords" content="{{ keywords }}">
