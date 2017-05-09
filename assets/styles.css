@@ -405,7 +405,7 @@ footer {
 	height: 100%;
 	position: fixed;
 	z-index: 99999;
-	background:  #141414 50% 30% no-repeat;
+	background: #141414;
 }
 
 .services .thumbnail {
