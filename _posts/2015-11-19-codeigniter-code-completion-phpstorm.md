@@ -21,4 +21,4 @@ Extraia-o no mesmo diretório do arquivo index.php e através do PhpStorm vá at
 - Funciona perfeitamente com o CodeIgniter 3.
 - Atualizações podem ser realizadas diretamente no arquivo phpstorm.php, vide CodeIgniter User Guide.
 
-[Download](https://github.com/natanfelles/codeigniter-phpstorm){:target="_blank" class="btn small"}
+[Ver no GitHub](https://github.com/natanfelles/codeigniter-phpstorm){:target="_blank" class="btn btn-default"}
