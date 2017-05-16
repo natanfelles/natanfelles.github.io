@@ -142,7 +142,7 @@ Supondo que você já possua um [servidor web]({{ site.baseurl }}{% post_url 201
 wget https://github.com/elijaa/phpmemcachedadmin/archive/master.zip
 unzip master.zip
 mv phpmemcacheadmin-master phpmemcacheadmin
-cd phpmemcacheadmin-master
+cd phpmemcacheadmin
 chmod +rx *
 chmod 777 Config/Memcache.php
 chmod 777 Temp/
