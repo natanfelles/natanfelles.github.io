@@ -8,7 +8,7 @@ body {
 	background-color: #191A1C;
 }
 
-h1, h2, h3, h4, h5, h5 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Open Sans", sans-serif;
     font-weight: lighter;
     color: #fff;
@@ -31,6 +31,17 @@ a:hover {
 	cursor: pointer;
 }
 
+blockquote {
+	border-left-color: #bbb;
+}
+
+legend {
+	color: #00a4e2;
+	font-size: 24px;
+	font-weight: 500;
+	border-bottom: 1px dotted #000;
+}
+
 .form-control {
     color: #fff;
     background-color: #575757;
@@ -45,11 +56,11 @@ a:hover {
     box-shadow: inset 0 1px 1px #0000001a, 0 0 8px #00a4e299;
 }
 
-.content {
-	/*background-color: #191A1C;
+/*.content {
+	background-color: #191A1C;
 	border-left: 1px solid #000;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) inset;*/
-}
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) inset;
+}*/
 
 .top-border {
 	border-top: 4px solid #00a4e2;
@@ -100,8 +111,6 @@ a.thumbnail:hover {
     margin: 40px auto;
 }
 
-
-
 .posts-list .list-group-item {
 	padding: 20px 0;
 }
@@ -125,8 +134,6 @@ a.thumbnail:hover {
 .content hr {
 	border-top: 1px dotted #000;
 }
-
-.content .list-group {}
 
 .content .list-group-item {
     background-color: transparent;
@@ -157,6 +164,13 @@ a.thumbnail:hover {
 	padding: 5px 10px;
 	font-size: 12px;
     font-weight: normal;
+}
+
+.btn-xs {
+	padding: 1px 5px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
 }
 
 .btn-primary {
@@ -251,10 +265,10 @@ code {
     font-size: 100%;
 }
 
-pre code {
-    /*font-size: 12px;*/
-    /*white-space: pre;*/
-}
+/*pre code {
+    font-size: 12px;
+    white-space: pre;
+}*/
 
 .panel-hero {
 	border-top: 4px solid #00a4e2;
@@ -283,29 +297,6 @@ header {
     margin: 0 auto;
     padding-right: 0;
     padding-left: 0;
-}
-
-@media (max-width: 767px) {
-    .navbar-brand {
-        padding-top: 20px !important;
-    }
-    .navbar-header {
-        margin: 0 5px !important;
-    }
-    .navbar .container {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-}
-
-@media (max-width: 640px) {
-    .navbar-brand {
-        margin-top: -5px;
-    }
-    .navbar .container {
-        padding-right: 10px;
-        padding-left: 25px;
-    }
 }
 
 .navbar-default {
@@ -450,6 +441,20 @@ footer {
 	border-left-color: #f41249;
 }
 
+.popover {
+	border: 1px solid #000;
+	background-color: #191A1C;
+}
+
+.popover-title {
+    background-color: #141516;
+    border-bottom: 1px solid #000;
+}
+
+.popover.top > .arrow::after {
+    border-top-color: #000;
+}
+
 .panel, .modal-content {
     background-color: #141516;
     border-color: #000;
@@ -481,9 +486,64 @@ footer {
     opacity: .9;
 }
 
+#cp-images .modal-body {
+    padding: 0;
+}
+
+.carousel-caption,
+.carousel-caption h3 {
+	color: #141516;
+	text-shadow: 0 2px 2px #fff;
+}
+
+.carousel-caption h3 {
+	color: #00a4e2;
+	font-weight: 500;
+}
+
+.carousel-indicators li {
+    background-color: #141516;
+    border: 1px solid #000;
+	box-shadow: 0 2px 2px #fff;
+}
+
+.carousel-indicators .active {
+    background-color: #00a4e2;
+}
+
 .input-group-btn {
 	font-size: inherit;
 	/*padding: inherit;*/
+}
+
+.alert-danger {
+	color: #360605;
+	background-color: #e61414;
+	border-color: #4b121b;
+}
+
+.alert-info {
+    color: #002f47;
+    background-color: #0671a7;
+    border-color: #085969;
+}
+
+.alert-warning {
+    color: #4a340e;
+    background-color: #f9d100;
+    border-color: #d2a23e;
+}
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+    color: #e61414;
+}
+
+.has-error .form-control,
+.has-error .form-control:focus {
+    border-color: #e61414;
+	-webkit-box-shadow: inset 0 1px 1px #0000001a, 0 0 8px #e6141499;
+    -moz-box-shadow: inset 0 1px 1px #0000001a, 0 0 8px #e6141499;
+    box-shadow: inset 0 1px 1px #0000001a, 0 0 8px #e6141499;
 }
 
 .input-group-btn .btn {
@@ -559,6 +619,28 @@ h6:hover .header-link {
 }
 
 .breadcrumb {
-    
+	font-size: 13px;
 }
 
+@media (max-width: 767px) {
+    .navbar-brand {
+        padding-top: 20px !important;
+    }
+    .navbar-header {
+        margin: 0 5px !important;
+    }
+    .navbar .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar-brand {
+        margin-top: -5px;
+    }
+    .navbar .container {
+        padding-right: 10px;
+        padding-left: 25px;
+    }
+}
