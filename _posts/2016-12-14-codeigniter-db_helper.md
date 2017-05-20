@@ -1,11 +1,12 @@
 ---
-title: "CodeIgniter - Helper de Banco de dados para Adicionar e remover Chaves Estrangeiras"
+title: "CodeIgniter - Helper de Banco de Dados para Adicionar e Remover Chaves Estrangeiras"
 layout: post
 categories: desenvolvimento
 image: db_helper.svg
+tags: codeigniter mysql
 ---
 
-Se você trabalha com relacionamentos em tabelas de bancos de dados, principalmente ao utilizar o motor InnoDB no MySQL, com o framework CodeIgniter então esse helper lhe pode ser muito útil.
+Se você trabalha com relacionamentos em tabelas de bancos de dados, principalmente ao utilizar o motor InnoDB do MySQL, com o framework CodeIgniter, então esse helper lhe pode ser muito útil.
 
 Copie e cole o código abaixo em um arquivo chamado `db_helper.php` dentro da pasta `helpers` da sua aplicação e carregue-o com autoload ou `$this->load->helper('db')`.
 
@@ -55,28 +56,28 @@ Você deve usar as funções desse helper dentro de uma query.
 Para adicionar Chaves Estrangeiras, faça algo assim:
 
 ```php
-<?php
+$table = 'users';
 $fields = array(
     'id'         => [
         'type'           => 'INT(11)',
         'auto_increment' => TRUE,
     ],
-    'user_id'    => [
-        'type'     => 'INT(11)',
+    'country_id' => [
+        'type'           => 'INT(11)',
     ],
 );
 $this->dbforge->add_field($fields);
 $this->dbforge->add_key('id', TRUE);
-$this->dbforge->create_table($this->table);
-$this->db->query(add_foreign_key($this->table, 'user_id', 'users(id)', 'CASCADE', 'CASCADE'));
+$this->dbforge->create_table($table);
+$this->db->query(add_foreign_key($table, 'country_id', 'countries(id)', 'CASCADE', 'CASCADE'));
 ```
 
 E para remover as Chaves Estrangeiras, rode a função `drop_foreign_key`:
 
 ```php
-<?php
-$this->db->query(drop_foreign_key($this->table, 'user_id'));
-$this->dbforge->drop_table($this->table);
+$table = 'users';
+$this->db->query(drop_foreign_key($table, 'country_id'));
+$this->dbforge->drop_table($table);
 ```
 
 É isso, algo simples que poderá lhe ajudar a manter uma melhor integridade no gerenciamento de bancos de dados usando o CodeIgniter.
