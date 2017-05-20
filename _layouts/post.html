@@ -9,7 +9,7 @@ layout: content
 	{% for category in page.categories %}
 		· <a href="{{ 'blog/categorias#' | append: category | relative_url }}">{{ category }}</a>
 	{% endfor %}
-	<span class="pull-right">{{ page.date | date: "%-d.%m.%Y" }}</span>
+	<span class="pull-right">{{ page.date | date: "%d.%m.%Y" }}</span>
 </div>
 
 <p>
