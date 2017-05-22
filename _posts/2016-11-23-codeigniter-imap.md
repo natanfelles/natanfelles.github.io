@@ -15,14 +15,12 @@ Perfeito para criar seu próprio webmail ou personalizar o gerenciamento de e-ma
 Antes de mais nada, você precisa carregar a biblioteca. Use autoload ou carregue onde precisar desta forma:
 
 ```php
-<?php
 $this->load->library('imap');
 ```
 
 Após, inicialize a conexão com o servidor:
 
 ```php
-<?php
 $config = array(
 	'host'     => 'imap-mail.outlook.com',
 	'encrypto' => 'ssl',
@@ -35,7 +33,6 @@ $this->imap->imap_connect($config);
 Feito isso, você pode começar a se comunicar com o servidor. Veja como obter as pastas da sua caixa de e-mails:
 
 ```php
-<?php
 $folders = $this->imap->get_folders();
 print_r($folders);
 ```

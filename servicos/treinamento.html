@@ -1,8 +1,27 @@
 ---
-layout: content
+layout: service
 title: Serviços · Treinamento
+description: Treinamentos relacionados ao uso de softwares, programação e métodos ágeis
+keywords: servidor, servidor web, linux, servidor linux, centos, debian, ubuntu, treinamento, seo, redes sociais, webmaster, administrador de sistemas, hospedagem, unix, linux, internet, php, shell script, bash, php 7, html, css, js, javascript, jquery, banco de dados, sql, mysql, mariadb, protocolos, freelancer
 ---
 
 <h1 class="page-header">Serviços <small>Treinamento</small></h1>
 
 {% include underconstruction.html %}
+
+<div id="service_type-content" class="hide">
+	<div class="alert alert-warning">
+	  <strong><i class="fa fa-warning"></i> Atenção!</strong><br>
+	  O Material de Apoio (páginas web, PDF e vídeos) está sendo desenvolvido.<br>
+	  Assim que estiver pronto serão disponibilizados os diversos tipos de treinamentos. Obrigado!
+	</div>
+	<legend>Tipo de Treinamento</legend>
+	<input type="hidden" name="Serviço" value="treinamento">
+	<div class="form-group">
+		<label>Serviço</label>
+		<select class="form-control" name="Serviço" id="service" required>
+			<option value="" selected>Selecione um serviço...</option>
+		</select>
+		<div class="help-block with-errors"></div>
+	</div>
+</div>

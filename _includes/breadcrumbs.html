@@ -1,8 +1,9 @@
-{% comment %}
+{% capture breadcrumbs %}
 {% assign uri = page.url | remove: '.html' | split: '/'  %}
 <ol class="breadcrumb">
   <li><a href="{{ '/' | relative_url }}">Início</a></li>
-  {% if uri[1] != page.url %}
+  {% assign p1 = page.url | remove: '/' %}
+  {% if uri[1] != p1 %}
   	{% for p in site.pages  %}
   		{% assign url =  p.url | remove: '/' %}
   		{% if url == uri[1] %}
@@ -11,11 +12,23 @@
   	{% endfor %}
   {% endif %}
   {% if uri[2]  %}
-  	<li><a href="{{ uri[1]/uri[2] | relative_url }}">{{ uri[2] }}</a></li>
+        {% for p in site.pages  %}
+            {% assign url =  p.url | remove: '/' %}
+            {% if url == uri[2] %}
+                <li><a href="{{ uri[1]/uri[2] | relative_url }}">{{ p.title }}</a></li>
+            {% endif %}
+        {% endfor %}
   {% endif %}
   {% if uri[3] %}
-  	<li><a href="{{ uri[1]/uri[2]/uri[3] | relative_url }}">{{ uri[3] }}</a></li>
+    {% for p in site.pages  %}
+      {% assign url =  p.url | remove: '/' %}
+      {% if url == uri[3] %}
+          <li><a href="{{ uri[1]/uri[2]/uri[3] | relative_url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% endfor %}
   {% endif %}
   <li class="active">{{ page.title }}</li>
 </ol>
-{% endcomment %}
+{% endcapture %}
+
+{{ breadcrumbs | normalize_whitespace }}

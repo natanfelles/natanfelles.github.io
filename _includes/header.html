@@ -1,3 +1,4 @@
+{% capture header %}
 <header>
   <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -30,3 +31,10 @@
     </div>
   </nav>
 </header>
+{% endcapture %}
+
+{% if jekyll.environment == 'development' %}
+	{{ header }}
+{% else %}
+	{{ header | normalize_whitespace }}
+{% endif %}

@@ -193,6 +193,12 @@ a.thumbnail:hover {
     background: #141516;
 }
 
+.btn-primary.disabled:hover {
+    color: #bbb;
+    background: transparent;
+    border-color: #bbb;
+}
+
 .btn-default {
 	border-color: #bbb;
 	color: #bbb;
@@ -526,6 +532,12 @@ footer {
     color: #002f47;
     background-color: #0671a7;
     border-color: #085969;
+}
+
+.alert-success {
+    color: #053306;
+    background-color: #47bf15;
+    border-color: #264d05;
 }
 
 .alert-warning {

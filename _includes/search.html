@@ -1,3 +1,4 @@
+{% capture search %}
 {% comment %}<!-- <form id="search-form">
 	<div class="input-group">
 	  <input type="text" name="q" class="form-control" placeholder="Pesquisar guias...">
@@ -28,13 +29,20 @@
 					</div>
 				</form>
 				<div id="search-box">
-					<p class="text-muted text-right sr-benchmark">{% comment %}<!-- ajax -->{% endcomment %}</p>
-					<div class="list-group sr-results">{% comment %}<!-- ajax -->{% endcomment %}</div>
+					<p class="text-muted text-right sr-benchmark"></p>
+					<div class="list-group sr-results"></div>
 					<nav class="text-center sr-pages">
-						<ul class="pagination">{% comment %}<!-- ajax -->{% endcomment %}</ul>
+						<ul class="pagination"></ul>
 					</nav>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+{% endcapture %}
+
+{% if jekyll.environment == 'development' %}
+	{{ search }}
+{% else %}
+	{{ search | normalize_whitespace }}
+{% endif %}

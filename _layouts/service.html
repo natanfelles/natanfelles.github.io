@@ -1,0 +1,62 @@
+---
+layout: content
+---
+
+{% capture service %}
+
+{{ content }}
+
+<form action="//formspree.io/{{ site.email }}" method="POST" role="form" id="service-form" data-toggle="validator">
+	<input type="hidden" name="_format" value="plain" />
+	<input type="hidden" name="_subject" value="Solicitação de Serviço" />
+	<input type="hidden" name="_replyto" value="" />
+	<legend>Contato</legend>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="Nome">Nome</label>
+				<input type="text" class="form-control" id="nome" name="Nome" placeholder="Seu nome" minlength="5" maxlength="32" required>
+				<div class="help-block with-errors"></div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="E-mail">E-mail</label>
+				<input type="email" class="form-control" id="email" name="E-mail" placeholder="Seu e-mail" required>
+				<div class="help-block with-errors"></div>
+			</div>
+		</div>
+	</div>
+	<div id="service_type"></div>
+	<div id="service-confirm" style="display: none">
+		<legend>Opções</legend>
+		<div id="service-options"></div>
+		<legend>Observações</legend>
+		<div class="form-group">
+			<textarea name="Observação" class="form-control" rows="5" placeholder="Observações que você acredita serem relevantes a este serviço..." maxlength="2048"></textarea>
+			<div class="help-block with-errors"></div>
+		</div>
+		{% comment %}
+			<legend>Método de Pagamento</legend>
+			<div class="form-group">
+				<label for="provedor_de_pagamentos">Provedor de Pagamentos Preferencial</label>
+				<select class="form-control" name="provedor_de_pagamentos">
+					<option value="paypal">PayPal</option>
+					<option value="pagseguro">PagSeguro</option>
+					<option value="ted">Transferência Bancária</option>
+				</select>
+			</div>
+		{% endcomment %}
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</div>
+	</div>
+	<div class="alert" style="display: none;"></div>
+</form>
+{% endcapture %}
+
+{% if jekyll.environment == 'development' %}
+	{{ service }}
+{% else %}
+	{{ service | normalize_whitespace }}
+{% endif %}

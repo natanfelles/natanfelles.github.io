@@ -3,6 +3,7 @@ layout: content
 title: Blog · Posts por Tags
 ---
 
+{% capture blog_tags %}
 <h1 class="page-header">Blog <small>Posts por Tags</small></h1>
 
 <div class="tags-cloud">
@@ -23,3 +24,10 @@ title: Blog · Posts por Tags
 		</ul>
 	{% endfor %}
 </div>
+{% endcapture %}
+
+{% if jekyll.environment == 'development' %}
+	{{ blog_tags }}
+{% else %}
+	{{ blog_tags | normalize_whitespace }}
+{% endif %}

@@ -3,6 +3,7 @@ layout: content
 title: Blog · Posts por Categorias
 ---
 
+{% capture blog_categorias %}
 <h1 class="page-header">Blog <small>Posts por Categorias</small></h1>
 
 <div id="post">
@@ -17,3 +18,10 @@ title: Blog · Posts por Categorias
 		</ul>
 	{% endfor %}
 </div>
+{% endcapture %}
+
+{% if jekyll.environment == 'development' %}
+	{{ blog_categorias }}
+{% else %}
+	{{ blog_categorias | normalize_whitespace }}
+{% endif %}

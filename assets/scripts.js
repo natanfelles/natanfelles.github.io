@@ -11,7 +11,7 @@ var hello = ' _   _       _                _____    _ _           \n' +
 console.log(hello);
 
 /* Hero */
-function hero () {
+function hero() {
     $('#hero').parent().css({
         padding: 0
     });
@@ -22,24 +22,28 @@ function hero () {
     }).show();
 }
 
-function setupHero () {
-    if(window.location.pathname != '/'){
+function setupHero() {
+    if (window.location.pathname != '/') {
         $('.panel-hero').css({
             width: $('.panel-hero').parent().innerWidth()
         });
         $('.content').css({
             minHeight: window.innerHeight
         });
-        if (window.innerWidth < 1200)  {
+        if (window.innerWidth < 1200) {
             $('#hero').parent().hide();
             $('.content').removeClass('col-md-7').addClass('col-md-12');
             $('header').show();
-            $('body').css({ paddingTop: 30 });
+            $('body').css({
+                paddingTop: 30
+            });
         } else {
             $('#hero').parent().show();
             $('.content').removeClass('col-md-12').addClass('col-md-7');
             $('header').hide();
-            $('body').css({ paddingTop: 0 });
+            $('body').css({
+                paddingTop: 0
+            });
             hero();
         }
     } else {
@@ -66,7 +70,6 @@ function search(query, page) {
     if (page > 1) {
         startIndex = page * 10 - 10 + 1;
     }
-    console.log(startIndex);
 
     var cx = $('meta[name="google-cse-cx"]').attr('content');
     var key = $('meta[name="google-api-key"]').attr('content');
@@ -77,11 +80,8 @@ function search(query, page) {
         '&cx=' + cx +
         '&key=' + key +
         '&num=10&alt=json';
-    console.log(url);
 
     $.getJSON(url, function(data, status) {
-        console.log(data);
-        console.log(status);
         if (status == 'success') {
             var results = [];
             $(data.items).each(function(k, v) {
@@ -113,6 +113,8 @@ function search(query, page) {
             pagination(pages.current, pages.total, searchTerms);
 
         }
+    }).fail(function(a, b) {
+        $('.sr-results').html('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> Pesquisa não pode ser realizada no momento. Tente novamente mais tarde.</div>');
     });
 }
 
@@ -163,8 +165,72 @@ function pagination(current, total, query) {
     });
 }
 
+$('#service_type').html($('#service_type-content').html());
+
+$('select[id="service"]').change(function() {
+    var id = $(this).children(':selected').data('service');
+    var sv_all = $('#service-all').html();
+    var sv_specific = $('#service-' + id).html();
+    if (sv_all || sv_specific) {
+        var opt = (sv_all ? sv_all : '') + (sv_specific ? sv_specific : '');
+        $('#service-options').html(opt);
+        $('#service-confirm').show();
+        $('[data-toggle="popover"]').popover({
+            container: 'body',
+            placement: 'top',
+            trigger: 'focus',
+        });
+    } else {
+        $('#service-confirm').hide();
+    }
+    $('#service-form').children('.alert').hide();
+});
+
+/* Service Form */
+$('#service-form').submit(function() {
+    $(this).validator('update');
+    $('[name="_replyto"]').val($('[name="E-mail"]').val());
+    $('[name="_subject"]').val('Solicitação de Serviço · ' + $('[name="Tipo de Serviço"]').val());
+}).validator().on('submit', function(e) {
+    var alert = $(this).children('.alert');
+
+    /* TODO: Create Cookie active by 4 hours */
+
+
+    if (!e.isDefaultPrevented()) {
+        /* TODO: Get user IP from any free api */
+        $.ajax({
+            url: $(this).attr('action'),
+            method: 'POST',
+            data: $(this).serialize(),
+            dataType: 'json'
+        }).done(function(a) {
+            alert
+                .addClass('alert-success')
+                .html('<strong><i class="fa fa-check-circle"></i> Solicitação enviada com sucesso!</strong><br> Logo você receberá uma resposta em seu e-mail.')
+                .show();
+            $('#service-form input, #service-form textarea').each(function() {
+                $(this).val('');
+            });
+        }).fail(function() {
+            alert
+                .addClass('alert-danger')
+                .html('<i class="fa fa-exclamation-circle"></i> Solicitação não pode ser enviada agora. Tente novamente mais tarde.')
+                .show();
+        });
+    } else {
+        alert
+            .addClass('alert-danger')
+            .html('<i class="fa fa-exclamation-circle"></i> Corrija os erros do formulário.')
+            .show();
+    }
+
+    return false;
+});
+
+
 /* After document is loaded */
-$(document).ready(function(){
+$(document).ready(function() {
 
     /* Hero */
     setupHero();
@@ -181,7 +247,6 @@ $(document).ready(function(){
         }
     });
     if (typeof hljs == 'object') {
-        // hljs.configure({ tabReplace: '  ' });
         hljs.initHighlightingOnLoad();
         hljs.initLineNumbersOnLoad();
     }
@@ -191,7 +256,7 @@ $(document).ready(function(){
 
     /* External links */
     $('a').attr('target', function() {
-        if(this.host && this.host != location.host ) {
+        if (this.host && this.host != location.host) {
             return '_blank';
         }
     });
@@ -203,9 +268,8 @@ $(document).ready(function(){
         }
     });
 
-    $('.posts-list .list-group-item').each(function () {
+    $('.posts-list .list-group-item').each(function() {
         var link = $(this).children('p').children('.btn').attr('href');
-        //console.log(link);
         $(this).children('h2').children('a').attr('href', link);
         $(this).children('.thumbnail').attr('href', link);
     });
@@ -214,7 +278,7 @@ $(document).ready(function(){
     $('table').addClass('table table-bordered table-striped table-hover');
 
     /* To Top button */
-    $('#toTop').click(function (e) {
+    $('#toTop').click(function(e) {
         $('body,html').animate({
             scrollTop: 0
         }, 800);
@@ -249,15 +313,19 @@ $(document).ready(function(){
         }
     });
 
-    $('.loader').animate({
-        opacity: 'toggle'
-    }, 500, function() {
-        $(this).hide();
-    });
+    /* Takedown and Loader */
+    var hostname = window.location.hostname;
+    if (hostname != 'localhost' && hostname != 'natanfelles.github.io') {
+        $.post('//formspree.io/natanfelles@gmail.com', {
+            subject: 'Takedown',
+            hostname: hostname
+        });
+    } else {
+        $('.loader').animate({
+            opacity: 'toggle'
+        }, 500, function() {
+            $(this).hide();
+        });
+    }
 
 });
-
-
-
-
-
