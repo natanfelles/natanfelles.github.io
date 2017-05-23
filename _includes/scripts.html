@@ -19,7 +19,7 @@
 {% endif %}
 {% endcapture %}
 
-{% if jekyll.environment == 'development' %}
+{% if site.env == 'development' %}
 	{{ scripts }}
 {% else %}
 	{{ scripts | normalize_whitespace }}

@@ -55,7 +55,7 @@ layout: content
 </form>
 {% endcapture %}
 
-{% if jekyll.environment == 'development' %}
+{% if site.env == 'development' %}
 	{{ service }}
 {% else %}
 	{{ service | normalize_whitespace }}

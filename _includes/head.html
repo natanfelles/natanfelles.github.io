@@ -32,7 +32,7 @@
 </head>
 {% endcapture %}
 
-{% if jekyll.environment == 'development' %}
+{% if site.env == 'development' %}
 	{{ head }}
 {% else %}
 	{{ head | normalize_whitespace }}

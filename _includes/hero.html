@@ -29,7 +29,7 @@
 </div>
 {% endcapture %}
 
-{% if jekyll.environment == 'development' %}
+{% if site.env == 'development' %}
 	{{ hero }}
 {% else %}
 	{{ hero | normalize_whitespace }}

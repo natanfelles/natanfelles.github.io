@@ -41,7 +41,7 @@
 </div>
 {% endcapture %}
 
-{% if jekyll.environment == 'development' %}
+{% if site.env == 'development' %}
 	{{ search }}
 {% else %}
 	{{ search | normalize_whitespace }}

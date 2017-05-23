@@ -13,7 +13,7 @@
 </footer>
 {% endcapture %}
 
-{% if jekyll.environment == 'development' %}
+{% if site.env == 'development' %}
 	{{ footer }}
 {% else %}
 	{{ footer | normalize_whitespace }}
