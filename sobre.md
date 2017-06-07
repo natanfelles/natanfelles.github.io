@@ -7,7 +7,7 @@ title: Sobre
 
 Sou fascinado por programação web, neurociência, tecnologia, filosofia, psicologia, política, história e mulheres.
 
-Sou brasileiro, autêntico nacional-socialista, gaúcho, colorado, adaptável a credos e incrédulos.
+Sou brasileiro, gaúcho, colorado, adaptável a credos e incrédulos.
 
 Acredito num futuro melhor, na valorização da justiça, do amor, da ética e do respeito.
 
