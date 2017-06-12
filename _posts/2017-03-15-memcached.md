@@ -3,6 +3,7 @@ title: "Memcached: Instalar, configurar, proteger, analisar"
 layout: post
 categories: desenvolvimento
 image: memcached.png
+tags: memcached cache firewall ufw linux debian php
 ---
 
 Memcached é um serviço desenvolvido para aliviar o carregamento de bancos de dados em aplicações web dinâmicas armazenando objetos na memória.
