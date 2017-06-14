@@ -38,7 +38,7 @@ Estando no prompt do MySQL, use a tabela `mysql` e defina sua nova senha:
 
 ```sql
 USE mysql;
--- O nome do campo é "Password" se a versão do seu MySQL é menor que 5.7
+-- O nome da coluna é "Password" se a versão do seu MySQL é menor que 5.7
 UPDATE user SET authentication_string=PASSWORD('nova-senha') WHERE user='root';
 FLUSH PRIVILEGES;
 EXIT
