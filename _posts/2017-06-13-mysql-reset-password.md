@@ -56,7 +56,7 @@ Feito.
 
 
 # Fontes
+
 -   [MySQL :: MySQL 5.7 Reference Manual :: B.5.3.2 How to Reset the Root Password](https://dev.mysql.com/doc/refman/5.7/en/resetting-permissions.html)
 -   [MysqlPasswordReset - Community Help Wiki](https://help.ubuntu.com/community/MysqlPasswordReset)
 -   [Reset Forgotten MySQL Root Password](https://www.howtoforge.com/reset-forgotten-mysql-root-password)
-
