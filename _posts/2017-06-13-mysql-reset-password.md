@@ -44,7 +44,7 @@ FLUSH PRIVILEGES;
 EXIT
 ```
 
-Com a nova senha definida, mate o processo do mysqld_safe com um `Ctrl + C` e inicie o MySQL normalmente:
+Com a nova senha definida, mate o processo do mysqld_safe com um `Ctrl + C` e inicie o MySQL:
 
 ```sh
 sudo systemctl start mysql.service
