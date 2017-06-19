@@ -14,7 +14,7 @@ Alguém, muito tempo antes de mim, já sentiu essa mesma necessidade e fez melho
 
 ## Instalação
 
-Antes de instalá-lo você já deve ter o **Gerenciador de Dependência para PHP** instalado.
+Antes de instalá-lo você já deve ter o **Gerenciador de Dependências para PHP** instalado.
 
 Execute:
 
