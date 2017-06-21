@@ -1,5 +1,5 @@
 ---
-title: 'Instalando qualquer versão do Node.JS'
+title: 'Instalando qualquer versão do Node.js'
 layout: post
 categories: desenvolvimento
 image: nodejs-install.png
