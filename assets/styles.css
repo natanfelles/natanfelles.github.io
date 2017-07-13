@@ -87,6 +87,10 @@ a.thumbnail:hover {
     border-color: #878787;
 }
 
+.embed-responsive {
+	border: 1px solid #000;
+}
+
 .logo {
 	border: 2px solid #fff;
 	margin: 20px auto;
