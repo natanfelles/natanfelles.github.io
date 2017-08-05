@@ -25,7 +25,8 @@ function hero() {
 function setupHero() {
     if (window.location.pathname != '/') {
         $('.panel-hero').css({
-            width: $('.panel-hero').parent().innerWidth()
+            width: $('.panel-hero').parent().innerWidth(),
+            left: $('.panel-hero').parent().position().left + 'px'
         });
         $('.content').css({
             minHeight: window.innerHeight
