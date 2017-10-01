@@ -91,8 +91,65 @@ a.thumbnail:hover {
     border-color: #878787;
 }
 
+.products .thumbnail {
+    border-color: #000;    
+}
+
+.products .thumbnail img {
+    border-radius: 4px 4px 0 0; 
+}
+
+.thumbnail .caption {
+    color: #bbb;
+}
+
+.thumbnail .caption h3 {
+    margin: 5px 0 10px 0;
+}
+
+.thumbnail .price {
+    position: absolute;
+    top: 1px;
+    right: 16px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+    background: rgba(0, 0, 0, .8);
+    padding: 5px 10px;
+    border-radius: 0 3px;
+}
+
+.thumbnail .price sup {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.price-header {
+    margin-top: 8px;
+}
+
+.cart {
+    position: fixed;
+    top: 100px;
+    right: 90px;
+    border-radius: 50%;    
+    width: 60px; 
+    height: 60px; 
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+   /* background: #47bf15;*/
+    background: #141516;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 5px #0000004d;
+    z-index: 1000;
+}
+
 .embed-responsive {
 	border: 1px solid #000;
+    margin-bottom: 10px;
 }
 
 .logo {
@@ -228,6 +285,58 @@ a.thumbnail:hover {
 .open > .dropdown-toggle.btn-default:hover {
     color: #bbb;
     background-color: #111;
+    border-color: #bbb;
+}
+
+.btn-success {
+    border-color: #bbb;
+    color: #bbb;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success:active:focus {
+    color: #47bf15;
+    border-color: #47bf15;
+    background: transparent;
+}
+
+.btn-success:focus,
+.btn-success:active,
+.btn-success:active:focus {
+    background: #141516;
+}
+
+.btn-success.disabled:hover {
+    color: #bbb;
+    background: transparent;
+    border-color: #bbb;
+}
+
+.btn-danger {
+    border-color: #bbb;
+    color: #bbb;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger:active:focus {
+    color: #e61414;
+    border-color: #e61414;
+    background: transparent;
+}
+
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger:active:focus {
+    background: #141516;
+}
+
+.btn-danger.disabled:hover {
+    color: #bbb;
+    background: transparent;
     border-color: #bbb;
 }
 
@@ -470,12 +579,16 @@ footer {
     border-top-color: #000;
 }
 
-.panel, .modal-content {
-    background-color: #141516;
-    border-color: #000;
+.modal.in .modal-dialog {
+    border: 1px solid #000;
+    border-radius: 4px;
 }
 
-.panel-default>.panel-heading, .modal-header {
+.panel, .modal-content {
+    background-color: #141516;
+}
+
+.panel-default>.panel-heading, .modal-header, .modal-footer  {
     color: #fff;
     background-color: #111;
     border-color: #000;

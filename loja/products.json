@@ -1,0 +1,22 @@
+---
+layout: null
+---
+{% capture products %}
+	{% for product in site.data.products %}
+		{
+		"id": "{{ product.id }}",
+		"name": "{{ product.name }}",
+		"price": "{{ product.price }}",
+		"description": "{{ product.description }}",
+		"link": "{{ 'loja/' | append: product.link | relative_url }}",
+		"image": "{{ 'assets/img_products/' | append: product.image | relative_url }}"
+		}
+		{% unless forloop.last %},{% endunless %}
+	{% endfor %}	
+{% endcapture %}
+
+{% if site.env == 'development' %}
+	[{{ products }}]
+{% else %}
+	[{{ products | normalize_whitespace }}]
+{% endif %}

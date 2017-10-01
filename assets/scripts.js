@@ -188,46 +188,187 @@ $('select[id="service"]').change(function() {
 });
 
 /* Service Form */
-$('#service-form').submit(function() {
-    $(this).validator('update');
-    $('[name="_replyto"]').val($('[name="E-mail"]').val());
-    $('[name="_subject"]').val('Solicitação de Serviço · ' + $('[name="Tipo de Serviço"]').val());
-}).validator().on('submit', function(e) {
-    var alert = $(this).children('.alert');
+if ($('#service-form').length){
+    $('#service-form').submit(function() {
+        $(this).validator('update');
+        $('[name="_replyto"]').val($('[name="E-mail"]').val());
+        $('[name="_subject"]').val('Solicitação de Serviço · ' + $('[name="Tipo de Serviço"]').val());
+    }).validator().on('submit', function(e) {
+        var alert = $(this).children('.alert');
 
-    /* TODO: Create Cookie active by 4 hours */
+        /* TODO: Create Cookie active by 4 hours */
 
 
-    if (!e.isDefaultPrevented()) {
-        /* TODO: Get user IP from any free api */
-        $.ajax({
-            url: $(this).attr('action'),
-            method: 'POST',
-            data: $(this).serialize(),
-            dataType: 'json'
-        }).done(function(a) {
-            alert
-                .addClass('alert-success')
-                .html('<strong><i class="fa fa-check-circle"></i> Solicitação enviada com sucesso!</strong><br> Logo você receberá uma resposta em seu e-mail.')
-                .show();
-            $('#service-form input, #service-form textarea').each(function() {
-                $(this).val('');
+        if (!e.isDefaultPrevented()) {
+            /* TODO: Get user IP from any free api */
+            $.ajax({
+                url: $(this).attr('action'),
+                method: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json'
+            }).done(function(a) {
+                alert
+                    .addClass('alert-success')
+                    .html('<strong><i class="fa fa-check-circle"></i> Solicitação enviada com sucesso!</strong><br> Logo você receberá uma resposta em seu e-mail.')
+                    .show();
+                $('#service-form input, #service-form textarea').each(function() {
+                    $(this).val('');
+                });
+            }).fail(function() {
+                alert
+                    .addClass('alert-danger')
+                    .html('<i class="fa fa-exclamation-circle"></i> Solicitação não pode ser enviada agora. Tente novamente mais tarde.')
+                    .show();
             });
-        }).fail(function() {
+        } else {
             alert
                 .addClass('alert-danger')
-                .html('<i class="fa fa-exclamation-circle"></i> Solicitação não pode ser enviada agora. Tente novamente mais tarde.')
+                .html('<i class="fa fa-exclamation-circle"></i> Corrija os erros do formulário.')
                 .show();
-        });
-    } else {
-        alert
-            .addClass('alert-danger')
-            .html('<i class="fa fa-exclamation-circle"></i> Corrija os erros do formulário.')
-            .show();
+        }
+
+        return false;
+    });
+}
+
+function setProducts(sortBy) {
+    var items = localStorage.getItem('products-sortBy' + sortBy);
+    items = JSON.parse(items);
+    var html = '';
+    for (var i = 0; i < items.length; i++) {
+        html += '<div class="col-md-6">' +
+        '<div class="thumbnail">' +
+        '<span class="price"><sup>$</sup>' + items[i].price + '</span>' +
+        '<img src="' + items[i].image + '" alt="' + items[i].name + '">' +
+        '<div class="caption text-center">' +
+        '<h3>' + items[i].name + '</h3>' +
+        '<p>' + items[i].description + '</p>' +
+        '<div class="btn-group btn-group-justified">' +
+        '<a href="#" class="btn btn-success to-cart" data-id="' + items[i].id + '" data-price="' + items[i].price + '" data-name="' + items[i].name + '">Adicionar</a>' +
+        '<a href="' + items[i].link + '" class="btn btn-default">Saber Mais</a>' +
+        '</div></div></div></div>';
+    }
+    console.log(html);
+    $('#products').html(html);
+    cartAction();
+}
+
+
+function cartAction() {
+    $('.to-cart').click(function () {
+        console.log($(this).data());
+        addToCart($(this).data());
+        $('.cart').css({ background: '#47bf15'}).animate({
+            width: "240px",
+            height: "240px",
+            borderWidth: "8px",
+            fontSize: "80px",
+            padding: "60px"
+          }, 500).animate({
+            width: "60px",
+            height: "60px",   
+            borderWidth: "2px",         
+            fontSize: "20px",
+            padding: "15px"
+          }, 750);
+        return false;
+    });
+}
+cartAction();
+
+function addToCart(item) {
+    console.log(item);    
+    
+
+    var cart = JSON.parse(localStorage.getItem('cart'));
+
+    if (!cart) {
+        cart = {};
     }
 
+    if (!cart[item.id]) {
+        cart[item.id] = item;
+        cart[item.id].quantity = 1;
+    } else {
+       cart[item.id].quantity += 1; 
+    }
+    
+    
+    console.log(cart);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    htmlCart(cart);
+
+}
+
+function htmlCart(cart) {
+    var total = 0;
+    var empty = true;
+    $('#cart-items').html('');  
+    $('#form-paypal .items').html('');  
+    $('#form-pagseguro .items').html('');  
+
+    $.each(cart, function(index, item) {
+        console.log(index);
+        console.log(item);     
+        $('#cart-items').append(
+            '<tr>' +
+            '<td>' + item.name + '</td>' +
+            '<td>U$ ' + item.price + '</td>' +
+            '<td>' + item.quantity + '</td>' +
+            '<td><button class="btn btn-sm btn-danger remove-item" onclick="removeCartItem(\'' + item.id + '\')"><i class="fa fa-times"></i> Remover</button></td>' +
+            '</tr>'
+        );
+        total += item.price * item.quantity;     
+        empty = false;        
+
+        $('#form-paypal .items').append(
+            '<input type="hidden" name="item_name_' + item.id + '" value="' + item.name + '">' +
+            '<input type="hidden" name="amount_' + item.id + '" value="' + item.price + '">' +
+            '<input type="hidden" name="quantity_' + item.id + '" value="' + item.quantity + '">'
+        );
+
+        $('#form-pagseguro .items').append(
+            '<input type="hidden" name="itemId' + item.id + '" value="' + item.id + '">' +
+            '<input type="hidden" name="itemDescription' + item.id + '" value="' + item.name + '">' +
+            '<input type="hidden" name="itemAmount' + item.id + '" value="' + parseFloat(Math.round((item.price * 3.5) * 100) / 100).toFixed(2) + '">' +
+            '<input type="hidden" name="itemQuantity' + item.id + '" value="' + item.quantity + '">'
+        );
+
+    });
+
+    if (empty) {
+        $('#cart-items').append(
+            '<tr><td colspan="4">Hey! Seu carrinho vazio.</td></tr>'
+        );
+        $('.cart').css({ background: '#000'});
+        $('#cart .modal-footer').hide();
+    } else {
+        $('.cart').css({ background: '#47bf15'});
+        $('#cart .modal-footer').show();
+    }
+
+    $('#cart-total').html('U$ ' + total);
+
+
+}
+
+function removeCartItem(id) {
+    var cart = JSON.parse(localStorage.getItem('cart'));
+    $.each(cart, function (index, item) {
+        console.log(index);
+        console.log(item);
+        if (item.id == id) {
+            item.quantity--;
+            if (item.quantity < 1) {
+                delete cart[index];
+            }
+        }
+    });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    htmlCart(cart);
     return false;
-});
+}
 
 
 /* After document is loaded */
@@ -313,6 +454,33 @@ $(document).ready(function() {
             search(v, 1);
         }
     });
+
+    /* Prepare for Shop */
+    if ($('#shop').length) {
+        $.getJSON('/loja/products.json', function (items) {                       
+
+            // Name
+            items.sort(function (a, b) {
+                return a.name > b.name;
+            });
+            localStorage.setItem('products-sortByName', JSON.stringify(items));
+            
+            // Low price
+            items.sort(function (a, b) {
+                return a.price < b.price;
+            });
+            localStorage.setItem('products-sortByLowPrice', JSON.stringify(items));
+            
+            // High price
+            items.sort(function (a, b) {
+                return a.price > b.price;
+            });
+            localStorage.setItem('products-sortByHighPrice', JSON.stringify(items));            
+
+        });
+        
+        htmlCart(JSON.parse(localStorage.getItem('cart')));
+    }
 
     /* Takedown and Loader */
     var hostname = window.location.hostname;
