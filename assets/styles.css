@@ -138,12 +138,11 @@ a.thumbnail:hover {
     font-size: 20px;
     text-align: center;
     padding: 15px;
-   /* background: #47bf15;*/
-    background: #141516;
+    background: #141414;
     border: 2px solid #fff;
     color: #fff;
     cursor: pointer;
-    box-shadow: 0 2px 5px #0000004d;
+    box-shadow: 0 2px 5px #00000080;
     z-index: 1000;
 }
 
@@ -766,6 +765,9 @@ h6:hover .header-link {
     .navbar .container {
         padding-right: 15px;
         padding-left: 15px;
+    }
+    .cart {
+        right: 50px;
     }
 }
 

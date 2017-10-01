@@ -356,7 +356,7 @@ function htmlCart(cart) {
         $('#cart-items').append(
             '<tr><td colspan="4">Hey! Seu carrinho está vazio.</td></tr>'
         );
-        $('.cart').css({ background: '#000'});
+        $('.cart').css({ background: '#141414'});
         $('#cart .modal-footer').hide();
     } else {
         $('.cart').css({ background: '#47bf15'});
