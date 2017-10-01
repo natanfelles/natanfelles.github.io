@@ -1,5 +1,7 @@
 ---
 layout: null
+sitemap:
+  exclude: "yes"
 ---
 {% capture products %}
 	{% for product in site.data.products %}
