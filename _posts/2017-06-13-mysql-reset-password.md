@@ -4,6 +4,7 @@ layout: post
 categories: desenvolvimento
 image: mysql-reset-password.png
 tags: mysql linux servidor
+description: Esqueceu ou não sabe a senha de um servidor MySQL? Aprenda a criar uma nova.
 ---
 
 Hoje precisei acessar um servidor MySQL recém instalado no qual eu não sabia a senha do usuário root.

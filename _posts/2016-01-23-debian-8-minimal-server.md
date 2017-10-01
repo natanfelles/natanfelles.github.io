@@ -3,7 +3,7 @@ title:  Debian 8 Minimal Server
 categories: desenvolvimento
 tags: debian linux virtualbox
 image: login-background.png
-description: A versão Debian Minimal possui apenas os pacotes realmente necessários para o funcionamento do sistema, sendo mais leve e possibilitando que o usuário personalize-o conforme suas necessidades.
+description: Aprenda como instalar o Debian 8 com o mínimo de softwares necessários para poder personalizar seu servidor ou desktop.
 ---
 
 ## Mínimo... Por quê?

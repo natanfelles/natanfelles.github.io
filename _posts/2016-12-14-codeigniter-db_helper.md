@@ -4,6 +4,7 @@ layout: post
 categories: desenvolvimento
 image: db_helper.svg
 tags: codeigniter mysql
+description: Se você trabalha com relacionamentos em tabelas de bancos de dados, principalmente ao utilizar o motor InnoDB do MySQL, com o framework CodeIgniter, então esse helper lhe pode ser muito útil.
 ---
 
 Se você trabalha com relacionamentos em tabelas de bancos de dados, principalmente ao utilizar o motor InnoDB do MySQL, com o framework CodeIgniter, então esse helper lhe pode ser muito útil.

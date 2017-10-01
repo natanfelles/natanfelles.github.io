@@ -3,7 +3,7 @@ title:  "Servidor Portátil para Windows"
 categories: desenvolvimento
 tags: windows servidor nginx php mysql nodejs memcached mongodb
 image: winginx.jpg
-description: Para trabalhar em qualquer lugar, diretamente de um pendrive, por exemplo, podemos utilizar o Winginx.
+description: Conheça o Winginx, um servidor Nginx (e muito mais) portátil para o Windows.
 ---
 
 ## Nginx no Windows!

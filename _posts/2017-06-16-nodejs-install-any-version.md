@@ -4,6 +4,7 @@ layout: post
 categories: desenvolvimento
 image: nodejs-install.png
 tags: nodejs linux servidor
+description: Veja a maneira mais fácil de gerenciar várias versões do Node.js.
 ---
 
 Já havia algum tempo que eu vinha enfrentando dificuldades para trabalhar com o frontend no Laravel devido a diversas falhas ocorridas no processo de instalação dos pacotes necessários conforme o seu `package.json`.

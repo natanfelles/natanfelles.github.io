@@ -3,7 +3,7 @@ title:  "Gerenciar Swap em Produção"
 categories: desenvolvimento
 tags: swap linux servidor
 image: ram.png
-description: Hoje realizei uma manutenção preventiva em meu gabinete e, por algum motivo não identificado, uma das memórias RAM parou de funcionar.
+description: Veja como gerenciar a swap e evite travar um computador com pouca RAM.
 ---
 
 ## Um drama de RAM

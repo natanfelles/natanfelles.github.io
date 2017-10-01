@@ -3,7 +3,7 @@ title:  CodeIgniter Code Completion para PhpStorm
 categories: desenvolvimento projetos
 tags: codeigniter php
 image: codeigniter-phpstorm.png
-description: Trabalhar com o CodeIgniter no PhpStorm pode ser um pouco complicado inicialmente pois a IDE não detecta os objetos das classes CI_Controller e CI_Model, mas este pequeno problema pode ser resolvido com praticidade sem que seja necessário modificar arquivos do diretório system.
+description: Veja como auto-completar código no PhpStorm com o framework CodeIgniter.
 ---
 
 ## O Problema

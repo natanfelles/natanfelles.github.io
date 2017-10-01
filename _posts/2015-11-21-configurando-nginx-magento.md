@@ -3,7 +3,7 @@ title:  "Configurando Nginx para Magento"
 categories: desenvolvimento
 tags: nginx magento linux
 image: nginx-magento.png
-description: Configurando Nginx para Magento
+description: Exemplo de configurações importantes para um Virtual Host rodando Magento.
 ---
 
 ## Atenção!

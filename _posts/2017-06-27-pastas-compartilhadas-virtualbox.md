@@ -4,6 +4,7 @@ layout: post
 categories: desenvolvimento
 image: virtualbox-pastas-compartilhadas.png
 tags: linux debian ubuntu virtualbox
+description: Compartilhe diretórios locais com suas máquinas virtuais. 
 ---
 
 Uma maneira muito prática de trabalhar com máquinas virtuais sem precisar fazer upload por FTP ou SSH a toda hora é utilizando as opções de pastas compartilhadas no VirtualBox.

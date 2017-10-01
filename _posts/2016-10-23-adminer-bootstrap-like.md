@@ -3,7 +3,7 @@ title:  "Adminer Bootstrap-Like Design"
 categories: desenvolvimento projetos
 tags: adminer bootstrap mysql php html css javascript
 image: adminer-bootstrap-like.png
-description: Interface inspirada no Bootstrap com ícones do Font Awesome.
+description: Interface para o gerenciador de bancos de dados Adminer inspirada no Twitter Bootstrap com ícones do Font Awesome.
 ---
 
 ## Sobre

@@ -3,7 +3,7 @@ title:  "Online Editor"
 categories: desenvolvimento projetos
 tags: editor ace css javascript html
 image: online-editor.png
-description: "Online Editor foi desenvolvido com o auxílio de 4 projetos de código aberto: jQuery, Bootstrap, Font Awesome e Ace."
+description: Online Editor é um editor acessível pelo navegador e como funções incríveis, semelhante ao popular Sublime Text. Disponível para download.
 ---
 
 ## Poderoso Editor Online

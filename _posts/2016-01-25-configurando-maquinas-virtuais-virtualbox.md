@@ -3,7 +3,7 @@ title:  Configurando Máquinas Virtuais no VirtualBox
 categories: desenvolvimento
 tags: virtualbox linux
 image: virtualbox.png
-description: O VirtualBox é um poderoso sistema de virtualização de código aberto mantido pela Oracle. Através dele você pode rodar diversos sistemas operacionais em uma única máquina física. Importante para a realização de testes, incompatibilidade de softwares, criação de redes e muito mais.
+description: Aprenda a instalar o VirtualBox e configurar VMs com acesso à internet.
 ---
 
 ## Apresentação

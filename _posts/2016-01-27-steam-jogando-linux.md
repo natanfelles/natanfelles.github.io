@@ -3,7 +3,7 @@ title:  "Steam: Jogando no Linux"
 categories: desenvolvimento
 tags: linux steam
 image: steam.png
-description: Steam é um software proprietário que permite a interação online através de chats, transmisão de gameplays e principalmente jogar. Jogar praticamente qualquer game conhecido da atualidade (mais de 6 mil), destaque para famosos como  Counter-Strike, Half-Life e Grand Theft Auto.
+description: Veja como instalar jogos oficiais da Steam no Debian, Ubuntu ou Linux Mint.
 ---
 
 ## O que é Steam?

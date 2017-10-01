@@ -3,7 +3,7 @@ title:  "CodeIgniter Template"
 categories: desenvolvimento projetos
 tags: codeigniter php html css javascript
 image: codeigniter-template.png
-description: O grande ganho com esse sistema de template é que não há necessidade de duplicação de código. Acompanhe os arquivos abaixos e você entenderá melhor.
+description: O grande ganho com esse sistema de template é que não há necessidade de duplicação de código. Acompanhe os arquivos no site e você entenderá melhor.
 ---
 
 <div style="display: none;">
@@ -36,7 +36,7 @@ Basicamente, funcionará da seguinte maneira:
 
 Nada fora do normal, exceto pelo fato das views serem requisitadas pelo html.php.
 
-O grande ganho com esse sistema de template é que não há necessidade de duplicação de código. Acompanhe os arquivos abaixos e você entenderá melhor:
+O grande ganho com esse sistema de template é que não há necessidade de duplicação de código. Acompanhe os arquivos abaixo e você entenderá melhor:
 
 ## Mãos a obra!
 

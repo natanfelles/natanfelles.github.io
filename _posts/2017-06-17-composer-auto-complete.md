@@ -4,6 +4,7 @@ layout: post
 categories: desenvolvimento
 image: composer-auto-complete.png
 tags: php composer linux
+description: Instale um pacote que permitirá auto-completar comandos do Composer pelo terminal.
 ---
 
 O [composer](https://getcomposer.org/) facilita, e muito, o desenvolvimento com PHP. Mas, trabalhando na linha de comando, já me acostumei a não ter que ficar digitando todos os comandos o tempo todo. Principalmente utilizando o **apt** para gerenciar os pacotes do Sistema Operacional.

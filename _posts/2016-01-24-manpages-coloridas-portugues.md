@@ -3,7 +3,7 @@ title:  "Manpages Coloridas e em Português"
 categories: desenvolvimento
 tags: manpages linux
 image: man-cp.png
-description: No mundo Unix, a maioria dos programas possuem diversas opções  via linha de comando e é praticamente impossível lembrar-se de tudo quando você quer resolver alguma coisa através do terminal.
+description: Veja como configurar as páginas de manuais de softwares no Linux para português e coloridas.
 ---
 
 No mundo Unix, a maioria dos programas possuem diversas opções  via linha de comando e é praticamente impossível lembrar-se de tudo quando você quer resolver alguma coisa através do terminal.

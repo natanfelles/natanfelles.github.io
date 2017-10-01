@@ -3,7 +3,7 @@ title:  "Apt-Cacher-NG: Proxy de Cache de Pacotes"
 categories: desenvolvimento
 tags: cache proxy debian linux
 image: apt-cacher-ng.png
-description: Apt-Cacher NG é um proxy de cache para pacotes de software baixados por mecanismos de distribuição em sistemas Unix/Linux de servidores espelhos acessíveis via HTTP.
+description: Possui mais de um computador rodando Linux? Aprenda a cachear pacotes de software para economizar banda e agilizar a instalação em várias máquinas.
 ---
 
 ## Apresentação
