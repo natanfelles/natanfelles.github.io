@@ -13,6 +13,9 @@
 		<a href="{{ 'blog' | relative_url }}" class="btn btn-icon btn-default{% if uri[1] == 'blog' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Blog">
 			<i class="fa fa-book"></i>
 		</a>
+		<a href="{{ 'loja' | relative_url }}" class="btn btn-icon btn-default{% if uri[1] == 'produtos' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Loja">
+			<i class="fa fa-shopping-cart"></i>
+		</a>
 		<a href="{{ 'servicos' | relative_url }}" class="btn btn-icon btn-default{% if uri[1] == 'servicos' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Serviços">
 			<i class="fa fa-gears"></i>
 		</a>
@@ -22,9 +25,11 @@
 		<button class="btn btn-icon btn-default" data-toggle="tooltip" data-placement="bottom" title="Pesquisar" data-target="#search-results" id="search-hero">
 			<i class="fa fa-search"></i>
 		</button>
+		{% comment %}	
 		<a href="https://github.com/natanfelles" class="btn btn-icon btn-default" data-toggle="tooltip" data-placement="bottom" title="GitHub" target="_blank">
 			<i class="fa fa-github"></i>
 		</a>
+		{% endcomment %}	
 	</div>
 </div>
 {% endcapture %}

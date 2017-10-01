@@ -17,6 +17,9 @@
           <li{% if uri[1] == 'blog' %} class="active"{% endif %}>
             <a href="{{ 'blog' | relative_url }}">Blog</a>
           </li>
+          <li{% if uri[1] == 'loja' %} class="active"{% endif %}>
+            <a href="{{ 'loja' | relative_url }}">Loja</a>
+          </li>
           <li{% if uri[1] == 'servicos' %} class="active"{% endif %}>
             <a href="{{ 'servicos' | relative_url }}">Serviços</a>
           </li>
