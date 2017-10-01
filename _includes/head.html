@@ -19,12 +19,16 @@
   {% if site.env == "development" %}
     <link rel="stylesheet" type="text/css" href="{{ 'assets/external/css/bootstrap.min.css' | relative_url }}">
     <link rel="stylesheet" type="text/css" href="{{ 'assets/external/css/font-awesome.min.css' | relative_url }}">
-    <link rel="stylesheet" type="text/css" href="{{ 'assets/external/js/highlightjs/styles/atom-one-dark.css' | relative_url }}">
+    {% if page.url != '/' %}
+      <link rel="stylesheet" type="text/css" href="{{ 'assets/external/js/highlightjs/styles/atom-one-dark.css' | relative_url }}">
+    {% endif %} 
     <link rel="stylesheet" type="text/css" href="{{ 'assets/styles.css' | relative_url }}">
   {% else %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css" />
+    {% if page.url != '/' %}
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css" />
+    {% endif %} 
     <link rel="stylesheet" type="text/css" href="{{ 'assets/styles.min.css' | relative_url }}">
   {% endif %}
 
