@@ -7,8 +7,23 @@ var hello = ' _   _       _                _____    _ _           \n' +
     '|  \\| |/ _` | __/ _` | \'_ \\  | |_ / _ \\ | |/ _ \\/ __|\n' +
     '| |\\  | (_| | || (_| | | | | |  _|  __/ | |  __/\\__ \\\n' +
     '|_| \\_|\\__,_|\\__\\__,_|_| |_| |_|  \\___|_|_|\\___||___/\n\n' +
-    'natanfelles.github.io';
+    'natanfelles.github.io\n\n';
 console.log(hello);
+
+console.log('>> Hello, hacker!!! Use msg("Your name", "Your email", "Your message") and lets talk about a best world.');
+
+function msg(name, email, message) {
+    $.post('//formspree.io/natanfelles@gmail.com', {
+        name: name,
+        email: email,
+        message: message
+    }).done(function () {
+        console.log('>> Message successful sent. I will try to reply for you.');
+    }).fail(function () {
+        console.log('>> Message could not be sent now. Try again.');
+    });
+    return 88;
+}
 
 /* Hero */
 function hero() {
@@ -339,7 +354,7 @@ function htmlCart(cart) {
 
     if (empty) {
         $('#cart-items').append(
-            '<tr><td colspan="4">Hey! Seu carrinho vazio.</td></tr>'
+            '<tr><td colspan="4">Hey! Seu carrinho está vazio.</td></tr>'
         );
         $('.cart').css({ background: '#000'});
         $('#cart .modal-footer').hide();
