@@ -271,6 +271,7 @@ function setProducts(sortBy) {
 
 function cartAction() {
     $('.to-cart').click(function () {
+        addToCart($(this).data());
         $('.cart').css({ background: '#47bf15'}).animate({
             width: "240px",
             height: "240px",
