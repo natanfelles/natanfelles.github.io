@@ -263,7 +263,7 @@ function setProducts(sortBy) {
         '<a href="' + items[i].link + '" class="btn btn-default">Saber Mais</a>' +
         '</div></div></div></div>';
     }
-    console.log(html);
+
     $('#products').html(html);
     cartAction();
 }
@@ -271,8 +271,6 @@ function setProducts(sortBy) {
 
 function cartAction() {
     $('.to-cart').click(function () {
-        console.log($(this).data());
-        addToCart($(this).data());
         $('.cart').css({ background: '#47bf15'}).animate({
             width: "240px",
             height: "240px",
@@ -292,9 +290,6 @@ function cartAction() {
 cartAction();
 
 function addToCart(item) {
-    console.log(item);
-
-
     var cart = JSON.parse(localStorage.getItem('cart'));
 
     if (!cart) {
@@ -308,8 +303,6 @@ function addToCart(item) {
        cart[item.id].quantity += 1;
     }
 
-
-    console.log(cart);
     localStorage.setItem('cart', JSON.stringify(cart));
 
     htmlCart(cart);
@@ -369,8 +362,6 @@ function htmlCart(cart) {
 function removeCartItem(id) {
     var cart = JSON.parse(localStorage.getItem('cart'));
     $.each(cart, function (index, item) {
-        console.log(index);
-        console.log(item);
         if (item.id == id) {
             item.quantity--;
             if (item.quantity < 1) {
