@@ -8,6 +8,8 @@ layout: content
 	{% endif %}
 {% endfor %}
 
+<div id="shop"></div>
+
 <h1>{{ page.title }}</h1>
 
 {% if product.video != "" and product.video != null %}
@@ -26,7 +28,7 @@ layout: content
 		<div class="col-md-6 text-right">
 			<a href="#" class="btn btn-success to-cart" data-id="{{ product.id }}" data-price="{{ product.price }}" data-name="{{ product.name }}">Adicionar ao Carrinho</a>
 		</div>
-	</div>	
+	</div>
 </div>
 
 {{ content }}
