@@ -3,11 +3,15 @@ layout: content
 title: Loja
 description: Adquira produtos virtuais que podem lhe ajudar no desenvolvimento e personalização da sua marca.
 ---
+{% capture shopping %}
 <div class="products" id="shop">
 	<h1 class="page-header">{{ page.title }}</h1>
 
-	<p>Para serviços personalizados veja a página <a href="{{ 'servicos' | relative_url}}">Serviços</a>.</p>	
-	
+	<div class="well">
+		Para serviços personalizados veja a página <a href="{{ 'servicos' | relative_url}}">Serviços</a>.
+	</div>
+
+	{% comment %}
 	<div class="well well-sm text-right">
 		<div class="form-inline">
 			<div class="form-group">
@@ -20,18 +24,19 @@ description: Adquira produtos virtuais que podem lhe ajudar no desenvolvimento e
 			</div>
 		</div>
 	</div>
+	{% endcomment %}
 
 	<div class="row" id="products">
 
 		{% for product in site.data.products %}
 
 			<div class="col-md-6">
-				<div class="thumbnail"> 
+				<div class="thumbnail">
 					<span class="price"><sup>U$</sup>{{ product.price }}</span>
 					<img src="{{ 'assets/img_products/' | append: product.image | relative_url }}" alt="{{ product.name }}">
 					<div class="caption text-center">
 						<h3>{{ product.name }}</h3>
-						<p>{{ product.description }}</p>						
+						<p>{{ product.description }}</p>
 						<div class="btn-group btn-group-justified">
 							<a href="#" class="btn btn-success to-cart" data-id="{{ product.id }}" data-price="{{ product.price }}" data-name="{{ product.name }}">Adicionar</a>
 							<a href="{{ 'loja/' | append: product.link | relative_url }}" class="btn btn-default">Saber Mais</a>
@@ -40,11 +45,17 @@ description: Adquira produtos virtuais que podem lhe ajudar no desenvolvimento e
 				</div>
 			</div>
 
-		{% endfor %}		
+		{% endfor %}
 
 	</div>
-	
-	
+
+
 </div>
+{% endcapture %}
+{% if site.env == 'development' %}
+	{{ shopping }}
+{% else %}
+	{{ shopping | normalize_whitespace }}
+{% endif %}
 
 {% include cart.html %}
