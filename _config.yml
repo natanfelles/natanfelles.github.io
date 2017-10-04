@@ -65,6 +65,12 @@ defaults:
     values:
       layout: post
       image: post.png
+  -
+    scope:
+      path: loja
+    values:
+      layout: product
+      image: product.png
 
 # collections:
 #   docs:
