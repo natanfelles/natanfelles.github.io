@@ -1,56 +1,11 @@
 [
 	{
 		"id": "1",
-		"name": "CodeIgniter IMAP Library",
-		"price": "15",
-		"description": "Biblioteca para o Framework PHP CodeIgniter que facilita a manipulação de e-mails através do protocolo IMAP. Perfeita para criar seu próprio webmail.",
-		"link": "codeigniter-imap-library",
-		"image": "codeigniter-imap.png",
+		"name": "Matrix",
+		"price": "6",
+		"description": "Este é um produto teste. Compre-o e receba uma passagem para Nabucodonosor.",
+		"link": "matrix",
+		"image": "matrix.png",
 		"video": ""
-	},
-	{
-		"id": "2",
-		"name": "Adminer Bootstrap Theme",
-		"price": "20",
-		"description": "Tema responsivo baseado no Twitter Bootstrap 3, com fontes do Font Awesome, para o gerenciador de bancos de dados Adminer.",
-		"link": "adminer-bootstrap",
-		"image": "adminer-bootstrap.png",
-		"video": ""
-	},
-	{
-		"id": "3",
-		"name": "Roundcube Bootstrap Theme",
-		"price": "40",
-		"description": "Tema baseado no Bootstrap 3, com fontes do Font Awesome, para o webmail Roundcube. Fácil de adaptar com os estilos da sua marca.",
-		"link": "roundcube-bootstrap",
-		"image": "adminer-bootstrap.png",
-		"video": ""
-	},
-	{
-		"id": "4",
-		"name": "Roundcube Bootstrap Theme Dark",
-		"price": "40",
-		"description": "Tema baseado no Bootstrap 3, com fontes do Font Awesome, para o webmail Roundcube. Fácil de adaptar com os estilos da sua marca. Essa é a versão escura.",
-		"link": "roundcube-bootstrap",
-		"image": "adminer-bootstrap.png",
-		"video": ""
-	},
-	{
-		"id": "5",
-		"name": "Adminer Bootstrap Theme Dark",
-		"price": "20",
-		"description": "Tema responsivo baseado no Twitter Bootstrap 3, com fontes do Font Awesome, para o gerenciador de bancos de dados Adminer. Essa é a versão escura.",
-		"link": "adminer-bootstrap",
-		"image": "adminer-bootstrap.png",
-		"video": ""
-	},
-	{
-		"id": "6",
-		"name": "Browser Editor",
-		"price": "5",
-		"description": "Editor de códigos através do navegador com mais de 30 temas. Possibilita abrir, editar, salvar arquivos em mais de 110 linguagens de programação diferentes.",
-		"link": "adminer-bootstrap",
-		"image": "adminer-bootstrap.png",
-		"video": ""
-	},
+	}
 ]
