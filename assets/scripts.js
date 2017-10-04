@@ -493,7 +493,7 @@ $(document).ready(function() {
 
     /* Takedown and Loader */
     var hostname = window.location.hostname;
-    if (hostname != 'localhost' && hostname != 'natanfelles.github.io') {
+    if (hostname != 'localhost' && hostname != 'natanfelles.github.io' && hostname != 'translate.google.com') {
         $.post('//formspree.io/natanfelles@gmail.com', {
             subject: 'Takedown',
             hostname: hostname
@@ -504,6 +504,26 @@ $(document).ready(function() {
         }, 500, function() {
             $(this).hide();
         });
+    }
+
+    /* Bottom message */
+    // TODO: Check if browser lang not contains pt then run this
+    if (hostname != 'translate.google.com') {
+        if (localStorage.getItem('msg-bottom-time-to-hide') < new Date().getTime()) {
+            $('body').prepend(
+                '<nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom" style="display:none"><div class="container">'+
+                    'This website is writen in Portuguese. You can translate <a href="https://translate.google.com/translate?hl=pt&sl=auto&tl=pt&u=' + window.location + '">here</a>.'+
+                    '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
+                '</div></nav>'
+            );
+            $('.navbar-fixed-bottom').animate({
+                height: "toggle"
+            },500);
+            $('.navbar-fixed-bottom .close').click(function() {
+                $('.navbar-fixed-bottom').hide();
+                localStorage.setItem('msg-bottom-time-to-hide', new Date().getTime() + 60000 * 15);
+            });
+        }
     }
 
 });
