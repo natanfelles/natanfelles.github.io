@@ -281,8 +281,8 @@ function cartAction() {
             padding: "60px"
           }, 500).animate({
             width: "60px",
-            height: "60px",   
-            borderWidth: "2px",         
+            height: "60px",
+            borderWidth: "2px",
             fontSize: "20px",
             padding: "15px"
           }, 750);
@@ -292,8 +292,8 @@ function cartAction() {
 cartAction();
 
 function addToCart(item) {
-    console.log(item);    
-    
+    console.log(item);
+
 
     var cart = JSON.parse(localStorage.getItem('cart'));
 
@@ -305,10 +305,10 @@ function addToCart(item) {
         cart[item.id] = item;
         cart[item.id].quantity = 1;
     } else {
-       cart[item.id].quantity += 1; 
+       cart[item.id].quantity += 1;
     }
-    
-    
+
+
     console.log(cart);
     localStorage.setItem('cart', JSON.stringify(cart));
 
@@ -319,13 +319,13 @@ function addToCart(item) {
 function htmlCart(cart) {
     var total = 0;
     var empty = true;
-    $('#cart-items').html('');  
-    $('#form-paypal .items').html('');  
-    $('#form-pagseguro .items').html('');  
+    $('#cart-items').html('');
+    $('#form-paypal .items').html('');
+    $('#form-pagseguro .items').html('');
 
     $.each(cart, function(index, item) {
         console.log(index);
-        console.log(item);     
+        console.log(item);
         $('#cart-items').append(
             '<tr>' +
             '<td>' + item.name + '</td>' +
@@ -334,8 +334,8 @@ function htmlCart(cart) {
             '<td><button class="btn btn-sm btn-danger remove-item" onclick="removeCartItem(\'' + item.id + '\')"><i class="fa fa-times"></i> Remover</button></td>' +
             '</tr>'
         );
-        total += item.price * item.quantity;     
-        empty = false;        
+        total += item.price * item.quantity;
+        empty = false;
 
         $('#form-paypal .items').append(
             '<input type="hidden" name="item_name_' + item.id + '" value="' + item.name + '">' +
@@ -383,6 +383,10 @@ function removeCartItem(id) {
     localStorage.setItem('cart', JSON.stringify(cart));
     htmlCart(cart);
     return false;
+}
+
+function sendForm(formId) {
+    document.getElementById(formId).submit();
 }
 
 
@@ -472,28 +476,28 @@ $(document).ready(function() {
 
     /* Prepare for Shop */
     if ($('#shop').length) {
-        $.getJSON('/loja/products.json', function (items) {                       
+        $.getJSON('/loja/products.json', function (items) {
 
             // Name
             items.sort(function (a, b) {
                 return a.name > b.name;
             });
             localStorage.setItem('products-sortByName', JSON.stringify(items));
-            
+
             // Low price
             items.sort(function (a, b) {
                 return a.price < b.price;
             });
             localStorage.setItem('products-sortByLowPrice', JSON.stringify(items));
-            
+
             // High price
             items.sort(function (a, b) {
                 return a.price > b.price;
             });
-            localStorage.setItem('products-sortByHighPrice', JSON.stringify(items));            
+            localStorage.setItem('products-sortByHighPrice', JSON.stringify(items));
 
         });
-        
+
         htmlCart(JSON.parse(localStorage.getItem('cart')));
     }
 
