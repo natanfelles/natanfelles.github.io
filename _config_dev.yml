@@ -21,6 +21,13 @@ disqus_shortname: natanfelles
 branch: master
 ###########
 
+shop:
+  paypal:
+    business: natanfelles@gmail.com
+    currency_code: USD
+  pagseguro:
+    receiverEmail: natanfelles@gmail.com
+
 env: development
 
 

@@ -28,34 +28,31 @@
 					</tfoot>
 				</table>
 				<ul class="list-unstyled">
-					<li><small>* Cada produto possui licença proprietária.</small></li>
 					<li><small>* Suporte de um ano após o envio dos arquivos.</small></li>
-					<li><small>* A quantidade representa o número de instalações válidas.</small></li>					
-					<li><small>* No pagamento pelo PagSeguro o valor será convertido de Dólar para Real.</small></li>	
-					<li><small>* Os arquivos adquiridos serão enviados para o e-mail em que o pagamento for realizado.</small></li>		
-				</ul>							
+					<li><small>* A quantidade representa o número de instalações válidas.</small></li>
+					<li><small>* No pagamento pelo PagSeguro o valor será convertido de Dólar para Real.</small></li>
+					<li><small>* Os arquivos adquiridos serão enviados para o e-mail em que o pagamento for realizado.</small></li>
+				</ul>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-success" onclick="document.getElementById('form-pagseguro').submit();">Pagar pelo PagSeguro</button>
-				<button type="button" class="btn btn-success" onclick="document.getElementById('form-paypal').submit();">Pagar pelo PayPal</button>				
+				<button type="button" class="btn btn-success" onclick="document.getElementById('form-paypal').submit();">Pagar pelo PayPal</button>
 			</div>
 		</div>
 	</div>
 </div>
 
-<form action="https://pagseguro.uol.com.br/v2/checkout/payment.html" method="get" target="_blank" id="form-pagseguro">
-<!-- <form id="form-pagseguro"> -->
-	<input name="receiverEmail" value="natanfelles@gmail.com" type="hidden">  
+<form action="https://pagseguro.uol.com.br/v2/checkout/payment.html" target="_blank" id="form-pagseguro">
+	<input name="receiverEmail" value="{{ site.shop.pagseguro.receiverEmail }}" type="hidden">
     <input name="currency" value="BRL" type="hidden">
     <input name="encoding" value="UTF-8" type="hidden">
 
 	<div class="items"></div>
 </form>
 
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="get" target="_blank" id="form-paypal">
-<!-- <form id="form-paypal"> -->	
-	<input name="business" value="natanfelles@gmail.com" type="hidden">
-	<input name="currency_code" value="USD" type="hidden">
+<form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" id="form-paypal">
+	<input name="business" value="{{ site.shop.paypal.business }}" type="hidden">
+	<input name="currency_code" value="{{ site.shop.paypal.currency_code }}" type="hidden">
 	<input name="cmd" value="_cart" type="hidden">
 	<input name="add" value="1" type="hidden">
 	<input name="upload" value="1" type="hidden">
