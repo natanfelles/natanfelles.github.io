@@ -466,7 +466,7 @@ $(document).ready(function() {
 
     /* Prepare for Shop */
     if ($('#shop').length) {
-        $.getJSON('/loja/products.json', function (items) {
+        /*$.getJSON('/loja/products.json', function (items) {
 
             // Name
             items.sort(function (a, b) {
@@ -486,7 +486,7 @@ $(document).ready(function() {
             });
             localStorage.setItem('products-sortByHighPrice', JSON.stringify(items));
 
-        });
+        });*/
 
         htmlCart(JSON.parse(localStorage.getItem('cart')));
     }
