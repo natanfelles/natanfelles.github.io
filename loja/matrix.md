@@ -1,7 +1,8 @@
 ---
 title: Matrix
 id: "1"
-layout: product
+image: matrix.png
+description: Este é o produto que todo mundo quer. Compre-o e receba uma passagem para Nabucodonosor.
 ---
 
 Zion vai queimar de verdade. Expect us!
