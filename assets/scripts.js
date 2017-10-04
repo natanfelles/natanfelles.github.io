@@ -324,8 +324,6 @@ function htmlCart(cart) {
     $('#form-pagseguro .items').html('');
 
     $.each(cart, function(index, item) {
-        console.log(index);
-        console.log(item);
         $('#cart-items').append(
             '<tr>' +
             '<td>' + item.name + '</td>' +
