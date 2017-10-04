@@ -1,8 +1,9 @@
+{% capture cart %}
 <div class="cart" data-toggle="modal" data-target="#cart">
 	<i class="fa fa-shopping-cart"></i>
 </div>
 
-<!-- Modal -->
+
 <div class="modal fade" id="cart">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -59,3 +60,9 @@
 
 	<div class="items"></div>
 </form>
+{% endcapture cart %}
+{% if site.env == 'development' %}
+	{{ cart }}
+{% else %}
+	{{ cart | normalize_whitespace }}
+{% endif %}
