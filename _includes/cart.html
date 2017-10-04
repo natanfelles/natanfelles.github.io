@@ -43,7 +43,7 @@
 	</div>
 </div>
 
-<form action="https://pagseguro.uol.com.br/v2/checkout/payment.html" target="_blank" id="form-pagseguro">
+<form action="https://pagseguro.uol.com.br/v2/checkout/payment.html" method="post" target="_blank" id="form-pagseguro">
 	<input name="receiverEmail" value="{{ site.shop.pagseguro.receiverEmail }}" type="hidden">
     <input name="currency" value="BRL" type="hidden">
     <input name="encoding" value="UTF-8" type="hidden">
@@ -51,7 +51,7 @@
 	<div class="items"></div>
 </form>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" id="form-paypal">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="form-paypal">
 	<input name="business" value="{{ site.shop.paypal.business }}" type="hidden">
 	<input name="currency_code" value="{{ site.shop.paypal.currency_code }}" type="hidden">
 	<input name="cmd" value="_cart" type="hidden">
