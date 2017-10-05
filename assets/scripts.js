@@ -512,7 +512,7 @@ $(document).ready(function() {
         if (localStorage.getItem('msg-bottom-time-to-hide') < new Date().getTime()) {
             $('body').prepend(
                 '<nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom" style="display:none"><div class="container">'+
-                    'This website is writen in Portuguese. You can translate <a href="https://translate.google.com/translate?hl=pt&sl=auto&tl=pt&u=' + window.location + '">here</a>.'+
+                    'This website is written in Portuguese. You can translate <a href="https://translate.google.com/translate?hl=pt&sl=pt&tl=en&u=' + window.location + '">here</a>.'+
                     '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
                 '</div></nav>'
             );
