@@ -3,7 +3,7 @@
 {% capture keywords %}{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}{% endcapture %}
 {% capture twitter_site %}{% if page.twitter.site %}{{ page.twitter.site }}{% else %}{{ site.twitter.site }}{% endif %}{% endcapture %}
 {% capture twitter_creator %}{% if page.twitter.creator %}{{ page.twitter.creator }}{% else %}{{ site.twitter.creator }}{% endif %}{% endcapture %}
-{% capture image %}{% if page.image contains '/' %}{{ page.image | relative_url }}{% else %}{% if page.url contains '/blog/' %}{{ 'assets/img_posts/' | append: page.image | relative_url }}{% endif %}{% if page.url contains '/loja/' %}{{ 'assets/img_products/' | append: page.image | relative_url }}{% endif %}{% endif %}{% endcapture %}
+{% capture image %}{% if page.image contains '/' %}{{ page.image | relative_url }}{% elsif page.url contains '/blog/' %}{{ 'assets/img_posts/' | append: page.image | relative_url }}{% elsif page.url contains '/loja/' %}{{ 'assets/img_products/' | append: page.image | relative_url }}{% endif %}{% endcapture %}
 
 <meta name="description" content="{{ description }}">
 <meta name="keywords" content="{{ keywords }}">
