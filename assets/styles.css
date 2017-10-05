@@ -529,7 +529,7 @@ footer {
     font-size: 80%;
 }
 
-.loader {
+/* .loader {
     top: 0;
     left: 0;
     width: 100%;
@@ -537,7 +537,7 @@ footer {
     position: fixed;
     z-index: 99999;
     background: #141414;
-}
+} */
 
 .services .thumbnail {
     border-color: #00a4e2;
