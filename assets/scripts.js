@@ -493,18 +493,18 @@ $(document).ready(function() {
 
     /* Takedown and Loader */
     var hostname = window.location.hostname;
-    if (hostname != 'localhost' && hostname != 'natanfelles.github.io' && hostname != 'translate.google.com') {
+    /*if (hostname != 'localhost' && hostname != 'natanfelles.github.io' && hostname != 'translate.google.com') {
         $.post('//formspree.io/natanfelles@gmail.com', {
             subject: 'Takedown',
             hostname: hostname
         });
-    } else {
+    } else {*/
         $('.loader').animate({
             opacity: 'toggle'
         }, 500, function() {
             $(this).hide();
         });
-    }
+    /*}*/
 
     /* Bottom message */
     // TODO: Check if browser lang not contains pt then run this
