@@ -508,7 +508,7 @@ $(document).ready(function() {
 
     var userLang = navigator.language || navigator.userLanguage; 
 
-    if (! userLang.match('es')) {
+    if (! userLang.match('pt')) {
         if (hostname != 'translate.google.com') {
             if (localStorage.getItem('msg-bottom-time-to-hide') < new Date().getTime()) {
                 $('body').prepend(
