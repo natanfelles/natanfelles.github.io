@@ -381,7 +381,7 @@ function sendForm(formId) {
 
 
 /* After document is loaded */
-$(document).ready(function() {
+/*$(document).ready(function() {*/
 
     /* Hero */
     setupHero();
@@ -529,4 +529,4 @@ $(document).ready(function() {
     }
 
 
-});
+/*});*/
