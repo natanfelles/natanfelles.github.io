@@ -193,7 +193,7 @@ a.thumbnail:hover {
 }
 
 .posts-list h2 a:hover {
-    color: #ccc;
+    color: #ddd;
 }
 
 .tags {
@@ -366,8 +366,9 @@ dl.file-excerpt dt {
     border-radius: 4px 4px 0 0;
     padding: 9.5px;
     font-size: 13px;
+    font-weight: 400;
     line-height: 1.42857143;
-    color: #fff;
+    color: #ddd;
     background-color: #111;
 }
 
