@@ -395,7 +395,9 @@ function sendForm(formId) {
     $('pre code').each(function(i, block) {
         if (!$(this).attr('class')) {
             $(this).attr('class', 'hljs language-txt');
-        } else if ($(this).hasClass('language-php')) {
+        } else if ($(this).hasClass('language-php') && 
+                (  this.innerHTML.indexOf('?php') > 0 ||   this.innerHTML.indexOf('?=') > 0)
+            ) {
             // Avoid html syntax do not be highlighted in php files
             $(this).removeClass('language-php').addClass('language-html');
         }
