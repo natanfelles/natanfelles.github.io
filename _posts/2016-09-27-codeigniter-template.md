@@ -42,143 +42,153 @@ O grande ganho com esse sistema de template é que não há necessidade de dupli
 
 Primeiro, crie o arquivo _application/views/html.php_ como no exemplo:
 
-```php
-<!doctype html>
-<html lang="<?= isset($lang) ? $lang : 'en' ?>">
-<?php
-$this->load->view('templates/head');
-?>
-<body<?= isset($body_attr) ? " {$body_attr}" : '' ?>>
-<?php
-$this->load->view("pages/{$page}");
-$this->load->view('templates/scripts');
-?>
-</body>
-</html>
-```
+{: .file-excerpt }
+application/views/html.php
+:	```php
+	<!doctype html>
+	<html lang="<?= isset($lang) ? $lang : 'en' ?>">
+	<?php
+	$this->load->view('templates/head');
+	?>
+	<body<?= isset($body_attr) ? " {$body_attr}" : '' ?>>
+	<?php
+	$this->load->view("pages/{$page}");
+	$this->load->view('templates/scripts');
+	?>
+	</body>
+	</html>
+	```
 
 Em seguida, construa o head em _application/views/templates/head.php_:
 
-```php
-<head>
-	<meta charset="UTF-8">
-	<title><?= isset($title) ? $title : 'CodeIgniter' ?></title>
-<?php
-// CSS Links
-if (isset($link_css)):
-	foreach ($link_css as $link):
-		echo '<link rel="stylesheet" href="' . $link . '">';
-	endforeach;
-endif;
+{: .file-excerpt }
+application/views/templates/head.php
+:	```php
+	<head>
+		<meta charset="UTF-8">
+		<title><?= isset($title) ? $title : 'CodeIgniter' ?></title>
+	<?php
+	// CSS Links
+	if (isset($link_css)):
+		foreach ($link_css as $link):
+			echo '<link rel="stylesheet" href="' . $link . '">';
+		endforeach;
+	endif;
 
-// CSS Inline
-if (isset($inline_css)):
-	echo '<style type="text/css">';
-	foreach ($inline_css as $inline):
-		echo $inline;
-	endforeach;
-	echo '</style>';
-endif;
-?>
-</head>
-```
+	// CSS Inline
+	if (isset($inline_css)):
+		echo '<style type="text/css">';
+		foreach ($inline_css as $inline):
+			echo $inline;
+		endforeach;
+		echo '</style>';
+	endif;
+	?>
+	</head>
+	```
 
 E o arquivo para o javascript em _application/views/templates/scripts.php_:
 
-```php
-<?php
-// JS Links
-if (isset($link_js)):
-	foreach ($link_js as $link):
-		echo '<script src="' . $link . '" type="text/javascript"></script>';
-	endforeach;
-endif;
+{: .file-excerpt }
+application/views/templates/scripts.php
+:	```php
+	<?php
+	// JS Links
+	if (isset($link_js)):
+		foreach ($link_js as $link):
+			echo '<script src="' . $link . '" type="text/javascript"></script>';
+		endforeach;
+	endif;
 
-// JS Inline
-if (isset($inline_js)):
-	echo '<script type="text/javascript">';
-	foreach ($inline_js as $inline):
-		echo $inline;
-	endforeach;
-	echo '</script>';
-endif;
-```
+	// JS Inline
+	if (isset($inline_js)):
+		echo '<script type="text/javascript">';
+		foreach ($inline_js as $inline):
+			echo $inline;
+		endforeach;
+		echo '</script>';
+	endif;
+	```
 
 Feito isso, vamos à página de exemplo em _application/views/pages/example/index.php_:
 
-```php
-<div class="container">
-	<div class="jumbotron">
-		<h1>
-		<span class="glyphicon glyphicon-fire"></span> CodeIgniter Template</h1>
-		<p>Esta é uma página de exemplo.</p>
+{: .file-excerpt }
+application/views/pages/example/index.php
+:	```php
+	<div class="container">
+		<div class="jumbotron">
+			<h1>
+			<span class="glyphicon glyphicon-fire"></span> CodeIgniter Template</h1>
+			<p>Esta é uma página de exemplo.</p>
+		</div>
 	</div>
-</div>
-```
+	```
 
 Com as views já criadas, podemos fazer um controller em _application/controllers/Example.php_:
 
-```php
-<?php
+{: .file-excerpt }
+application/controllers/Example.php
+:	```php
+	<?php
 
-class Example extends CI_Controller {
+	class Example extends CI_Controller {
 
-	public function __construct()
-	{
-		parent::__construct();
-		// Precisamos desse helper para usarmos a função base_url()
-		$this->load->helper('url');
+		public function __construct()
+		{
+			parent::__construct();
+			// Precisamos desse helper para usarmos a função base_url()
+			$this->load->helper('url');
+		}
+
+		public function index()
+		{
+			// views/html.php - Idioma da página html
+			$data['lang'] = 'pt-BR';
+
+			// views/pages/example/index.php - Conteúdo do body
+			// Crie uma pasta com o nome do controller e arquivo com nome do método para melhor organizar
+			$data['page'] = 'example/index';
+
+			// views/templates/head.php - Título da Página
+			$data['title'] = 'CodeIgniter Template';
+
+			// views/html.php - Atributos da tag body
+			$data['body_attr'] = 'class="grey"';
+
+			// views/templates/head.php - CSS links.
+			// Adicione os links de suas folhas de estilo
+			$data['link_css'] = array(
+				'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', // Externo
+				base_url('assets/css/styles.css'), // Local
+			);
+
+			// views/templates/head.php - CSS inline. Será inserido dentro da tag style, no head
+			$data['inline_css'] = array(
+				'body {padding-top: 70px}',
+				'.grey {background-color: #f9f9f9}',
+				'.jumbotron {background-color: #343131; color: #b3b3b3 }',
+				'h1 {color: #fff !important}',
+				'.glyphicon-fire {color: #dd4814; font-size: 150%}',
+			);
+
+			// views/templates/scripts.php - JS links. Serão inseridos na view scripts.php
+			$data['link_js'] = array(
+				'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
+				'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
+				base_url('assets/js/scripts.js'),
+			);
+
+			// views/templates/scripts.php - JS inline. Será inserido dentro da tag script
+			$data['inline_js'] = array(
+				'console.log("Hello!")',
+			);
+
+			// Carrega a view principal e define os dados dinâmicos
+			$this->load->view('html', $data);
+		}
+
 	}
-
-	public function index()
-	{
-		// views/html.php - Idioma da página html
-		$data['lang'] = 'pt-BR';
-
-		// views/pages/example/index.php - Conteúdo do body
-		// Crie uma pasta com o nome do controller e arquivo com nome do método para melhor organizar
-		$data['page'] = 'example/index';
-
-		// views/templates/head.php - Título da Página
-		$data['title'] = 'CodeIgniter Template';
-
-		// views/html.php - Atributos da tag body
-		$data['body_attr'] = 'class="grey"';
-
-		// views/templates/head.php - CSS links.
-		// Adicione os links de suas folhas de estilo
-		$data['link_css'] = array(
-			'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', // Externo
-			base_url('assets/css/styles.css'), // Local
-		);
-
-		// views/templates/head.php - CSS inline. Será inserido dentro da tag style, no head
-		$data['inline_css'] = array(
-			'body {padding-top: 70px}',
-			'.grey {background-color: #f9f9f9}',
-			'.jumbotron {background-color: #343131; color: #b3b3b3 }',
-			'h1 {color: #fff !important}',
-			'.glyphicon-fire {color: #dd4814; font-size: 150%}',
-		);
-
-		// views/templates/scripts.php - JS links. Serão inseridos na view scripts.php
-		$data['link_js'] = array(
-			'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
-			'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
-			base_url('assets/js/scripts.js'),
-		);
-
-		// views/templates/scripts.php - JS inline. Será inserido dentro da tag script
-		$data['inline_js'] = array(
-			'console.log("Hello!")',
-		);
-
-		// Carrega a view principal e define os dados dinâmicos
-		$this->load->view('html', $data);
-	}
-
-}
-```
+	```
 
 ## Fim
 

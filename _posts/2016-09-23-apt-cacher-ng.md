@@ -46,9 +46,11 @@ Estando com o servidor proxy de cache instalado, vamos ver como configurar as m�
 
 Em cada cliente, crie um arquivo em /etc/apt/apt.conf e adicione a linha abaixo, substituindo o IP pelo do seu servidor:
 
-```sh
-Acquire::http::Proxy "http://192.168.1.100:3142";
-```
+{: .file-excerpt }
+/etc/apt/apt.conf
+:	```sh
+	Acquire::http::Proxy "http://192.168.1.100:3142";
+	```
 
 Feito! Salve e feche o arquivo e atualize a máquina cliente:
 
@@ -66,10 +68,12 @@ Caso seja necessário, você pode proteger o sistema web com a requisição de u
 
 Para isso, edite o arquivo /etc/apt-cacher-ng/security.conf:
 
-```sh
-#AdminAuth: mooma:moopa
-AdminAuth: usuario:Senh4
-```
+{: .file-excerpt }
+/etc/apt-cacher-ng/security.conf
+:	```sh
+	#AdminAuth: mooma:moopa
+	AdminAuth: usuario:Senh4
+	```
 Depois reinicie o apt-cacher-ng:
 
 ```sh

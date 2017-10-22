@@ -22,19 +22,21 @@ vi /etc/apt/sources.list
 
 Adicione os repositórios <em>non-free</em>, como no exemplo:
 
-```sh
-# Debian
-deb http://ftp.br.debian.org/debian/ jessie non-free contrib main
-deb-src http://ftp.br.debian.org/debian/ jessie non-free contrib main
+{: .file-excerpt }
+/etc/apt/sources.list
+:	```sh
+	# Debian
+	deb http://ftp.br.debian.org/debian/ jessie non-free contrib main
+	deb-src http://ftp.br.debian.org/debian/ jessie non-free contrib main
 
-# Debian Security
-deb http://security.debian.org/ jessie/updates non-free contrib main
-deb-src http://security.debian.org/ jessie/updates non-free contrib main
+	# Debian Security
+	deb http://security.debian.org/ jessie/updates non-free contrib main
+	deb-src http://security.debian.org/ jessie/updates non-free contrib main
 
-# Debian Jessie Updates
-deb http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
-deb-src http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
-```
+	# Debian Jessie Updates
+	deb http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
+	deb-src http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
+	```
 Pressione `Esc` + `:wq` + `Enter` para salvar e sair.
 
 Devemos adicionar a arquitetura i386 e atualizar a lista pacotes para rodar aplicações 32 bits:

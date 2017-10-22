@@ -14,19 +14,21 @@ Se tratando de GNU/Linux sempre há uma solução. Talvez você tenha que estuda
 
 Atualmente, muitos softwares proprietários estão disponíveis à partir dos repositórios oficiais de muitas distribuições Linux. No Debian, podemos utilizá-los inserindo o repositório _non-free_ no arquivo _/etc/apt/sources.list_ como no exemplo abaixo:
 
-```sh
-# Debian
-deb http://ftp.br.debian.org/debian/ jessie non-free contrib main
-deb-src http://ftp.br.debian.org/debian/ jessie non-free contrib main
+{: .file-excerpt }
+/etc/apt/sources.list
+:	```sh
+	# Debian
+	deb http://ftp.br.debian.org/debian/ jessie non-free contrib main
+	deb-src http://ftp.br.debian.org/debian/ jessie non-free contrib main
 
-# Debian Security
-deb http://security.debian.org/ jessie/updates non-free contrib main
-deb-src http://security.debian.org/ jessie/updates non-free contrib main
+	# Debian Security
+	deb http://security.debian.org/ jessie/updates non-free contrib main
+	deb-src http://security.debian.org/ jessie/updates non-free contrib main
 
-# Debian Jessie Updates
-deb http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
-deb-src http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
-```
+	# Debian Jessie Updates
+	deb http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
+	deb-src http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
+	```
 
 Sempre que modificar o arquivo de fontes de repositórios é recomendável atualizar o sistema.
 

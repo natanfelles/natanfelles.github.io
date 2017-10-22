@@ -36,11 +36,13 @@ A saída deve ser identica ao nome inserido, nesse caso mostraria _servidor.domi
 
 ## O Arquivo hosts
 
-```sh
-127.0.0.1        localhost.localdomain   localhost
-127.0.0.1        servidor.dominio.com    servidor
-154.53.224.150   admin.dominio.com       admin
-```
+{: .file-excerpt }
+/etc/hosts
+:	```sh
+	127.0.0.1        localhost.localdomain   localhost
+	127.0.0.1        servidor.dominio.com    servidor
+	154.53.224.150   admin.dominio.com       admin
+	```
 
 No arquivo hosts fica o endereçamento direto a nomes de domínios. No exemplo acima possuímos três linhas e cada uma com o IP, o FQDN e o nome do host respectivamente.
 
@@ -52,26 +54,28 @@ Através do arquivo hosts podemos impor para qual IP destina-se um domínio. Por
 
 ## O Arquivo hosts.deny
 
-```sh
-# /etc/hosts.deny: list of hosts that are _not_ allowed to access the system.
-#                  See the manual pages hosts_access(5) and hosts_options(5).
-#
-# Example:    ALL: some.host.name, .some.domain
-#             ALL EXCEPT in.fingerd: other.host.name, .other.domain
-#
-# If you're going to protect the portmapper use the name "rpcbind" for the
-# daemon name. See rpcbind(8) and rpc.mountd(8) for further information.
-#
-# The PARANOID wildcard matches any host whose name does not match its
-# address.
-#
-# You may wish to enable this to ensure any programs that don't
-# validate looked up hostnames still leave understandable logs. In past
-# versions of Debian this has been the default.
-# ALL: PARANOID
-ALL: ALL: twist /var/noaccess %h %d;
-	/bin/echo -e "$(date) - O host %h tentou acessar o %d" >> /home/username/security.log;
-```
+{: .file-excerpt }
+/etc/hosts.deny
+:	```sh
+	# /etc/hosts.deny: list of hosts that are _not_ allowed to access the system.
+	#                  See the manual pages hosts_access(5) and hosts_options(5).
+	#
+	# Example:    ALL: some.host.name, .some.domain
+	#             ALL EXCEPT in.fingerd: other.host.name, .other.domain
+	#
+	# If you're going to protect the portmapper use the name "rpcbind" for the
+	# daemon name. See rpcbind(8) and rpc.mountd(8) for further information.
+	#
+	# The PARANOID wildcard matches any host whose name does not match its
+	# address.
+	#
+	# You may wish to enable this to ensure any programs that don't
+	# validate looked up hostnames still leave understandable logs. In past
+	# versions of Debian this has been the default.
+	# ALL: PARANOID
+	ALL: ALL: twist /var/noaccess %h %d;
+		/bin/echo -e "$(date) - O host %h tentou acessar o %d" >> /home/username/security.log;
+	```
 
 Este arquivo já é muito bem explicado através dos comentários, sua função é negar o acesso a determinados serviços.
 
@@ -85,19 +89,21 @@ Dessa meneira você saberá, pelo menos, o IP final de um atacante. Dê ainda ma
 
 ## O Arquivo hosts.allow
 
-```sh
-# /etc/hosts.allow: list of hosts that are allowed to access the system.
-#                   See the manual pages hosts_access(5) and hosts_options(5).
-#
-# Example:    ALL: LOCAL @some_netgroup
-#             ALL: .foobar.edu EXCEPT terminalserver.foobar.edu
-#
-# If you're going to protect the portmapper use the name "rpcbind" for the
-# daemon name. See rpcbind(8) and rpc.mountd(8) for further information.
-#
-ALL: 127.0.0.1
-ALL: .dominio.com
-```
+{: .file-excerpt }
+/etc/hosts.allow
+:	```sh
+	# /etc/hosts.allow: list of hosts that are allowed to access the system.
+	#                   See the manual pages hosts_access(5) and hosts_options(5).
+	#
+	# Example:    ALL: LOCAL @some_netgroup
+	#             ALL: .foobar.edu EXCEPT terminalserver.foobar.edu
+	#
+	# If you're going to protect the portmapper use the name "rpcbind" for the
+	# daemon name. See rpcbind(8) and rpc.mountd(8) for further information.
+	#
+	ALL: 127.0.0.1
+	ALL: .dominio.com
+	```
 
 Ao finalizar o arquivo anterior você deve ter ficado se peguntando; mas… se bloquearmos todos os acessos e ninguém poder entrar, também ficaremos trancados fora do servidor? Exatamente isso. Ninguém entra! Porém, existe o arquivo hosts.allow e nele configura-se quem pode acessar determinados serviços.
 

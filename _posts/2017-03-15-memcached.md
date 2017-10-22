@@ -37,57 +37,59 @@ sudo vi /etc/memcached.conf
 
 O arquivo é bem documentado e sugiro que você comente as linhas que for alterar e adicione seus valores personalizados logo abaixo:
 
-```sh
-# memcached default config file
-# 2003 - Jay Bonci <jaybonci@debian.org>
-# This configuration file is read by the start-memcached script provided as
-# part of the Debian GNU/Linux distribution.
+{: .file-excerpt }
+/etc/memcached.conf
+:   ```sh
+    # memcached default config file
+    # 2003 - Jay Bonci <jaybonci@debian.org>
+    # This configuration file is read by the start-memcached script provided as
+    # part of the Debian GNU/Linux distribution.
 
-# Run memcached as a daemon. This command is implied, and is not needed for the
-# daemon to run. See the README.Debian that comes with this package for more
-# information.
--d
+    # Run memcached as a daemon. This command is implied, and is not needed for the
+    # daemon to run. See the README.Debian that comes with this package for more
+    # information.
+    -d
 
-# Log memcached's output to /var/log/memcached
-logfile /var/log/memcached.log
+    # Log memcached's output to /var/log/memcached
+    logfile /var/log/memcached.log
 
-# Be verbose
-# -v
+    # Be verbose
+    # -v
 
-# Be even more verbose (print client commands as well)
-# -vv
+    # Be even more verbose (print client commands as well)
+    # -vv
 
-# Start with a cap of 64 megs of memory. It's reasonable, and the daemon default
-# Note that the daemon will grow to this size, but does not start out holding this much
-# memory
-#-m 64
--m 450 # Quantidade personalizada de memória em MegaBytes
+    # Start with a cap of 64 megs of memory. It's reasonable, and the daemon default
+    # Note that the daemon will grow to this size, but does not start out holding this much
+    # memory
+    #-m 64
+    -m 450 # Quantidade personalizada de memória em MegaBytes
 
-# Default connection port is 11211
--p 11211
+    # Default connection port is 11211
+    -p 11211
 
-# Run the daemon as root. The start-memcached will default to running as root if no
-# -u command is present in this config file
--u memcache
+    # Run the daemon as root. The start-memcached will default to running as root if no
+    # -u command is present in this config file
+    -u memcache
 
-# Specify which IP address to listen on. The default is to listen on all IP addresses
-# This parameter is one of the only security measures that memcached has, so make sure
-# it's listening on a firewalled interface.
-#-l 127.0.0.1
--l 192.168.1.21 # Único endereço IP em que o memcached irá atender
+    # Specify which IP address to listen on. The default is to listen on all IP addresses
+    # This parameter is one of the only security measures that memcached has, so make sure
+    # it's listening on a firewalled interface.
+    #-l 127.0.0.1
+    -l 192.168.1.21 # Único endereço IP em que o memcached irá atender
 
-# Limit the number of simultaneous incoming connections. The daemon default is 1024
-# -c 1024
+    # Limit the number of simultaneous incoming connections. The daemon default is 1024
+    # -c 1024
 
-# Lock down all paged memory. Consult with the README and homepage before you do this
-# -k
+    # Lock down all paged memory. Consult with the README and homepage before you do this
+    # -k
 
-# Return error when memory is exhausted (rather than removing items)
-# -M
+    # Return error when memory is exhausted (rather than removing items)
+    # -M
 
-# Maximize core file limit
-# -r
-```
+    # Maximize core file limit
+    # -r
+    ```
 
 Realizadas as alterações, podemos reiniciar o serviço:
 
@@ -158,33 +160,35 @@ O PHPMemcachedAdmin permite que você adicione quantos servidores desejar, tanto
 vi phpmemcacheadmin/Config/Memcache.php
 ```
 
-```php
-<?php
-return array(
-    'stats_api'          => 'Server',
-    'slabs_api'          => 'Server',
-    'items_api'          => 'Server',
-    'get_api'            => 'Server',
-    'set_api'            => 'Server',
-    'delete_api'         => 'Server',
-    'flush_all_api'      => 'Server',
-    'connection_timeout' => '1',
-    'max_item_dump'      => '100',
-    'refresh_rate'       => 2,
-    'memory_alert'       => '80',
-    'hit_rate_alert'     => '90',
-    'eviction_alert'     => '0',
-    'file_path'          => 'Temp/',
-    'servers'            => array(
-        'Default' => array(
-            '192.168.1.21:11211' => array(
-                'hostname' => '192.168.1.21',
-                'port'     => '11211',
+{: .file-excerpt }
+phpmemcacheadmin/Config/Memcache.php
+:   ```php
+    <?php
+    return array(
+        'stats_api'          => 'Server',
+        'slabs_api'          => 'Server',
+        'items_api'          => 'Server',
+        'get_api'            => 'Server',
+        'set_api'            => 'Server',
+        'delete_api'         => 'Server',
+        'flush_all_api'      => 'Server',
+        'connection_timeout' => '1',
+        'max_item_dump'      => '100',
+        'refresh_rate'       => 2,
+        'memory_alert'       => '80',
+        'hit_rate_alert'     => '90',
+        'eviction_alert'     => '0',
+        'file_path'          => 'Temp/',
+        'servers'            => array(
+            'Default' => array(
+                '192.168.1.21:11211' => array(
+                    'hostname' => '192.168.1.21',
+                    'port'     => '11211',
+                ),
             ),
         ),
-    ),
-);
-```
+    );
+    ```
 
 À partir de agora podemos analisar em tempo real o uso do nosso servidor memcached.
 

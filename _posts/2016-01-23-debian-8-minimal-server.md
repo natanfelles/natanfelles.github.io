@@ -198,42 +198,46 @@ vi /etc/network/interfaces
 
 O arquivo de interfaces criado automaticamente pelo instalador apt ficou assim:
 
-```sh
-# This file describes the network interfaces available on your system
-# and how to activate them. For more information, see interfaces(5).
+{: .file-excerpt }
+/etc/network/interfaces
+:	```sh
+	# This file describes the network interfaces available on your system
+	# and how to activate them. For more information, see interfaces(5).
 
-source /etc/network/interfaces.d/*
+	source /etc/network/interfaces.d/*
 
-# The loopback network interface
-auto lo
-iface lo inet loopback
+	# The loopback network interface
+	auto lo
+	iface lo inet loopback
 
-# The primary network interface
-allow-hotplug eth0
-iface eth0 inet dhcp
-```
+	# The primary network interface
+	allow-hotplug eth0
+	iface eth0 inet dhcp
+	```
 
 E aqui está o arquivo já configurado com o IP Estático 192.168.1.100 definido. Deixe o seu conforme este:
 
-```sh
-# This file describes the network interfaces available on your system
-# and how to activate them. For more information, see interfaces(5).
+{: .file-excerpt }
+/etc/network/interfaces
+:	```sh
+	# This file describes the network interfaces available on your system
+	# and how to activate them. For more information, see interfaces(5).
 
-# The loopback network interface
-auto lo
-iface lo inet loopback
+	# The loopback network interface
+	auto lo
+	iface lo inet loopback
 
-# The primary network interface
-#allow-hotplug eth0
-#iface eth0 inet dhcp
-auto eth0
-iface eth0 inet static
-		address 192.168.1.100
-		netmask 255.255.255.0
-		network 192.168.1.0
-		broadcast 192.168.1.255
-		gateway 192.168.1.1
-```
+	# The primary network interface
+	#allow-hotplug eth0
+	#iface eth0 inet dhcp
+	auto eth0
+	iface eth0 inet static
+			address 192.168.1.100
+			netmask 255.255.255.0
+			network 192.168.1.0
+			broadcast 192.168.1.255
+			gateway 192.168.1.1
+	```
 
 Por termos configurado a placa de rede eth0 para iniciar automaticamente, precisaremos reiniciar o servidor:
 
@@ -255,15 +259,17 @@ vi /etc/hosts
 
 Ele deve ficar semelhante a este exemplo:
 
-```sh
-127.0.0.1         localhost.localdomain      localhost
-192.168.1.100     debian.dominio.com         debian
+{: .file-excerpt }
+/etc/hosts
+:	```sh
+	127.0.0.1         localhost.localdomain      localhost
+	192.168.1.100     debian.dominio.com         debian
 
-# The following lines are desirable for IPv6 capable hosts
-::1     localhost ip6-localhost ip6-loopback
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
-```
+	# The following lines are desirable for IPv6 capable hosts
+	::1     localhost ip6-localhost ip6-loopback
+	ff02::1 ip6-allnodes
+	ff02::2 ip6-allrouters
+	```
 
 Se você quiser mudar o hostname, podes fazê-lo assim:
 
@@ -296,19 +302,21 @@ vi /etc/apt/sources.list
 
 O arquivo deve ficar semelhante ao exemplo abaixo:
 
-```sh
-#deb cdrom:[Debian GNU/Linux 8.2.0 _Jessie_ - Official amd64 NETINST Binary-1 20150906-11:09]/ jessie main
+{: .file-excerpt }
+/etc/apt/sources.list
+:	```sh
+	#deb cdrom:[Debian GNU/Linux 8.2.0 _Jessie_ - Official amd64 NETINST Binary-1 20150906-11:09]/ jessie main
 
-deb http://ftp.br.debian.org/debian/ jessie main contrib non-free
-deb-src http://ftp.br.debian.org/debian/ jessie main contrib non-free
+	deb http://ftp.br.debian.org/debian/ jessie main contrib non-free
+	deb-src http://ftp.br.debian.org/debian/ jessie main contrib non-free
 
-deb http://security.debian.org/ jessie/updates main contrib non-free
-deb-src http://security.debian.org/ jessie/updates main contrib non-free
+	deb http://security.debian.org/ jessie/updates main contrib non-free
+	deb-src http://security.debian.org/ jessie/updates main contrib non-free
 
-# jessie-updates, previously known as 'volatile'
-deb http://ftp.br.debian.org/debian/ jessie-updates main contrib non-free
-deb-src http://ftp.br.debian.org/debian/ jessie-updates main contrib non-free
-```
+	# jessie-updates, previously known as 'volatile'
+	deb http://ftp.br.debian.org/debian/ jessie-updates main contrib non-free
+	deb-src http://ftp.br.debian.org/debian/ jessie-updates main contrib non-free
+	```
 
 Depois, atualize os repositórios:
 

@@ -25,22 +25,24 @@ vi /etc/apt/sources.list
 
 Abaixo, segue o exemplo do meu arquivo atual. Adicione apenas a última linha, se quiser:
 
-```sh
-# Debian
-deb http://ftp.br.debian.org/debian/ jessie non-free contrib main
-deb-src http://ftp.br.debian.org/debian/ jessie non-free contrib main
+{: .file-excerpt }
+/etc/apt/sources.list
+:	```sh
+	# Debian
+	deb http://ftp.br.debian.org/debian/ jessie non-free contrib main
+	deb-src http://ftp.br.debian.org/debian/ jessie non-free contrib main
 
-# Debian Security
-deb http://security.debian.org/ jessie/updates non-free contrib main
-deb-src http://security.debian.org/ jessie/updates non-free contrib main
+	# Debian Security
+	deb http://security.debian.org/ jessie/updates non-free contrib main
+	deb-src http://security.debian.org/ jessie/updates non-free contrib main
 
-# Debian Jessie Updates
-deb http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
-deb-src http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
+	# Debian Jessie Updates
+	deb http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
+	deb-src http://ftp.br.debian.org/debian/ jessie-updates non-free contrib main
 
-# VirtualBox
-deb http://download.virtualbox.org/virtualbox/debian jessie contrib
-```
+	# VirtualBox
+	deb http://download.virtualbox.org/virtualbox/debian jessie contrib
+	```
 
 Para que o novo repositório seja validado, adicione a apt-key:
 
