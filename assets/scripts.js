@@ -395,6 +395,9 @@ function sendForm(formId) {
     $('pre code').each(function(i, block) {
         if (!$(this).attr('class')) {
             $(this).attr('class', 'hljs language-txt');
+        } else if ($(this).hasClass('language-php')) {
+            // Avoid html syntax do not be highlighted in php files
+            $(this).removeClass('language-php').addClass('language-html');
         }
     });
     if (typeof hljs == 'object') {
