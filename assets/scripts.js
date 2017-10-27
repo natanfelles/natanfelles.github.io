@@ -392,10 +392,10 @@ function sendForm(formId) {
     $('[data-toggle="tooltip"]').tooltip();
     
     /* Ekko Lightbox */
-    $('[data-toggle="lightbox"]').click(function (e) {
+    /*$('[data-toggle="lightbox"]').click(function (e) {
         e.preventDefault();
         $(this).ekkoLightbox();
-    }).attr('title', 'Clique para ampliar');
+    }).attr('title', 'Clique para ampliar');*/
 
 
     /* Code Highlight */
