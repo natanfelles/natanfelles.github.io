@@ -403,6 +403,7 @@ function sendForm(formId) {
         }
     });
     if (typeof hljs == 'object') {
+        hljs.configure({tabReplace: '  '});
         hljs.initHighlightingOnLoad();
         hljs.initLineNumbersOnLoad();
     }
