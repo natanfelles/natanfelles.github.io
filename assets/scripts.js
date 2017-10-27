@@ -390,11 +390,13 @@ function sendForm(formId) {
     });
 
     $('[data-toggle="tooltip"]').tooltip();
-
-    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-        event.preventDefault();
+    
+    /* Ekko Lightbox */
+    $('[data-toggle="lightbox"]').click(function (e) {
+        e.preventDefault();
         $(this).ekkoLightbox();
-    });
+    }).attr('title', 'Clique para ampliar');
+
 
     /* Code Highlight */
     $('pre code').each(function(i, block) {
