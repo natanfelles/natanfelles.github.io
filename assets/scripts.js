@@ -391,6 +391,11 @@ function sendForm(formId) {
 
     $('[data-toggle="tooltip"]').tooltip();
 
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+
     /* Code Highlight */
     $('pre code').each(function(i, block) {
         if (!$(this).attr('class')) {

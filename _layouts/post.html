@@ -13,7 +13,9 @@ layout: content
 </div>
 
 <p>
-	<img src="{{ 'assets/img_posts/' | append: page.image | relative_url }}" alt="{{ page.title }}" />
+	<a href="{{ 'assets/img_posts/' | append: page.image | relative_url }}" data-toggle="lightbox">
+		<img src="{{ 'assets/img_posts/' | append: page.image | relative_url }}" alt="{{ page.title }}"/>
+	</a>
 </p>
 
 

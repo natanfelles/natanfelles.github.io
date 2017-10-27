@@ -396,10 +396,9 @@ code {
     font-size: 100%;
 }
 
-/*pre code {
-    font-size: 12px;
+/* pre code:hover {
     white-space: pre;
-}*/
+} */
 
 .panel-hero {
     border-top: 4px solid #00a4e2;
@@ -638,8 +637,13 @@ footer {
     opacity: .9;
 }
 
+.ekko-lightbox .modal-body,
 #cp-images .modal-body {
     padding: 0;
+}
+
+.ekko-lightbox img {
+    border-radius: 4px;
 }
 
 .carousel-caption,
