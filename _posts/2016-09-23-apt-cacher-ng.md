@@ -49,7 +49,9 @@ Em cada cliente, crie um arquivo em /etc/apt/apt.conf e adicione a linha abaixo,
 {: .file-excerpt }
 /etc/apt/apt.conf
 :	```sh
-	Acquire::http::Proxy "http://192.168.1.100:3142";
+	#Acquire::AllowInsecureRepositories true;
+	Acquire::http::proxy "http://192.168.1.100:3142";
+	Acquire::https::proxy "DIRECT";
 	```
 
 Feito! Salve e feche o arquivo e atualize a máquina cliente:
