@@ -604,6 +604,10 @@ footer {
     border-radius: 4px;
 }
 
+.ekko-lightbox.modal.in .modal-dialog {
+    border-color: #bbb;
+}
+
 .panel,
 .modal-content {
     background-color: #141516;
