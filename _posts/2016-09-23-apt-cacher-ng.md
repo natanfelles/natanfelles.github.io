@@ -44,14 +44,14 @@ O Apt-Cacher-NG, por padrão, roda na porta 3142 e é acessível via web, onde p
 
 Estando com o servidor proxy de cache instalado, vamos ver como configurar as máquinas clientes:
 
-Em cada cliente, crie um arquivo em /etc/apt/apt.conf e adicione a linha abaixo, substituindo o IP pelo do seu servidor:
+Em cada cliente, crie um arquivo em /etc/apt/apt.conf e adicione as linhas abaixo, substituindo o IP pelo do seu servidor:
 
 {: .file-excerpt }
 /etc/apt/apt.conf
 :	```sh
-	#Acquire::AllowInsecureRepositories true;
-	Acquire::http::proxy "http://192.168.1.100:3142";
-	Acquire::https::proxy "DIRECT";
+	#Acquire::AllowInsecureRepositories true; # Allow to use an offline repo
+	Acquire::http::proxy "http://192.168.1.100:3142"; # The cache proxy repo
+	Acquire::https::proxy "DIRECT"; # Allow cache proxy SSL repos
 	```
 
 Feito! Salve e feche o arquivo e atualize a máquina cliente:
