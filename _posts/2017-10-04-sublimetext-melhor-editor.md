@@ -7,9 +7,9 @@ tags: linux debian ubuntu editor sublime
 description: Veja como instalar e configurar o SublimeText com pacotes esseciais
 ---
 
-Meu primeiro editor de códigos foi o Notepad do Windows, onde comecei copiando e colando scripts da internet. Com o passar do tempo descobri o Notepad++ e aquele código colorido era de encher os olhos.
+Meu primeiro editor de códigos foi o Notepad do Windows, onde comecei copiando e colando scripts da internet. Com o passar do tempo descobri o [Notepad++](https://notepad-plus-plus.org) e aquele código colorido era de encher os olhos.
 
-A possibilidade de fazer algumas customizações no [Notepad++](https://notepad-plus-plus.org) também me agradava, embora não saber, logo de cara, o significado de cada coisa. Ah, e ele era em português! Gostava disso (me perdia no inglês, naquela época).
+A possibilidade de fazer algumas customizações no Notepad++ também me agradava, embora não saber, logo de cara, o significado de cada coisa. Ah, e ele era em português! Gostava disso (me perdia no inglês, naquela época).
 
 Com o passar do tempo utilizei alguns editores WYSIWYG como o [NVU](http://www.nvu.com) e o "todo poderoso" Dreamweaver. Realmente, a possibilidade de clicar em um botão ou customizar opções pela interface gráfica ajudaram muito. Ajudaram a entender os códigos gerados, porque, para mim, isso sempre foi o mais importante.
 
@@ -71,21 +71,23 @@ Depois basta pesquisar o pacote que você quer, selecioná-lo e pressionar `Ente
 Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 
 - [A File Icon](https://packagecontrol.io/packages/A%20File%20Icon)
+- [All Autocomplete](https://packagecontrol.io/packages/All%20Autocomplete)
 - [ApacheConf.tmLanguage](https://packagecontrol.io/packages/ApacheConf.tmLanguage)
 - [Blade Snippets](https://packagecontrol.io/packages/Blade%20Snippets)
 - [Bootstrap 3 Snippets](https://packagecontrol.io/packages/Bootstrap%203%20Snippets)
 - [Bootstrap 4 Snippets](https://packagecontrol.io/packages/Bootstrap%204%20Snippets)
 - [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter)
-- [Color Highlighter]()
-- [Composer]()
-- [ComposerPackageInfo]()
+- [Color Highlighter](https://packagecontrol.io/packages/Color%20Highlighter)
+- [Composer](https://packagecontrol.io/packages/Composer)
+- [ComposerPackageInfo](https://packagecontrol.io/packages/ComposerPackageInfo)
 - [DocBlockr](https://packagecontrol.io/packages/DocBlockr)
 - [DotENV](https://packagecontrol.io/packages/DotENV)
 - [EditorConfig](https://packagecontrol.io/packages/EditorConfig)
 - [Emmet](https://packagecontrol.io/packages/Emmet)
-- [Figlet Big ASCII Text]()
+- [Figlet Big ASCII Text](https://packagecontrol.io/packages/Figlet%20Big%20ASCII%20Text)
+- [FuzzyFilePath](https://packagecontrol.io/packages/FuzzyFilePath)
 - [Git](https://packagecontrol.io/packages/Git)
-- [Git Config]()
+- [Git Config](https://packagecontrol.io/packages/Git%20Config)
 - [GitGutter](https://packagecontrol.io/packages/GitGutter)
 - [HighlightWords](https://packagecontrol.io/packages/HighlightWords)
 - [Hosts](https://packagecontrol.io/packages/Hosts)
