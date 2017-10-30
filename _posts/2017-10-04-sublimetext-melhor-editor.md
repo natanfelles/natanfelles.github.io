@@ -96,8 +96,10 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 - [INI](https://packagecontrol.io/packages/INI)
 - [IntelliDocs](https://packagecontrol.io/packages/IntelliDocs)
 - [Jekyll](https://packagecontrol.io/packages/Jekyll)
+- [Keymaps](https://packagecontrol.io/packages/Keymaps)
 - [Laravel Blade Highlighter](https://packagecontrol.io/packages/Laravel%20Blade%20Highlighter)
 - [Liquid](https://packagecontrol.io/packages/Liquid)
+- [Load file to REPL](https://packagecontrol.io/packages/Load%20file%20to%20REPL)
 - [Markdown Extended](https://packagecontrol.io/packages/Markdown%20Extended)
 - [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 - [Minify](https://packagecontrol.io/packages/Minify)
@@ -197,7 +199,7 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 	{ "keys": ["ctrl+alt+n"], "command": "sublime_tmpl" },
 	{ "keys": ["ctrl+alt+m"], "command": "markdown_preview_select", "args": { "target": "browser" }},
 	{ "keys": ["ctrl+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
-	{ "keys": ["f5"], "caption": "SublimeREPL: Python - RUN current file", "command": "run_existing_window_command", "args": { "id": "repl_python_run", "file": "config/Python/Main.sublime-menu" }, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }] },
+	{ "keys": ["f5"], "command": "load_file_to_repl" }
 ]
 ```
 
