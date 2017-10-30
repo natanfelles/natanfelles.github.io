@@ -15,9 +15,9 @@ Com o passar do tempo utilizei alguns editores WYSIWYG como o [NVU](http://www.n
 
 Trabalhar com o Dreamweaver, [NetBeans](https://netbeans.org) ou as poderosas IDEs da JetBrains é algo sensacional. Facilitam o desenvolvimento e muito.
 
-Porém, já há alguns anos meu editor do dia a dia tem sido o [Sublime](https://www.sublimetext.com), gosto do [Gedit](https://wiki.gnome.org/Apps/Gedit), mas o Sublime é tão leve e customizável que o identifico como o melhor editor disponível. Falo de editor e não IDE.
+Porém, já há alguns anos meu editor do dia a dia tem sido o [Sublime](https://www.sublimetext.com), gosto do [Gedit](https://wiki.gnome.org/Apps/Gedit), mas o Sublime é tão leve e customizável que o identifico como o melhor editor disponível. <s>Falo de editor e não IDE</s>.
 
-Nesse artigo falarei sobre como instalar e realizar algumas configurações "básicas" no SublimeText em um ambiente Debian-based.
+Nesse artigo falarei sobre como instalar e realizar algumas configurações <s>"básicas"</s> no SublimeText em um ambiente Debian-based.
 
 ## Instalação
 
