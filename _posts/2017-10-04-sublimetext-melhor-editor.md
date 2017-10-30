@@ -125,4 +125,88 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 
 ## Configurações
 
-Aqui: [Sublime Text User Backup](https://gitlab.com/natanfelles/sublime-backup).
+### Preferences
+
+```json
+{
+	"always_show_minimap_viewport": true,
+	"auto_complete_cycle": true,
+	"auto_find_in_selection": true,
+	"caret_extra_bottom": 1,
+	"color_scheme": "Packages/User/Color Highlighter/themes/One Dark (SL).tmTheme",
+	"default_line_ending": "unix",
+	"draw_minimap_border": true,
+	"figlet_font": "banner3",
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".idea",
+		".sass-cache"
+	],
+	"font_size": 11,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"All Autocomplete",
+		"ComposerPackageInfo",
+		"Jekyll",
+		"RestructuredText",
+		"SublimeLinter-contrib-htmlhint",
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 2,
+	"one_dark_show_scroll_tabs": false,
+	"one_dark_show_tabs_dropdown": true,
+	"overlay_scroll_bars": "enabled",
+	"preview_on_click": true,
+	"rulers":
+	[
+		80
+	],
+	"show_encoding": true,
+	"show_line_endings": true,
+	"tab_size": 4,
+	"tabs_small": true,
+	"theme": "One Dark.sublime-theme",
+	"trim_trailing_white_space_on_save": false,
+	"word_wrap": true
+}
+```
+
+### Key Bindings
+
+```json
+[
+	{ "keys": ["ctrl+\\"], "command": "toggle_side_bar" },
+	{ "keys": ["f12"], "command": "toggle_side_bar" },
+	{ "keys": ["ctrl+m"], "command": "toggle_minimap" },
+	{ "keys": ["ctrl+space"], "command": "code_intel_auto_complete" },
+	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+alt+l"], "command": "pep8_autoformat", "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }] },
+	{ "keys": ["ctrl+alt+l"], "command": "php_cbf", "context": [{ "key": "selector", "operator": "equal", "operand": "source.php" }] },	
+	{ "keys": ["ctrl+alt+t"], "command": "toggle_trailing_spaces" },
+	{ "keys": ["shift+delete"], "command": "delete_trailing_spaces" },
+	{ "keys": ["ctrl+alt+b"], "command": "beautify" },
+	{ "keys": ["ctrl+alt+m"], "command": "minify" },
+	{ "keys": ["ctrl+shift+c"], "command": "color_highlighter_pick_color" },
+	{ "keys": ["ctrl+alt+n"], "command": "sublime_tmpl" },
+	{ "keys": ["ctrl+alt+m"], "command": "markdown_preview_select", "args": { "target": "browser" }},
+	{ "keys": ["ctrl+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+]
+```
+
+### Auto-Completar, Docs, Templates, Plugins e Ajustes Finos
+
+Quer tranformar o SublimeText na mais poderosa, leve e rápida IDE para desenvolver em qualquer linguagem de programação?
+
+Faça download do meu [Sublime Text User Backup](https://gitlab.com/natanfelles/sublime-backup) por apenas [U$ 5 dólares](#){: onclick="sendForm('STIDE')"}.
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="STIDE">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="AJUDWBVRKYLJU">
+</form>
