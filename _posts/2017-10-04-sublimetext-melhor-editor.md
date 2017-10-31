@@ -199,7 +199,7 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 	{ "keys": ["ctrl+alt+n"], "command": "sublime_tmpl" },
 	{ "keys": ["ctrl+alt+m"], "command": "markdown_preview_select", "args": { "target": "browser" }},
 	{ "keys": ["ctrl+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
-	{ "keys": ["f5"], "command": "load_file_to_repl" }
+	{ "keys": ["f5"], "command": "load_file_to_repl", "args": { "clear": true, "save_focus": false }}
 ]
 ```
 
