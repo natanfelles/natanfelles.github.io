@@ -205,7 +205,7 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 
 ### Auto-Completar, Docs, Templates, Plugins e Ajustes Finos
 
-Quer tranformar o SublimeText na mais poderosa, leve e rápida IDE para desenvolver em qualquer linguagem de programação?
+Quer transformar o SublimeText na mais poderosa, leve e rápida IDE para desenvolver em qualquer linguagem de programação?
 
 Faça download do meu [Sublime Text User Backup](https://gitlab.com/natanfelles/sublime-backup) por apenas [U$ 5 dólares](#){: onclick="sendForm('STIDE')"}.
 
