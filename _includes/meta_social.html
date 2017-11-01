@@ -8,6 +8,7 @@
 <meta name="description" content="{{ description }}">
 <meta name="keywords" content="{{ keywords }}">
 
+{% comment %}
 {% if twitter_site != ''  %}
 <meta name="twitter:site" content="{{ twitter_site }}">
 {% endif %}
@@ -21,8 +22,9 @@
 <meta name="twitter:image" content="{{ site.url }}{{ image }}">
 <meta name="twitter:url" content="{{ page.url }}"/>
 <meta name="twitter:card" content="photo" />
+{% endcomment %}
 
-<meta name="og:url" content="{{ page.url }}">
+<meta name="og:url" content="{{ site.url }}{{ page.url }}">
 <meta name="og:site_name" content="{{ site.title }}">
 <meta name="og:title" content="{{ title }}">
 <meta name="og:description" content="{{ description }}">
