@@ -408,6 +408,7 @@ function sendForm(formId) {
             // Avoid html syntax do not be highlighted in php files
             $(this).removeClass('language-php').addClass('language-html');
         }
+        $(this).attr('title', 'Clique e use as setas do teclado para mover na horizontal');
     });
     if (typeof hljs == 'object') {
         hljs.configure({tabReplace: '  '});
