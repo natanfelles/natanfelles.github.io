@@ -18,7 +18,7 @@
 
 <meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ description }}">
-<meta name="twitter:image" content="{{ image }}">
+<meta name="twitter:image" content="{{ site.url }}{{ image }}">
 <meta name="twitter:url" content="{{ page.url }}"/>
 <meta name="twitter:card" content="photo" />
 
@@ -26,7 +26,7 @@
 <meta name="og:site_name" content="{{ site.title }}">
 <meta name="og:title" content="{{ title }}">
 <meta name="og:description" content="{{ description }}">
-<meta name="og:image" content="{{ image }}">
+<meta name="og:image" content="{{ site.url }}{{ image }}">
 {% capture og_type %}{% if page.layout == "post" %}article{% else %}website{% endif %}{% endcapture %}
 <meta name="og:type" content="{{ og_type }}">
 
