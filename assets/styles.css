@@ -400,9 +400,9 @@ code {
     font-size: 100%;
 }
 
-/* pre code:hover {
+pre code:hover {
     white-space: pre;
-} */
+} 
 
 .panel-hero {
     border-top: 4px solid #00a4e2;
