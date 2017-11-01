@@ -40,6 +40,10 @@ a:hover {
     cursor: pointer;
 }
 
+[data-toggle='lightbox'] img:hover {
+    cursor: zoom-in;
+}
+
 blockquote {
     border-left-color: #bbb;
 }
