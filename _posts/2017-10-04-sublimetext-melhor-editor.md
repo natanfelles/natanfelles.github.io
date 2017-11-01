@@ -4,7 +4,7 @@ layout: post
 categories: desenvolvimento
 image: sublime-best-editor.png
 tags: linux debian ubuntu editor sublime
-description: Veja como instalar e configurar o SublimeText com pacotes esseciais
+description: Veja como instalar e configurar o SublimeText com pacotes essenciais
 ---
 
 Meu primeiro editor de códigos foi o Notepad do Windows, onde comecei copiando e colando scripts da internet. Com o passar do tempo descobri o [Notepad++](https://notepad-plus-plus.org) e aquele código colorido era de encher os olhos.
