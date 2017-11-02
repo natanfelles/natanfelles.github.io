@@ -398,8 +398,24 @@ function sendForm(formId) {
     }).attr('title', 'Clique para ampliar');
 
 
-    /* Code Highlight */
-    $('pre code').each(function(i, block) {
+    /* Code Highlight */   
+    function hljsLines(block) {
+        var lines = $(block).html().split("\n");
+        var output = '';
+
+        for(var i = 0; i < lines.length - 1; i++) {
+            console.log(lines[i]);
+            output = output + '<div class="hljs-line">' + lines[i] + '</div>';
+        }
+        
+        $(block).html(output);
+    }
+
+     if (typeof hljs == 'object') {
+        hljs.configure({tabReplace: '  '});
+    }
+
+    $('pre code').each(function() {
         if (!$(this).attr('class')) {
             $(this).attr('class', 'hljs language-txt');
         } else if ($(this).hasClass('language-php') && 
@@ -409,12 +425,28 @@ function sendForm(formId) {
             $(this).removeClass('language-php').addClass('language-html');
         }
         $(this).attr('title', 'Clique e use as setas do teclado para mover na horizontal');
+        hljs.highlightBlock(this);
+        hljs.lineNumbersBlock(this);
+        hljsLines(this);
+
+        if ($(this).prev().hasClass('hljs-line-numbers')) {
+            hljsLines($(this).prev());  
+        }
+
     });
-    if (typeof hljs == 'object') {
-        hljs.configure({tabReplace: '  '});
-        hljs.initHighlightingOnLoad();
-        hljs.initLineNumbersOnLoad();
-    }
+
+    $('.hljs').mouseover(function() {
+        if ($(this).prev().hasClass('hljs-line-numbers')) {
+            $(this).prev().show();  
+        }
+    });
+
+    $('.hljs').mouseout(function() {
+        if ($(this).prev().hasClass('hljs-line-numbers')) {
+            $(this).prev().hide();  
+        }
+    });
+   
 
     /* Header links */
     headerLinks();
