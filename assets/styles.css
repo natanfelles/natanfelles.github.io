@@ -384,7 +384,7 @@ dl.file-excerpt dd pre {
 
 pre {
     padding: 0;
-    font-size: 16px;
+    font-size: 14px;
     border-color: #000;
     /*border-color: #878787;*/
     background-color: #282c34;
@@ -398,6 +398,10 @@ pre {
 code {
     background-color: #000;
     font-size: 100%;
+}
+
+pre code {
+    font-family: "DejaVu Sans Mono", monospace;
 }
 
 pre code:hover {
