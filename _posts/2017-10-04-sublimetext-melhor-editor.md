@@ -87,6 +87,7 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 - [EditorConfig](https://packagecontrol.io/packages/EditorConfig)
 - [Emmet](https://packagecontrol.io/packages/Emmet)
 - [Figlet Big ASCII Text](https://packagecontrol.io/packages/Figlet%20Big%20ASCII%20Text)
+- [Fold Comments](hhttps://packagecontrol.io/packages/Fold%20Comments)
 - [FuzzyFilePath](https://packagecontrol.io/packages/FuzzyFilePath)
 - [Git](https://packagecontrol.io/packages/Git)
 - [Git Config](https://packagecontrol.io/packages/Git%20Config)
@@ -200,7 +201,8 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 	{ "keys": ["ctrl+alt+n"], "command": "sublime_tmpl" },
 	{ "keys": ["ctrl+alt+m"], "command": "markdown_preview_select", "args": { "target": "browser" }},
 	{ "keys": ["ctrl+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
-	{ "keys": ["f5"], "command": "load_file_to_repl", "args": { "clear": true, "save_focus": false }}
+	{ "keys": ["f5"], "command": "load_file_to_repl", "args": { "clear": true, "save_focus": false }},
+	{ "keys": ["ctrl+down"],  "command": "toggle_fold_comments" }
 ]
 ```
 
