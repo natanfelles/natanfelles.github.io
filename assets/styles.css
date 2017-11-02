@@ -391,8 +391,26 @@ pre {
     color: #abb2bf;
 }
 
+.hljs {
+    padding: 0;
+}
+
+.hljs-line {
+    padding: 2px 5px 1px 5px;
+    min-height: 23px;
+}
+
+.hljs-line:hover {
+    background: #2c333d;
+}
+
 .hljs-line-numbers {
-    border-right: 1px solid #000;
+    background: #21252b;
+    border-right: 1px solid #181a1f;
+    color: #474f5e;
+    text-align: right;
+    min-width: 34px; 
+    display: none;
 }
 
 code {
@@ -406,7 +424,7 @@ pre code {
 
 pre code:hover {
     white-space: pre;
-} 
+}
 
 .panel-hero {
     border-top: 4px solid #00a4e2;
