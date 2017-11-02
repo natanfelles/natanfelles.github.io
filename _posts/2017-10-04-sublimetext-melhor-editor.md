@@ -120,6 +120,7 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 - [SublimeLinter-pylint](https://packagecontrol.io/packages/SublimeLinter-pylint)
 - [SublimeREPL](https://packagecontrol.io/packages/SublimeREPL)
 - [SublimeTmpl](https://packagecontrol.io/packages/SublimeTmpl)
+- [SyncedSideBar](https://packagecontrol.io/packages/SyncedSideBar)
 - [Theme - One Dark](https://packagecontrol.io/packages/Theme%20-%20One%20Dark)
 - [TodoReview](https://packagecontrol.io/packages/TodoReview)
 - [TrailingSpace](https://packagecontrol.io/packages/TrailingSpaces)
