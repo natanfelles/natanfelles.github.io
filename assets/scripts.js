@@ -390,7 +390,7 @@ function sendForm(formId) {
     });
 
     $('[data-toggle="tooltip"]').tooltip();
-    
+
     /* Ekko Lightbox */
     $('[data-toggle="lightbox"]').click(function (e) {
         e.preventDefault();
@@ -398,55 +398,69 @@ function sendForm(formId) {
     }).attr('title', 'Clique para ampliar');
 
 
-    /* Code Highlight */   
-    function hljsLines(block) {
+    /* Code Highlight */
+    function hljsLines(block, counter_id) {
         var lines = $(block).html().split("\n");
         var output = '';
 
         for(var i = 0; i < lines.length - 1; i++) {
-            console.log(lines[i]);
-            output = output + '<div class="hljs-line">' + lines[i] + '</div>';
+            output += '<div class="hljs-line" data-line="' + counter_id + '-' +(i+1)+'">' + lines[i] + '</div>';
         }
-        
+
         $(block).html(output);
     }
 
-     if (typeof hljs == 'object') {
+    if (typeof hljs == 'object') {
         hljs.configure({tabReplace: '  '});
-    }
 
-    $('pre code').each(function() {
-        if (!$(this).attr('class')) {
-            $(this).attr('class', 'hljs language-txt');
-        } else if ($(this).hasClass('language-php') && 
-                (  this.innerHTML.indexOf('?php') > 0 ||   this.innerHTML.indexOf('?=') > 0)
+        var pre_count = 1;
+
+        $('pre code').each(function() {
+            var main = $(this);
+
+            if (!main.attr('class')) {
+                main.attr('class', 'hljs language-txt');
+            } else if (main.hasClass('language-php') &&
+                (this.innerHTML.indexOf('?php') > 0 || this.innerHTML.indexOf('?=') > 0)
             ) {
-            // Avoid html syntax do not be highlighted in php files
-            $(this).removeClass('language-php').addClass('language-html');
-        }
-        $(this).attr('title', 'Clique e use as setas do teclado para mover na horizontal');
-        hljs.highlightBlock(this);
-        hljs.lineNumbersBlock(this);
-        hljsLines(this);
+                // Avoid html syntax do not be highlighted in php files
+                main.removeClass('language-php').addClass('language-html');
+            }
 
-        if ($(this).prev().hasClass('hljs-line-numbers')) {
-            hljsLines($(this).prev());  
-        }
+            hljs.highlightBlock(this);
+            hljs.lineNumbersBlock(this);
 
-    });
+            var counter_id = pre_count++;
 
-    $('.hljs').mouseover(function() {
-        if ($(this).prev().hasClass('hljs-line-numbers')) {
-            $(this).prev().show();  
-        }
-    });
+            hljsLines(this, counter_id);
 
-    $('.hljs').mouseout(function() {
-        if ($(this).prev().hasClass('hljs-line-numbers')) {
-            $(this).prev().hide();  
-        }
-    });
-   
+            var hasLineNumbers = false;
+
+            if (main.prev().hasClass('hljs-line-numbers')) {
+                hljsLines(main.prev(), counter_id);
+                hasLineNumbers = true;
+            }
+
+            if (hasLineNumbers) {
+                main.children('.hljs-line').each(function(){
+                   main.prev().children('[data-line=' + $(this).data('line') + ']').height($(this).height());
+                });
+            }
+
+        });
+
+        $('.hljs').mouseover(function() {
+            $('.hljs-line').mouseover(function() {
+                $('[data-line]').removeClass('active');
+                $('[data-line=' + $(this).data('line') + ']').addClass('active');
+            });
+        });
+
+        $('.hljs').mouseout(function() {
+            $('[data-line]').removeClass('active');
+        });
+
+    }
 
     /* Header links */
     headerLinks();
@@ -552,7 +566,7 @@ function sendForm(formId) {
         });
     /*}*/
 
-    var userLang = navigator.language || navigator.userLanguage; 
+    var userLang = navigator.language || navigator.userLanguage;
 
     if (! userLang.match('pt')) {
         if (hostname != 'translate.google.com') {

@@ -393,6 +393,7 @@ pre {
 
 .hljs {
     padding: 0;
+    cursor: text;
 }
 
 .hljs-line {
@@ -400,8 +401,10 @@ pre {
     min-height: 23px;
 }
 
-.hljs-line:hover {
+.hljs-line:hover,
+.hljs-line.active {
     background: #2c333d;
+    color: #abb2bf;
 }
 
 .hljs-line-numbers {
@@ -409,8 +412,8 @@ pre {
     border-right: 1px solid #181a1f;
     color: #474f5e;
     text-align: right;
-    min-width: 34px; 
-    display: none;
+    min-width: 35px;
+    cursor: default;
 }
 
 code {
@@ -423,7 +426,7 @@ pre code {
 }
 
 pre code:hover {
-    white-space: pre;
+    /*white-space: pre;*/
 }
 
 .panel-hero {
