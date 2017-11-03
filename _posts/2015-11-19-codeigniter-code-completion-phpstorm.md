@@ -1,7 +1,7 @@
 ---
 title:  CodeIgniter Code Completion para PhpStorm
 categories: desenvolvimento projetos
-tags: codeigniter php
+tags: codeigniter php editor
 image: codeigniter-phpstorm.png
 description: Veja como auto-completar código no PhpStorm com o framework CodeIgniter.
 ---
