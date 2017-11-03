@@ -43,7 +43,7 @@ layout: content
     	<i class="fa fa-google-plus"></i>
     </a>
 	<a class="btn btn-primary pull-right" href="https://github.com/{{ site.github.repository_nwo }}/edit/{{ site.branch }}/{{ page.path }}" target="_blank">
-			<i class="fa fa-github"></i>
+			<i class="fa fa-github icon-lg"></i>
 			Edite essa página no GitHub
 	</a>
 </div>
@@ -65,8 +65,6 @@ layout: content
 	</div>
 </div>
 
-{% if page.comments != false and site.disqus_shortname %}
-	<div class="comments">
-		{% include disqus.html %}
-	</div>
+{% if page.comments != false %}
+	<div id="comments"></div>
 {% endif %}
