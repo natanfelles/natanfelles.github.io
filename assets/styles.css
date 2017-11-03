@@ -83,6 +83,10 @@ footer {
     border-top: 1px solid #000;
 }
 
+.img-responsive {
+    width: 100%;
+}
+
 .img-thumbnail {
     border-color: #fff;
 }
@@ -180,7 +184,7 @@ a.thumbnail:hover {
 }
 
 .content-inner {
-    max-width: 640px;
+    max-width: 690px;
     margin: 40px auto;
 }
 
@@ -452,7 +456,7 @@ header {
 }
 
 .navbar .container {
-    max-width: 640px;
+    max-width: 690px;
     margin: 0 auto;
     padding-right: 0;
     padding-left: 0;
