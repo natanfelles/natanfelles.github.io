@@ -234,7 +234,12 @@ a.thumbnail:hover {
     min-width: 42px;
     min-height: 42px;
     margin-left: 5px;
-    font-size: 20px;
+    font-size: 21px;
+    text-align: center;
+}
+
+.icon-lg {
+    font-size: 150%;
 }
 
 .btn-sm {
@@ -548,7 +553,7 @@ header {
     border-color: #f41249;
 }
 
-.comments {
+#comments {
     margin: 20px 0;
 }
 
@@ -644,6 +649,10 @@ footer {
 .panel,
 .modal-content {
     background-color: #141516;
+}
+
+.panel-default {
+    border-color: #000;
 }
 
 .panel-default>.panel-heading,

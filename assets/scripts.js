@@ -246,6 +246,61 @@ if ($('#service-form').length){
     });
 }
 
+if ($('#comments').length) {
+    var main = $('#comments');
+    $.get('/blog/comments.html', function(data){
+        //console.log(data);
+        main.html(data);
+
+        /* Blog Form */
+        if ($('#blog-comments-form').length){
+            $('#blog-comments-form').submit(function() {
+                $(this).validator('update');
+                $('[name="_replyto"]').val($('[name="E-mail"]').val());
+                $('[name="_subject"]').val('Comentário · ' + $('title').html());
+                $('[name="Link"]').val(window.location);
+            }).validator().on('submit', function(e) {
+                var alert = $(this).children('.alert');
+
+                /* TODO: Create Cookie active by 4 hours */
+
+
+                if (!e.isDefaultPrevented()) {
+                    /* TODO: Get user IP from any free api */
+                    $.ajax({
+                        url: $(this).attr('action'),
+                        method: 'POST',
+                        data: $(this).serialize(),
+                        dataType: 'json'
+                    }).done(function(a) {
+                        alert
+                            .addClass('alert-success')
+                            .html('<strong><i class="fa fa-check-circle"></i> Comentário enviado com sucesso!</strong><br> Logo você receberá uma resposta em seu e-mail.')
+                            .show();
+                        $('#blog-comments-form input, #blog-comments-form textarea').each(function() {
+                            $(this).val('');
+                        });
+                    }).fail(function() {
+                        alert
+                            .addClass('alert-danger')
+                            .html('<i class="fa fa-exclamation-circle"></i> Comentário não pode ser enviado agora. Tente novamente mais tarde.')
+                            .show();
+                    });
+                } else {
+                    alert
+                        .addClass('alert-danger')
+                        .html('<i class="fa fa-exclamation-circle"></i> Corrija os erros do formulário.')
+                        .show();
+                }
+
+                return false;
+            });
+        }
+    });
+}
+
+
+
 function setProducts(sortBy) {
     var items = localStorage.getItem('products-sortBy' + sortBy);
     items = JSON.parse(items);
