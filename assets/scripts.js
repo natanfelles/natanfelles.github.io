@@ -275,7 +275,7 @@ if ($('#comments').length) {
                     }).done(function(a) {
                         alert
                             .addClass('alert-success')
-                            .html('<strong><i class="fa fa-check-circle"></i> Comentário enviado com sucesso!</strong><br> Logo você receberá uma resposta em seu e-mail.')
+                            .html('<strong><i class="fa fa-check-circle"></i> Comentário enviado com sucesso!</strong><br> Logo você receberá um e-mail de verificação para ele ser ativado.')
                             .show();
                         $('#blog-comments-form input, #blog-comments-form textarea').each(function() {
                             $(this).val('');
