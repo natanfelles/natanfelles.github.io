@@ -87,6 +87,10 @@ footer {
     width: 100%;
 }
 
+.no-resize {
+    width: auto;
+}
+
 .img-thumbnail {
     border-color: #fff;
 }

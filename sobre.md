@@ -3,7 +3,7 @@ layout: page
 title: Sobre
 ---
 
-![{{ site.author.name }}]({{ 'assets/img/photo.png' | relative_url }})
+![{{ site.author.name }}]({{ 'assets/img/photo.png' | relative_url }}){: class="no-resize"}
 
 Sou fascinado por programação web, neurociência, tecnologia, filosofia, psicologia, política, história e mulheres.
 
