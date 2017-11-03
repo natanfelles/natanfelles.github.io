@@ -25,7 +25,7 @@ sitemap:
 				<span class="pull-right">{{ post.date | date: "%d.%m.%Y" }}</span>
 			</div>
 			<a class="thumbnail">
-				<img alt="{{ post.title }}" src="{{ 'assets/img_posts/' | append: post.image | relative_url }}">
+				<img alt="{{ post.title }}" src="{{ 'assets/img_posts/' | append: post.image | relative_url }}" class="img-responsive">
 			</a>
 			<p class="list-group-item-text">
 				<a class="btn btn-primary" href="{{ post.url }}">Saber mais</a>
