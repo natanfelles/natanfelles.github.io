@@ -110,6 +110,7 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 - [Package Control](https://packagecontrol.io/packages/Package%20Control)
 - [PHP Codebeautifier](https://packagecontrol.io/packages/PHP%20Codebeautifier)
 - [phpunitkit](https://packagecontrol.io/packages/phpunitkit)
+- [ProjectManager](https://packagecontrol.io/packages/ProjectManager)
 - [Python PEP8 Autoformat](https://packagecontrol.io/packages/Python%20PEP8%20Autoformat)
 - [RestructuredText Improved](https://packagecontrol.io/packages/RestructuredText%20Improved)
 - [SCSS](https://packagecontrol.io/packages/SCSS)
