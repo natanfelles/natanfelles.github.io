@@ -346,7 +346,7 @@ Faça download do meu [Sublime Text User Backup](https://gitlab.com/natanfelles/
 [Solicitar Acesso](#){: class="btn btn-block btn-success" onclick="sendForm('STIDE')"}
 
 <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=lmAPsJDthFA?autoplay=1" autoplay="autoplay"></iframe>
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lmAPsJDthFA?autoplay=1" autoplay="autoplay" allowfullscreen></iframe>
 </div>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="STIDE">
