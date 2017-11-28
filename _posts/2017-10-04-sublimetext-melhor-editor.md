@@ -88,6 +88,7 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 - [DotENV](https://packagecontrol.io/packages/DotENV)
 - [EditorConfig](https://packagecontrol.io/packages/EditorConfig)
 - [Emmet](https://packagecontrol.io/packages/Emmet)
+- [Extended​Tab​Switcher](https://packagecontrol.io/packages/ExtendedTabSwitcher)
 - [Figlet Big ASCII Text](https://packagecontrol.io/packages/Figlet%20Big%20ASCII%20Text)
 - [Fold Comments](hhttps://packagecontrol.io/packages/Fold%20Comments)
 - [Function Name Display](https://packagecontrol.io/packages/Function%20Name%20Display)
@@ -98,6 +99,7 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 - [HighlightWords](https://packagecontrol.io/packages/HighlightWords)
 - [Hosts](https://packagecontrol.io/packages/Hosts)
 - [Hover Image Preview](https://packagecontrol.io/packages/Hover%20Image%20Preview)
+- [HTML-CSS-JS Prettify](https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify)
 - [Image​2​Base​64](https://packagecontrol.io/packages/Image2Base64)
 - [INI](https://packagecontrol.io/packages/INI)
 - [IntelliDocs](https://packagecontrol.io/packages/IntelliDocs)
@@ -261,8 +263,10 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
     { "keys": ["ctrl+m"], "command": "toggle_minimap" },
     { "keys": ["ctrl+space"], "command": "code_intel_auto_complete" },
     { "keys": ["ctrl+d"], "command": "duplicate_line" },
+    { "keys": ["ctrl+alt+l"], "command": "htmlprettify" },
     { "keys": ["ctrl+alt+l"], "command": "pep8_autoformat", "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }] },
-    { "keys": ["ctrl+alt+l"], "command": "php_cbf", "context": [{ "key": "selector", "operator": "equal", "operand": "source.php" }] }, 
+    { "keys": ["ctrl+alt+l"], "command": "php_cbf", "context": [{ "key": "selector", "operator": "equal", "operand": "source.php" }] },
+    { "keys": ["ctrl+shift+u"], "command": "phpunit_test_file", "context": [{ "key": "selector", "operator": "equal", "operand": "source.php" }] },
     { "keys": ["ctrl+alt+t"], "command": "toggle_trailing_spaces" },
     { "keys": ["shift+delete"], "command": "delete_trailing_spaces" },
     { "keys": ["ctrl+alt+b"], "command": "beautify" },
@@ -271,12 +275,13 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
     { "keys": ["ctrl+alt+n"], "command": "sublime_tmpl" },
     { "keys": ["ctrl+alt+m"], "command": "markdown_preview_select", "args": { "target": "browser" }},
     { "keys": ["ctrl+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
-    { "keys": ["f8"], "command": "load_file_to_repl", "args": { "clear": true, "save_focus": false }},
+    { "keys": ["f5"], "command": "load_file_to_repl", "args": { "clear": true, "save_focus": false }},
     { "keys": ["ctrl+down"],  "command": "toggle_fold_comments" },
     { "keys": ["f2"],  "command": "side_bar_rename" },
     { "keys": ["f5"],  "command": "refresh_folder_list" },
     { "keys": ["alt+d"],  "command": "side_bar_duplicate" },
-    { "keys": ["f10"],  "command": "lsp_symbol_definition" }
+    { "keys": ["f10"],  "command": "lsp_symbol_definition" },
+    { "keys": ["f1"], "command": "extended_switcher", "args": {"list_mode": "window"} },
 ]
 ```
 
