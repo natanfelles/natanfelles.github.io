@@ -80,6 +80,7 @@ Abaixo listo alguns pacotes muito úteis para tunar o SublimeText.
 - [Bootstrap 3 Snippets](https://packagecontrol.io/packages/Bootstrap%203%20Snippets)
 - [Bootstrap 4 Snippets](https://packagecontrol.io/packages/Bootstrap%204%20Snippets)
 - [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter)
+- [Case Conversion](https://packagecontrol.io/packages/Case%20Conversion)
 - [ColorHelper](https://packagecontrol.io/packages/ColorHelper)
 - [Composer](https://packagecontrol.io/packages/Composer)
 - [ComposerPackageInfo](https://packagecontrol.io/packages/ComposerPackageInfo)
