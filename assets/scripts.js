@@ -624,11 +624,13 @@ function sendForm(formId) {
     var userLang = navigator.language || navigator.userLanguage;
 
     if (! userLang.match('pt')) {
-        if (hostname != 'translate.google.com') {
+        //if (hostname != 'translate.google.com') {
             if (localStorage.getItem('msg-bottom-time-to-hide') < new Date().getTime()) {
                 $('body').prepend(
                     '<nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom" style="display:none"><div class="container">'+
-                        'This website is written in Portuguese. You can translate <a href="https://translate.google.com/translate?hl=pt&sl=pt&tl=en&u=' + window.location + '" target="_blank">here</a>.'+
+                        //'This website is written in Portuguese.'+
+                        //' You can translate <a href="https://translate.google.com/translate?hl=pt&sl=pt&tl=en&u=' + window.location + '" target="_blank">here</a>.'+
+                        ' Translate with Google: <div id="google_translate"></div>'+
                         '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
                     '</div></nav>'
                 );
@@ -637,11 +639,29 @@ function sendForm(formId) {
                 },500);
                 $('.navbar-fixed-bottom .close').click(function() {
                     $('.navbar-fixed-bottom').hide();
-                    localStorage.setItem('msg-bottom-time-to-hide', new Date().getTime() + 60000 * 15);
+                    localStorage.setItem('msg-bottom-time-to-hide', new Date().getTime() + 60000 * 5);
                 });
-            }
-        }
-    }
 
+            $('#google_translate').click(function() {
+
+                $('.goog-te-menu-frame').attr('name', 'google_translate').css({
+                        left: (window.innerWidth - $('.goog-te-menu-frame').width()) / 2 + 'px',
+                        top: (window.innerHeight - $('.goog-te-menu-frame').height()) / 2 + 'px'
+                });
+
+                if (frames.google_translate) {
+                    var style = document.createElement('style');
+                    var html = '.goog-te-menu2 {background-color: #141516 !important; text-decoration: none; border: 1px solid #000 !important;    border-radius: 4px; overflow: hidden; padding: 4px;}';
+                    html += '.goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div {color: #00a4e2 !important; background: #141516;}';
+                    html+= '.goog-te-menu2-item:hover div {color: #fff !important; background: #00a4e2 !important;}';
+                    html+='.goog-te-menu2-item-selected div, .goog-te-menu2-item-selected:link div, .goog-te-menu2-item-selected:visited div, .goog-te-menu2-item-selected:hover div, .goog-te-menu2-item-selected:active div {color: #fff !important; font-weight: bold;}';
+                    style.innerHTML = html;
+                    frames.google_translate.document.body.appendChild(style);
+                }
+            });
+        }
+
+       // }
+    }
 
 /*});*/
