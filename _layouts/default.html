@@ -15,7 +15,7 @@
 
 ································································································· -->
 
-<html lang="pt-br">
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
 {% include head.html %}
 <body>
 <div class="loader"></div>
