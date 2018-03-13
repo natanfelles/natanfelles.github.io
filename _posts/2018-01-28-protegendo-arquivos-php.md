@@ -2,7 +2,7 @@
 title: Protegendo Acesso a Arquivos com PHP
 layout: post
 categories: desenvolvimento
-image: post.png
+image: php-protect-files.png
 tags: php server nginx
 description: 
 ---
