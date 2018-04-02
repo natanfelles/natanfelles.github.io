@@ -10,7 +10,7 @@ var hello = ' _   _       _                _____    _ _           \n' +
     'natanfelles.github.io\n\n';
 console.log(hello);
 
-console.log('>> Hello, hacker!!! Use msg("Your name", "Your email", "Your message") and lets talk about a best world.');
+console.log('>> Hello, hacker!!! Use msg("Your name", "Your email", "Your message") and let\'s talk about a better world.');
 
 function msg(name, email, message) {
     $.post('//formspree.io/natanfelles@gmail.com', {
@@ -552,6 +552,9 @@ function sendForm(formId) {
     });
 
     /* Search */
+    $('#search-results').on('shown.bs.modal', function () {
+        $('#search-modal').find('[name=q]').focus();
+    });
 
     $('#search-hero, #search-nav').click(function() {
         $('#search-results').modal();
