@@ -299,6 +299,47 @@ if ($('#comments').length) {
     });
 }
 
+if ($('#contact-form').length){
+    $('#contact-form').submit(function() {
+        $(this).validator('update');
+    }).validator().on('submit', function(e) {
+        var alert = $(this).children('.alert');
+
+        /* TODO: Create Cookie active by 4 hours */
+
+
+        if (!e.isDefaultPrevented()) {
+            /* TODO: Get user IP from any free api */
+            $.ajax({
+                url: $(this).attr('action'),
+                method: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json'
+            }).done(function(a) {
+                alert
+                    .addClass('alert-success')
+                    .html('<strong><i class="fa fa-check-circle"></i> Mensagem enviada com sucesso!</strong><br> Tentarei reponder assim que possível.')
+                    .show();
+                $('#contact-form input, #contact-form textarea').each(function() {
+                    $(this).val('');
+                });
+            }).fail(function() {
+                alert
+                    .addClass('alert-danger')
+                    .html('<i class="fa fa-exclamation-circle"></i> Mensagem não pode ser enviada agora. Tente novamente mais tarde.')
+                    .show();
+            });
+        } else {
+            alert
+                .addClass('alert-danger')
+                .html('<i class="fa fa-exclamation-circle"></i> Corrija os erros do formulário.')
+                .show();
+        }
+
+        return false;
+    });
+}
+
 
 
 function setProducts(sortBy) {
@@ -666,5 +707,42 @@ function sendForm(formId) {
 
        // }
     }
+
+/*
+if (window.location.pathname === '/fatura') {
+    if (location.search.substring(1)) {
+        var invoice = JSON.parse(
+            '{"'
+            + decodeURI(search).replace(/"/g, '\\"')
+                               .replace(/&/g, '","')
+                               .replace(/=/g,'":"')
+            + '"}'
+        );
+
+        console.log(invoice);
+
+        $.each(invoice, function(key, value) {
+            console.log(key);
+            console.log(value);
+        });
+
+        //  var html = ''
+        // + '<div class="table-responsive">'
+        // + 'Olá'
+        // + '</p>'
+        // ;
+        // $('.page-header').html('Fatura #1258').after(html);
+
+
+    } else {
+        var html = ''
+        + '<p>'
+        + 'Olá'
+        + '</p>'
+        ;
+        $('.page-header').html('Doação').after(html);
+    }
+}*/
+
 
 /*});*/
