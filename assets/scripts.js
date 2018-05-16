@@ -211,15 +211,11 @@ if ($('#service-form').length){
     }).validator().on('submit', function(e) {
         var alert = $(this).children('.alert');
 
-        /* TODO: Create Cookie active by 4 hours */
-
-
         if (!e.isDefaultPrevented()) {
-            /* TODO: Get user IP from any free api */
             $.ajax({
                 url: $(this).attr('action'),
                 method: 'POST',
-                data: $(this).serialize(),
+                data: $(this).serialize() + '&IP=' + getIP(),
                 dataType: 'json'
             }).done(function(a) {
                 alert
@@ -262,15 +258,11 @@ if ($('#comments').length) {
             }).validator().on('submit', function(e) {
                 var alert = $(this).children('.alert');
 
-                /* TODO: Create Cookie active by 4 hours */
-
-
                 if (!e.isDefaultPrevented()) {
-                    /* TODO: Get user IP from any free api */
                     $.ajax({
                         url: $(this).attr('action'),
                         method: 'POST',
-                        data: $(this).serialize(),
+                        data: $(this).serialize() + '&IP=' + getIP(),
                         dataType: 'json'
                     }).done(function(a) {
                         alert
@@ -305,15 +297,11 @@ if ($('#contact-form').length){
     }).validator().on('submit', function(e) {
         var alert = $(this).children('.alert');
 
-        /* TODO: Create Cookie active by 4 hours */
-
-
         if (!e.isDefaultPrevented()) {
-            /* TODO: Get user IP from any free api */
             $.ajax({
                 url: $(this).attr('action'),
                 method: 'POST',
-                data: $(this).serialize(),
+                data: $(this).serialize() + '&IP=' + getIP(),
                 dataType: 'json'
             }).done(function(a) {
                 alert
@@ -746,3 +734,26 @@ if (window.location.pathname === '/fatura') {
 
 
 /*});*/
+
+
+function getIP() {
+    // http://api.ipstack.com/check?access_key=xxxx&output=json&fields=ip,country_code,city
+
+    var jqXHR = $.ajax({
+        async: false,
+        url: 'https://api.ipstack.com/check',
+        method: 'GET',
+        data: {
+            access_key: '4dca3b3f80d8012cefd8fe814a31be11',
+            output: 'json',
+            fields: 'ip',
+        },
+        dataType: 'json'
+    });
+
+   if (! jqXHR.responseJSON.ip) {
+    return '';
+   }
+
+    return jqXHR.responseJSON.ip;
+}
