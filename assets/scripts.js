@@ -645,13 +645,13 @@ function sendForm(formId) {
             subject: 'Takedown',
             hostname: hostname
         });
-    } else {*/
+    } else {
         $('.loader').animate({
             opacity: 'toggle'
         }, 500, function() {
             $(this).hide();
         });
-    /*}*/
+    }*/
 
     var userLang = navigator.language || navigator.userLanguage;
 
@@ -757,3 +757,13 @@ function getIP() {
 
     return jqXHR.responseJSON.ip;
 }
+
+// $('.loader').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>');
+
+$(document).ready(function() {
+    $('.loader').animate({
+            opacity: 'toggle'
+        }, 1000, function() {
+            $(this).hide();
+        });
+});
