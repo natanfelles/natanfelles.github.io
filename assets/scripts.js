@@ -70,6 +70,23 @@ function setupHero() {
     }
 }
 
+/* Theme switcher */
+$('.theme-switcher').click(function () {
+    switchTheme();
+});
+
+function switchTheme() {
+    var body = $('body');
+    var icon = $('.theme-switcher > i');
+    if (body.hasClass('dark')) {
+        body.removeClass('dark');
+        icon.removeClass('fa-moon-o').addClass('fa-sun-o');
+    } else {
+        body.addClass('dark');
+        icon.removeClass('fa-sun-o').addClass('fa-moon-o');
+    }
+}
+
 /* Header Links */
 function headerLinks() {
     $('#post :header').each(function() {

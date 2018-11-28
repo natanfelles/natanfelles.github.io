@@ -17,8 +17,9 @@
 
 <html lang="{% if page.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
 {% include head.html %}
-<body>
+<body class="dark">
 <div class="loader"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
+<div class="theme-switcher" data-toggle="tooltip" data-placement="right" title="Trocar tema"><i class="fa fa-moon-o"></i></div>
 
 {{content}}
 
