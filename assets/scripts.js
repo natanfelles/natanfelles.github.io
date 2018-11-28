@@ -72,18 +72,36 @@ function setupHero() {
 
 /* Theme switcher */
 $('.theme-switcher').click(function () {
-    switchTheme();
+    switchTheme(null, true);
 });
 
-function switchTheme() {
+function switchTheme(theme, storage) {
     var body = $('body');
     var icon = $('.theme-switcher > i');
-    if (body.hasClass('dark')) {
-        body.removeClass('dark');
-        icon.removeClass('fa-moon-o').addClass('fa-sun-o');
+
+    if (theme) {
+        if (theme === 'dark') {
+            body.addClass('dark');
+            icon.removeClass('fa-sun-o').addClass('fa-moon-o');
+        } else {
+            theme = 'light';
+            body.removeClass('dark');
+            icon.removeClass('fa-moon-o').addClass('fa-sun-o');
+        }
     } else {
-        body.addClass('dark');
-        icon.removeClass('fa-sun-o').addClass('fa-moon-o');
+        if (body.hasClass('dark')) {
+            theme = 'light';
+            body.removeClass('dark');
+            icon.removeClass('fa-moon-o').addClass('fa-sun-o');
+        } else {
+            theme = 'dark';
+            body.addClass('dark');
+            icon.removeClass('fa-sun-o').addClass('fa-moon-o');
+        }
+    }
+
+    if (storage) {
+        localStorage.setItem('theme', theme);
     }
 }
 
@@ -778,6 +796,24 @@ function getIP() {
 // $('.loader').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>');
 
 $(document).ready(function() {
+    switch(localStorage.getItem('theme')){
+        case 'dark':
+            switchTheme('dark', true);
+        break;
+        case 'light':
+            switchTheme('light', true);
+        break;
+        default:
+            var hour = (new Date()).getHours();
+            console.log(hour);
+            if (hour > 6 && hour < 18) {
+                switchTheme('light');
+            } else {
+                switchTheme('dark');
+            }
+        break;
+    }
+
     $('.loader').animate({
             opacity: 'toggle'
         }, 1000, function() {
