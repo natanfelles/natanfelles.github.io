@@ -39,7 +39,7 @@ highlighter: false
 kramdown:
   syntax_highlighter_opts:
     disable : true
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-feed
   #- jekyll-seo-tag
