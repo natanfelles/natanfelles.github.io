@@ -107,6 +107,10 @@ legend {
     border-bottom-color: #000;
 }
 
+.form-control {
+    font-size: 16px;
+}
+
 .dark .form-control {
     color: #fff;
     background-color: #575757;
