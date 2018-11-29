@@ -34,27 +34,8 @@ sitemap:
 	{% endfor %}
 </div>
 
-{% if paginator.total_pages > 1 %}
-	<div class="text-center">
-		<ul class="pagination">
-			{% if paginator.previous_page %}
-		    	<li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
-		  	{% endif %}
-		  	{% for page in (1..paginator.total_pages) %}
-			    {% if page == paginator.page %}
-			      	<li class="active"><a>{{ page }}</a></li>
-			    {% elsif page == 1 %}
-			      	<li><a href="{{ 'blog' | relative_url }}">{{ page }}</a></li>
-			    {% else %}
-			      	<li><a href="{{ site.paginate_path| replace: ':num', page | relative_url }}">{{ page }}</a></li>
-			    {% endif %}
-		  	{% endfor %}
-			{% if paginator.next_page %}
-				<li><a href="{{ paginator.next_page_path | relative_url }}">&raquo;</a></li>
-			{% endif %}
-		</ul>
-	</div>
-{% endif %}
+{% include pagination.html %}
+
 {% endcapture %}
 
 {% if jekyll.environment == 'development' %}
