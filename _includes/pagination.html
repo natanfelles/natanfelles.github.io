@@ -1,0 +1,42 @@
+{% if paginator.total_pages > 1 %}
+	<div class="text-center">
+		<ul class="pagination">
+			{% assign sides = 2 %}
+		  	{% assign min = paginator.page | minus: sides | minus: 1 %}
+		  	{% assign max = paginator.page | plus: sides | plus: 1 %}
+		  	{% for page in (1..paginator.total_pages) %}
+		  		{% if page == paginator.page %}
+			      	<li class="active"><a>{{ page }}</a></li>
+			      	{% continue %}
+			    {% endif %}
+			    {% if page == 1 %}
+			    	{% if min <= 1 %}
+				    	<li><a href="{{ 'blog' | relative_url }}">1</a></li>
+				    {% else %}
+				    	<li><a href="{{ 'blog' | relative_url }}">Primeira</a></li>
+				    {% endif %}
+			    	{% continue %}
+			    {% endif %}
+			    {% if page == paginator.total_pages %}
+			      	{% if max >= page %}
+				    	<li><a href="{{ site.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a></li>
+				    {% else %}
+				    	<li><a href="{{ site.paginate_path | replace: ':num', page | relative_url }}">Última</a></li>
+				    {% endif %}
+			    	{% continue %}
+				{% endif %}
+			    {% if page > min and page < max %}
+			      	<li><a href="{{ site.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a></li>{% continue %}
+			    {% endif %}
+				{% if page == min %}
+					<li><a href="{{ site.paginate_path | replace: ':num', paginator.previous_page | relative_url }}">&laquo;</a></li>
+					{% continue %}
+				{% endif %}
+				{% if page == max %}
+					<li><a href="{{ site.paginate_path | replace: ':num', paginator.next_page | relative_url }}">&raquo;</a></li>
+					{% continue %}
+				{% endif %}
+		  	{% endfor %}
+		</ul>
+	</div>
+{% endif %}
