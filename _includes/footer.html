@@ -6,9 +6,29 @@
 </div>
 
 <footer class="footer">
-  &copy; {{ site.time | date: '%Y' }} {{ site.title }}. Direitos reservados.
+  &copy; {{ site.time | date: '%Y' }} <span class="site-title">{{ site.title }}</span>. Direitos reservados.
 	<a class="pull-right" href="{{ site.commits_url }}">
-		Website renderizado em {{ site.time | date: "%d.%m.%Y %T %z" }}
+		Website renderizado em <time datetime="{{ site.time | date: "%Y-%m-%d %H:%M:%S" }}">
+		{{ site.time | date: "%-d" }} de
+		{% assign m = site.time | date: "%-m" %}
+		{% case m %}
+		  {% when '1' %}janeiro
+		  {% when '2' %}fevereiro
+		  {% when '3' %}março
+		  {% when '4' %}abril
+		  {% when '5' %}maio
+		  {% when '6' %}junho
+		  {% when '7' %}julho
+		  {% when '8' %}agosto
+		  {% when '9' %}setembro
+		  {% when '10' %}outubro
+		  {% when '11' %}novembro
+		  {% when '12' %}dezembro
+		{% endcase %} de
+		{{ site.time | date: "%Y" }} às
+		{{ site.time | date: "%T" }},
+		{{ site.time | date: "%z" }}.
+	</time>
 	</a>
 </footer>
 {% endcapture %}

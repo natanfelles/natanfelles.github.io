@@ -22,7 +22,7 @@ sitemap:
 					{% if category != post.categories[0] %}·{% endif %}
 					<a href="{{ 'blog/categorias#' | append: category | relative_url }}">{{ category }}</a>
 				{% endfor %}
-				<span class="pull-right">{{ post.date | date: "%d.%m.%Y" }}</span>
+				<time class="pull-right" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d.%m.%Y" }}</time>
 			</div>
 			<a class="thumbnail">
 				<img alt="{{ post.title }}" src="{{ 'assets/img_posts/' | append: post.image | relative_url }}" class="img-responsive">
