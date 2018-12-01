@@ -109,6 +109,7 @@ legend {
 
 .form-control {
     font-size: 16px;
+    height: 36px;
 }
 
 .dark .form-control {
@@ -1257,5 +1258,9 @@ h6:hover .header-link {
     }
     .theme-switcher {
         left: 25px;
+    }
+
+    footer {
+        text-align: center;
     }
 }
