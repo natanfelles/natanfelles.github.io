@@ -819,14 +819,14 @@ pre code {
     width: 100px;
 }
 
-#hero h1 {
-    margin: 0 0 5px 0;
+#hero h2 {
+    margin: 0 0 20px;
     font-size: 2.5em;
     letter-spacing: 4px;
     color: #000;
 }
 
-.dark #hero h1 {
+.dark #hero h2 {
     color: #fff;
 }
 
