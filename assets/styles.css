@@ -282,6 +282,10 @@ a.thumbnail:hover {
     border-top-color: #373737;
 }
 
+#hero p+hr {
+    width: 30%;
+}
+
 .breadcrumb,
 .well {
     border: 1px solid #ddd;

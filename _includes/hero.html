@@ -7,7 +7,7 @@
 		<h2 class="site-title">{{ site.title }}</h2>
 		<hr>
 		<p>{{ site.description }}</p>
-		<hr style="width: 30%">
+		<hr>
 		{% assign uri = page.url | remove: '.html' | split: '/'  %}
 		<a href="{{ 'blog' | relative_url }}/" class="btn btn-icon btn-default{% if uri[1] == 'blog' %} active{% endif %}" title="Blog">
 			<i class="fa fa-book"></i>
