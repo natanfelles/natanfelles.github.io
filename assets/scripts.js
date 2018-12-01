@@ -848,6 +848,8 @@ $(document).ready(function() {
         break;
     }
 
+    $('.site-title,.file-excerpt dt').addClass('notranslate');
+
     $('.loader').animate({
             opacity: 'toggle'
         }, 1000, function() {
