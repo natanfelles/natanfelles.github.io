@@ -7,7 +7,7 @@
   	{% for p in site.pages  %}
   		{% assign url =  p.url | remove: '/' %}
   		{% if url == uri[1] %}
-  			<li><a href="{{ url | relative_url }}">{{ p.title }}</a></li>
+  			<li><a href="{{ url | relative_url }}/">{{ p.title }}</a></li>
   		{% endif %}
   	{% endfor %}
   {% endif %}

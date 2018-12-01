@@ -8,7 +8,7 @@ layout: content
 <h1>{{ page.title }}</h1>
 
 <div class="well well-sm text-capitalize small">
-	<a href="{{ 'blog' | relative_url }}">Blog</a>
+	<a href="{{ 'blog' | relative_url }}/">Blog</a>
 	{% for category in page.categories %}
 		· <a href="{{ 'blog/categorias#' | append: category | relative_url }}">{{ category }}</a>
 	{% endfor %}
