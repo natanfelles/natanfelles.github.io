@@ -19,9 +19,13 @@
 	</title>
   <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author.name }}{% endif %}">
 
+	{% if page.sitemap == false %}
+  	<meta name="robots" content="noindex">
+  {% endif %}
+
   {% include  meta_social.html %}
 
-  <link rel="apple-touch-icon" href="{{ 'assets/img/apple-touch-icon.png' | relative_url }}">
+   <link rel="apple-touch-icon" href="{{ 'assets/img/apple-touch-icon.png' | relative_url }}">
   <link rel="icon" type="image/png" href="{{ 'assets/img/favicon.png' | relative_url }}">
   <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
 
