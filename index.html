@@ -3,8 +3,33 @@ layout: default
 title: Natan Felles
 ---
 
+{% capture index %}
+
 {% include hero.html %}
 
 <p>
 	Se você está lendo isso, algo errado não está certo.
 </p>
+<p>
+	Gerenciamento de sistemas.
+</p>
+<p>
+	Instalação de Servidores, Painéis de Controle e Sistemas de Gerenciamento de Conteúdo (CMS).
+</p>
+<p>
+	Programação web front-end e back-end (HTML, CSS, JavaScript, PHP, SQL, Shell Script).
+</p>
+<p>
+	Front-end com Bootstrap e jQuery ou Semantic UI.
+</p>
+<p>
+	Desenvolvimento sobre Framework (CodeIgniter, Phalcon, Laravel, CakePHP).
+</p>
+
+{% endcapture %}
+
+{% if site.env == 'development' %}
+	{{ index }}
+{% else %}
+	{{ index | normalize_whitespace }}
+{% endif %}
