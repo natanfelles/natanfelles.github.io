@@ -530,6 +530,8 @@ generalAdjusts();
     });
 
     $('[data-toggle="tooltip"]').tooltip();
+    $('.theme-switcher').tooltip({placement: 'right'});
+    $('#hero .btn').tooltip({placement: 'bottom'});
 
     /* Ekko Lightbox */
     $('[data-toggle="lightbox"]').click(function (e) {
