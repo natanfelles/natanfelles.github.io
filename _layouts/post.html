@@ -1,8 +1,10 @@
 ---
 layout: content
 ---
+{% capture cap_top %}
 
 <article>
+<header>
 <h1>{{ page.title }}</h1>
 
 <div class="well well-sm text-capitalize small">
@@ -13,24 +15,33 @@ layout: content
 	<time class="pull-right" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d.%m.%Y" }}</time>
 </div>
 
-<p>
-	<a href="{{ 'assets/img_posts/' | append: page.image | relative_url }}" data-toggle="lightbox">
-		<img src="{{ 'assets/img_posts/' | append: page.image | relative_url }}" alt="{{ page.title }}"/>
-	</a>
-</p>
-
+</header>
 
 <div id="post">
-	{{ content }}
+	<p>
+		<a href="{{ 'assets/img_posts/' | append: page.image | relative_url }}" data-toggle="lightbox">
+			<img src="{{ 'assets/img_posts/' | append: page.image | relative_url }}" alt="{{ page.title }}"/>
+		</a>
+	</p>
+
+{% endcapture %}
+{% if site.env == 'development' %}
+	{{ cap_top }}
+{% else %}
+	{{ cap_top | normalize_whitespace }}
+{% endif %}
+
+{{ content }}
+
+{% capture cap_bottom %}
 </div>
 
 {% if page.tags[0] %}
-	<hr>
-	<div class="tags">
+	<footer class="tags">
 		{% for tag in page.tags %}
 		    <a class="btn btn-sm btn-primary" href="{{ 'blog/tags#' | append: tag | relative_url }}">{{ tag }}</a>
 		{% endfor %}
-	</div>
+	</footer>
 {% endif %}
 </article>
 
@@ -69,4 +80,11 @@ layout: content
 
 {% if page.comments != false %}
 	<div id="comments"></div>
+{% endif %}
+
+{% endcapture %}
+{% if site.env == 'development' %}
+	{{ cap_bottom }}
+{% else %}
+	{{ cap_bottom | normalize_whitespace }}
 {% endif %}
