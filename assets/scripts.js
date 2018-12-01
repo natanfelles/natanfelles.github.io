@@ -49,14 +49,14 @@ function setupHero() {
         if (window.innerWidth < 1200) {
             $('#hero').parent().hide();
             $('.content').removeClass('col-md-7').addClass('col-md-12');
-            $('header').show();
+            $('.main-header').show();
             $('body').css({
                 paddingTop: 30
             });
         } else {
             $('#hero').parent().show();
             $('.content').removeClass('col-md-12').addClass('col-md-7');
-            $('header').hide();
+            $('.main-header').hide();
             $('body').css({
                 paddingTop: 0
             });
@@ -507,7 +507,7 @@ function generalAdjusts() {
     var switcher = $('.theme-switcher');
     var top = switcher.position().left;
 
-    if($('header').length)
+    if($('.main-header').length)
     {
         top += 60;
     } else {
