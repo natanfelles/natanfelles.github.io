@@ -51,6 +51,7 @@ exclude:
   - README.md
   - serve.sh
   - /assets/img/*.svg
+  - /gems
 
 permalink: /blog/:title
 paginate: 5
