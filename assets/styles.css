@@ -1230,6 +1230,12 @@ h6:hover .header-link {
     font-size: 15px;
 }
 
+.donation .btn {
+    background-color: inherit;
+    border-color: #fff;
+    color: #fff;
+}
+
 @media (max-width: 767px) {
     body,
     pre {
