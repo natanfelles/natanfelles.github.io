@@ -7,13 +7,13 @@ tags: php cpp nginx cgi benchmark
 description: Speed test of PHP-FPM versus C++ with CGI
 ---
 
-Ah, como é bom o perfume das flores do campo!
+Ah, como é bom o perfume das flores do campo! Não acha?
 
-Dois mil anos atrás comecei a fazer uns testes para tranformar alguns códigos simples escritos em PHP para C++.
+Esses dias comecei a fazer uns testes para tranformar alguns códigos simples escritos em PHP para C++.
 
 Ainda não descobri a melhor maneira de fazer isso, mas comecei usando CGI, para facilitar.
 
-Instalei, configurei, escrevi, compilei, peidei, testei e para minha surpresa o teste de benchmark de uma página respondida com PHP-FPM foi quase 10 vezes mais rápida que uma utilizando C++ e CGI.
+Instalei, configurei, escrevi, compilei, testei e para minha surpresa o teste de benchmark de uma página respondida com PHP-FPM foi quase 10 vezes mais rápida que uma utilizando C++ e CGI.
 
 ## Código Fonte
 
