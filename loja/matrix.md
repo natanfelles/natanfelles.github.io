@@ -2,10 +2,8 @@
 title: Matrix
 id: "1"
 image: matrix.png
-description: Este é o produto que todo mundo quer. Compre-o e receba uma passagem para Nabucodonosor.
+description: Este é o produto que todo mundo quer.
 ---
-
-Zion vai queimar de verdade. Expect us!
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
