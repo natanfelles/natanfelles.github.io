@@ -49,6 +49,7 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - gems
   - README.md
   - serve.sh
   - /assets/img/*.svg
