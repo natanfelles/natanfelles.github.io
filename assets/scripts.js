@@ -22,7 +22,7 @@ function msg(name, email, message) {
     }).fail(function () {
         console.log('>> Message could not be sent now. Try again.');
     });
-    return 88;
+    return 'OK';
 }
 
 /* Hero */
@@ -714,13 +714,13 @@ generalAdjusts();
     var userLang = navigator.language || navigator.userLanguage;
 
     if (! userLang.match('pt')) {
-        //if (hostname != 'translate.google.com') {
+        if (hostname !== 'natanfelles-github-io.translate.goog') {
             if (localStorage.getItem('msg-bottom-time-to-hide') < new Date().getTime()) {
                 $('body').prepend(
                     '<nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom" style="display:none"><div class="container">'+
                         //'This website is written in Portuguese.'+
-                        //' You can translate <a href="https://translate.google.com/translate?hl=pt&sl=pt&tl=en&u=' + window.location + '" target="_blank">here</a>.'+
-                        ' Translate with Google: <div id="google_translate"></div>'+
+                        '<a href="https://translate.google.com/translate?hl=pt&sl=pt&tl=en&u=' + window.location + '" target="_blank">'+
+                        'Translate this page</a>'+
                         '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
                     '</div></nav>'
                 );
@@ -732,7 +732,7 @@ generalAdjusts();
                     localStorage.setItem('msg-bottom-time-to-hide', new Date().getTime() + 60000 * 5);
                 });
 
-            $('#google_translate').click(function() {
+            /*$('#google_translate').click(function() {
 
                 $('.goog-te-menu-frame').attr('name', 'google_translate').css({
                         left: (window.innerWidth - $('.goog-te-menu-frame').width()) / 2 + 'px',
@@ -758,13 +758,13 @@ generalAdjusts();
                     html += '.goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div {color: #00a4e2 !important; background: ' + background + ';}';
                     html+= '.goog-te-menu2-item:hover div {color: #fff !important; background: #00a4e2 !important;}';
                     html+='.goog-te-menu2-item-selected div, .goog-te-menu2-item-selected:link div, .goog-te-menu2-item-selected:visited div, .goog-te-menu2-item-selected:hover div, .goog-te-menu2-item-selected:active div {color: '+color+' !important; font-weight: bold;}';
+
                     style.innerHTML = html;
                     frames.google_translate.document.body.appendChild(style);
                 }
-            });
+            });*/
         }
-
-       // }
+        }
     }
 
 /*

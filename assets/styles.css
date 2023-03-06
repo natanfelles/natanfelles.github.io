@@ -729,6 +729,7 @@ pre code {
 }
 
 /* Google Translate */
+/*
 .goog-te-banner-frame {
     left: 0 !important;
     top: auto !important;
@@ -798,6 +799,7 @@ pre code {
     -moz-box-sizing: border-box;
     position: relative;
 }
+*/
 
 #hero {
     position: fixed;
