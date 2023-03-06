@@ -808,17 +808,10 @@ if (window.location.pathname === '/fatura') {
 
 
 function getIP() {
-    // http://api.ipstack.com/check?access_key=xxxx&output=json&fields=ip,country_code,city
-
     var jqXHR = $.ajax({
         async: false,
-        url: 'https://api.ipstack.com/check',
+        url: 'https://api.ipify.org?format=json',
         method: 'GET',
-        data: {
-            access_key: '4dca3b3f80d8012cefd8fe814a31be11',
-            output: 'json',
-            fields: 'ip',
-        },
         dataType: 'json'
     });
 
