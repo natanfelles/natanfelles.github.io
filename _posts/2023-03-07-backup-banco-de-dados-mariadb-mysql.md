@@ -3,6 +3,7 @@ title: Backup de Banco de Dados MariaDB ou MySQL
 layout: post
 categories: desenvolvimento
 image: mariadb-database-backup.png
+tags: mysql mariadb linux servidor backup
 description: Backup de Banco de Dados MariaDB ou MySQL
 ---
 
