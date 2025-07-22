@@ -26,7 +26,9 @@
 		<button class="btn btn-icon btn-default" title="Pesquisar" data-target="#search-results" id="search-hero">
 			<i class="fa fa-search"></i>
 		</button>
-
+		<a href="{{ 'contato' | relative_url }}" class="btn btn-icon btn-default{% if uri[1] == 'contato' %} active{% endif %}" title="Contato">
+			<i class="fa fa-envelope"></i>
+		</a>
 		<a href="https://github.com/natanfelles" class="btn btn-icon btn-default" title="GitHub" target="_blank">
 			<i class="fa fa-github"></i>
 		</a>
