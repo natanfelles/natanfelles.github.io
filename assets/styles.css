@@ -2,15 +2,15 @@
  * @author Natan Felles <natanfelles@gmail.com>
  */
 @font-face {
-  font-family: 'DejaVu Sans Mono';
-  src: url('./fonts/DejaVuSansMono.ttf') format('truetype');
-  font-weight: normal;
+    font-family: 'DejaVu Sans Mono';
+    src: url('./fonts/DejaVuSansMono.ttf') format('truetype');
+    font-weight: normal;
 }
 
 @font-face {
-  font-family: 'DejaVu Sans Mono';
-  src: url('./fonts/DejaVuSansMono-Bold.ttf') format('truetype');
-  font-weight: bold;
+    font-family: 'DejaVu Sans Mono';
+    src: url('./fonts/DejaVuSansMono-Bold.ttf') format('truetype');
+    font-weight: bold;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
 body.dark {
     color: #bbb;
-    background-color: #191A1C;
+    background-color: #191a1c;
 }
 
 .theme-switcher {
@@ -131,7 +131,6 @@ legend {
     border-left: 1px solid #000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) inset;
 }*/
-
 .top-border {
     border-top: 4px solid #00a4e2;
 }
@@ -178,8 +177,6 @@ a.thumbnail:focus,
 a.thumbnail:hover {
     border-color: #00a4e2;
 }
-
-
 
 .products .thumbnail {
     border-color: #ddd;
@@ -282,7 +279,7 @@ a.thumbnail:hover {
     border-top-color: #373737;
 }
 
-#hero p+hr {
+#hero p + hr {
     width: 30%;
 }
 
@@ -435,18 +432,18 @@ dark .content .list-group-item {
 }
 
 .btn-default.active,
-.open>.dropdown-toggle.btn-default,
+.open > .dropdown-toggle.btn-default,
 .btn-default.active:hover,
-.open>.dropdown-toggle.btn-default:hover {
+.open > .dropdown-toggle.btn-default:hover {
     color: #333;
     background-color: #f9f9f9;
     border-color: #ddd;
 }
 
 .dark .btn-default.active,
-.dark .open>.dropdown-toggle.btn-default,
+.dark .open > .dropdown-toggle.btn-default,
 .dark .btn-default.active:hover,
-.dark .open>.dropdown-toggle.btn-default:hover {
+.dark .open > .dropdown-toggle.btn-default:hover {
     color: #0093cb;
     background-color: #111;
     border-color: #0093cb;
@@ -598,13 +595,11 @@ pre {
     padding: 2px 5px 1px 5px;
     min-height: 23px;
 } */
-
 /* .hljs-line:hover,
 .hljs-line.active {
     background: #2c333d;
     color: #abb2bf;
 } */
-
 .hljs-line-numbers {
     background: #21252b;
     border-right: 1px solid #181a1f;
@@ -628,7 +623,6 @@ pre code {
 /* pre code:hover {
     white-space: pre;
 } */
-
 .panel-hero {
     border-top: 4px solid #00a4e2;
     position: fixed;
@@ -708,9 +702,9 @@ pre code {
     color: #fff;
 }
 
-.navbar-inverse .navbar-nav>.active>a,
-.navbar-inverse .navbar-nav>.active>a:focus,
-.navbar-inverse .navbar-nav>.active>a:hover {
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
     color: #fff !important;
     background-color: #00a4e2;
 }
@@ -800,7 +794,6 @@ pre code {
     position: relative;
 }
 */
-
 #hero {
     position: fixed;
     top: 4px;
@@ -840,37 +833,37 @@ pre code {
     font-family: "Open Sans", sans-serif;
 }
 
-.pagination>li>a,
-.pagination>li>span {
+.pagination > li > a,
+.pagination > li > span {
     color: #00a4e2;
 }
 
-.dark .pagination>li>a,
-.dark .pagination>li>span {
+.dark .pagination > li > a,
+.dark .pagination > li > span {
     background-color: #141516;
     border-color: #000;
 }
 
-.pagination>.active>a,
-.pagination>.active>a:focus,
-.pagination>.active>a:hover,
-.pagination>.active>span,
-.pagination>.active>span:focus,
-.pagination>.active>span:hover,
-.dark .pagination>.active>a,
-.dark .pagination>.active>a:focus,
-.dark .pagination>.active>a:hover,
-.dark .pagination>.active>span,
-.dark .pagination>.active>span:focus,
-.dark .pagination>.active>span:hover {
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover,
+.dark .pagination > .active > a,
+.dark .pagination > .active > a:focus,
+.dark .pagination > .active > a:hover,
+.dark .pagination > .active > span,
+.dark .pagination > .active > span:focus,
+.dark .pagination > .active > span:hover {
     background-color: #00a4e2;
     border-color: #00a4e2;
 }
 
-.pagination>li>a:focus,
-.pagination>li>a:hover,
-.pagination>li>span:focus,
-.pagination>li>span:hover {
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
     color: #fff;
     background-color: #f41249;
     border-color: #f41249;
@@ -890,7 +883,7 @@ footer {
     font-size: 80%;
 }
 
- .loader {
+.loader {
     top: 0;
     left: 0;
     width: 100%;
@@ -971,7 +964,7 @@ footer {
 
 .dark .popover {
     border-color: #000;
-    background-color: #191A1C;
+    background-color: #191a1c;
 }
 
 .popover-title {
@@ -984,11 +977,11 @@ footer {
     border-bottom-color: #000;
 }
 
-.popover.top>.arrow::after {
+.popover.top > .arrow::after {
     border-top-color: #ddd;
 }
 
-.dark .popover.top>.arrow::after {
+.dark .popover.top > .arrow::after {
     border-top-color: #000;
 }
 
@@ -1023,7 +1016,7 @@ footer {
     border-color: #000;
 }
 
-.panel-default>.panel-heading,
+.panel-default > .panel-heading,
 .modal-header,
 .modal-footer {
     color: #000;
@@ -1031,7 +1024,7 @@ footer {
     border-color: #ddd;
 }
 
-.dark .panel-default>.panel-heading,
+.dark .panel-default > .panel-heading,
 .dark .modal-header,
 .dark .modal-footer {
     color: #fff;
@@ -1053,7 +1046,7 @@ footer {
 }
 
 .dark .fade.in {
-    background: #191A1C;
+    background: #191a1c;
 }
 
 .close {
@@ -1210,21 +1203,21 @@ h6:hover .header-link {
     opacity: 1;
 }
 
-.dark .table>tbody>tr>td,
-.dark .table>tbody>tr>th,
-.dark .table>tfoot>tr>td,
-.dark .table>tfoot>tr>th,
-.dark .table>thead>tr>td,
-.dark .table>thead>tr>th,
+.dark .table > tbody > tr > td,
+.dark .table > tbody > tr > th,
+.dark .table > tfoot > tr > td,
+.dark .table > tfoot > tr > th,
+.dark .table > thead > tr > td,
+.dark .table > thead > tr > th,
 .dark .table-bordered {
     border-color: #000;
 }
 
-.dark .table-striped>tbody>tr:nth-of-type(2n+1) {
+.dark .table-striped > tbody > tr:nth-of-type(2n+1) {
     background-color: #141516;
 }
 
-.dark .table-hover>tbody>tr:hover {
+.dark .table-hover > tbody > tr:hover {
     background-color: #111;
 }
 
@@ -1243,20 +1236,25 @@ h6:hover .header-link {
     pre {
         font-size: 14px;
     }
+
     .navbar-brand {
         padding-top: 20px !important;
     }
+
     .navbar-header {
         margin: 0 5px !important;
         min-height: 60px;
     }
+
     .navbar .container {
         padding-right: 15px;
         padding-left: 15px;
     }
+
     .cart {
         right: 50px;
     }
+
     #hero img {
         width: 80px;
         height: 80px;
@@ -1268,6 +1266,7 @@ h6:hover .header-link {
         padding-right: 10px;
         padding-left: 25px;
     }
+
     .theme-switcher {
         left: 25px;
     }
