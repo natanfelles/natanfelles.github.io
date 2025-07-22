@@ -7,22 +7,25 @@ layout: content
 {{ content }}
 
 <form action="https://formspree.io/f/{{ site.formspree }}" method="POST" role="form" id="service-form" data-toggle="validator">
-    <input type="hidden" name="_format" value="plain" />
-    <input type="hidden" name="_subject" value="Solicitação de Serviço" />
-    <input type="hidden" name="_replyto" value="" />
+    <input type="hidden" name="_format" value="plain">
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="subject" value="Solicitação de Serviço">
+    <input type="hidden" name="Página" value="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
     <legend>Contato</legend>
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="Nome">Nome</label>
-                <input type="text" class="form-control" id="nome" name="Nome" placeholder="Seu nome" minlength="5" maxlength="32" required>
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" name="Nome" placeholder="Seu nome" minlength="5" maxlength="32" required>
                 <div class="help-block with-errors"></div>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="E-mail">E-mail</label>
-                <input type="email" class="form-control" id="email" name="E-mail" placeholder="Seu e-mail" required>
+                <label for="email">E-mail</label>
+                {% comment %}O name deve ser "email" para ser Reply-To no email{% endcomment %}
+                <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
                 <div class="help-block with-errors"></div>
             </div>
         </div>

@@ -241,8 +241,9 @@ $('select[id="service"]').change(function() {
 if ($('#service-form').length){
     $('#service-form').submit(function() {
         $(this).validator('update');
-        $('[name="_replyto"]').val($('[name="E-mail"]').val());
-        $('[name="_subject"]').val('Solicitação de Serviço · ' + $('[name="Tipo de Serviço"]').val());
+        //$('[name="_replyto"]').val($('[name="E-mail"]').val());
+        $('[name="subject"]').val('Solicitação de Serviço: ' + $('[name="Tipo de Serviço"]').val());
+        $('[name="Página"]').val(window.location);
     }).validator().on('submit', function(e) {
         var alert = $(this).children('.alert');
 
@@ -287,9 +288,9 @@ if ($('#comments').length) {
         if ($('#blog-comments-form').length){
             $('#blog-comments-form').submit(function() {
                 $(this).validator('update');
-                $('[name="_replyto"]').val($('[name="E-mail"]').val());
-                $('[name="_subject"]').val('Comentário · ' + $('title').html());
-                $('[name="Link"]').val(window.location);
+                //$('[name="_replyto"]').val($('[name="E-mail"]').val());
+                $('[name="subject"]').val('Comentário em "' + $('title').html() + '"');
+                $('[name="Página"]').val(window.location);
             }).validator().on('submit', function(e) {
                 var alert = $(this).children('.alert');
 

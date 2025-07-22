@@ -12,30 +12,31 @@ sitemap: false
     <div class="panel-body">
         <form action="https://formspree.io/f/{{ site.formspree }}" method="POST" role="form" id="blog-comments-form" data-toggle="validator">
 
-            <input type="hidden" name="_format" value="plain" />
-            <input type="hidden" name="_replyto" value="" />
-            <input type="hidden" name="_subject" value="Comentário no Blog" />
-            <input type="hidden" name="Link" value="" />
+            <input type="hidden" name="_format" value="plain">
+            <input type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="subject" value="Comentário no Blog">
+            <input type="hidden" name="Página" value="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="Nome">Nome</label>
+                        <label for="name">Nome</label>
                         <input type="text" name="Nome" class="form-control" id="name" placeholder="Nome" minlength="5" maxlength="32" required>
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="E-mail">E-mail</label>
-                        <input type="text" name="E-mail" class="form-control" id="email" placeholder="E-mail" required>
+                        <label for="email">E-mail</label>
+                        {% comment %}O name deve ser "email" para ser Reply-To no email{% endcomment %}
+                        <input type="email" name="email" class="form-control" id="email" placeholder="E-mail" required>
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="Comentário">Comentário</label>
+                <label for="comment">Comentário</label>
                 <textarea class="form-control" name="Comentário" id="comment" placeholder="Comentário" rows="3" minlength="20" maxlength="2048" required></textarea>
                 <div class="help-block with-errors"></div>
             </div>

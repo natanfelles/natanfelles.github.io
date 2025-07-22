@@ -9,18 +9,25 @@ layout: content
 {% capture contato %}
 
 <form action="https://formspree.io/f/{{ site.formspree }}" method="POST" role="form" id="contact-form" data-toggle="validator">
+
+    <input type="hidden" name="_format" value="plain">
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="subject" value="Mensagem de Contato">
+    <input type="hidden" name="Página" value="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="Nome">Nome</label>
-                <input type="text" class="form-control" id="nome" name="Nome" placeholder="Seu nome" minlength="5" maxlength="32" required>
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" name="Nome" placeholder="Seu nome" minlength="5" maxlength="32" required>
                 <div class="help-block with-errors"></div>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="E-mail">E-mail</label>
-                <input type="email" class="form-control" id="email" name="E-mail" placeholder="Seu e-mail" required>
+                <label for="email">E-mail</label>
+                {% comment %}O name deve ser "email" para ser Reply-To no email{% endcomment %}
+                <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
                 <div class="help-block with-errors"></div>
             </div>
         </div>
@@ -28,8 +35,8 @@ layout: content
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label for="Mensagem">Mensagem</label>
-                <textarea name="Mensagem" class="form-control" rows="5" placeholder="Sua mensagem" minlength="20" maxlength="2048" required></textarea>
+                <label for="message">Mensagem</label>
+                <textarea name="Mensagem" id="message" class="form-control" rows="5" placeholder="Sua mensagem" minlength="20" maxlength="2048" required></textarea>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
