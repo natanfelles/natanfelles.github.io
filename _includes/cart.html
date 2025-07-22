@@ -1,68 +1,68 @@
 {% capture cart %}
 <div class="cart" data-toggle="modal" data-target="#cart">
-	<i class="fa fa-shopping-cart"></i>
+    <i class="fa fa-shopping-cart"></i>
 </div>
 
 
 <div class="modal fade" id="cart">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Carrinho</h4>
-			</div>
-			<div class="modal-body">
-				<table class="table table-hover table-stripe">
-					<thead>
-						<tr>
-							<th>Nome</th>
-							<th>Preço</th>
-							<th>Quantidade</th>
-							<th>Ações</th>
-						</tr>
-					</thead>
-					<tbody id="cart-items"></tbody>
-					<tfoot>
-						<tr>
-							<td colspan="3"><strong>Total:</strong> <span id="cart-total">0</span></td>
-						</tr>
-					</tfoot>
-				</table>
-				<ul class="list-unstyled">
-					<li><small>* Suporte de um ano após o envio dos arquivos.</small></li>
-					<li><small>* A quantidade representa o número de instalações válidas.</small></li>
-					<li><small>* No pagamento pelo PagSeguro o valor será convertido de Dólar para Real.</small></li>
-					<li><small>* Os arquivos adquiridos serão enviados para o e-mail em que o pagamento for realizado.</small></li>
-				</ul>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-success" onclick="sendForm('form-pagseguro')">Pagar pelo PagSeguro</button>
-				<button type="button" class="btn btn-success" onclick="sendForm('form-paypal')">Pagar pelo PayPal</button>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Carrinho</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-hover table-stripe">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Total:</strong> <span id="cart-total">0</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <ul class="list-unstyled">
+                    <li><small>* Suporte de um ano após o envio dos arquivos.</small></li>
+                    <li><small>* A quantidade representa o número de instalações válidas.</small></li>
+                    <li><small>* No pagamento pelo PagSeguro o valor será convertido de Dólar para Real.</small></li>
+                    <li><small>* Os arquivos adquiridos serão enviados para o e-mail em que o pagamento for realizado.</small></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" onclick="sendForm('form-pagseguro')">Pagar pelo PagSeguro</button>
+                <button type="button" class="btn btn-success" onclick="sendForm('form-paypal')">Pagar pelo PayPal</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <form action="https://pagseguro.uol.com.br/v2/checkout/payment.html" method="post" target="_blank" id="form-pagseguro">
-	<input name="receiverEmail" value="{{ site.shop.pagseguro.receiverEmail }}" type="hidden">
+    <input name="receiverEmail" value="{{ site.shop.pagseguro.receiverEmail }}" type="hidden">
     <input name="currency" value="BRL" type="hidden">
     <input name="encoding" value="UTF-8" type="hidden">
 
-	<div class="items"></div>
+    <div class="items"></div>
 </form>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="form-paypal">
-	<input name="business" value="{{ site.shop.paypal.business }}" type="hidden">
-	<input name="currency_code" value="{{ site.shop.paypal.currency_code }}" type="hidden">
-	<input name="cmd" value="_cart" type="hidden">
-	<input name="add" value="1" type="hidden">
-	<input name="upload" value="1" type="hidden">
+    <input name="business" value="{{ site.shop.paypal.business }}" type="hidden">
+    <input name="currency_code" value="{{ site.shop.paypal.currency_code }}" type="hidden">
+    <input name="cmd" value="_cart" type="hidden">
+    <input name="add" value="1" type="hidden">
+    <input name="upload" value="1" type="hidden">
 
-	<div class="items"></div>
+    <div class="items"></div>
 </form>
 {% endcapture cart %}
 {% if site.env == 'development' %}
-	{{ cart }}
+    {{ cart }}
 {% else %}
-	{{ cart | normalize_whitespace }}
+    {{ cart | normalize_whitespace }}
 {% endif %}

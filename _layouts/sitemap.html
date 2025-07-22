@@ -7,25 +7,25 @@ layout: content
 {{ content }}
 
 <ul>
-	<li><a href="{{ '/' | relative_url }}">Página Inicial</a></li>
-	<li><a href="{{ 'sobre' | relative_url }}">Sobre</a></li>
-	<li><a href="{{ 'contato' | relative_url }}">Contato</a></li>
-	<li><a href="{{ 'keys' | relative_url }}">Chaves Públicas</a></li>
-	<li><a href="{{ 'servicos' | relative_url }}/">Serviços</a></li>
-	{% comment %}
-	<li><a href="{{ 'capital' | relative_url }}">Pagamentos e doações</a></li>
-	{% endcomment %}
-	{% comment %}
-	<li><a href="{{ 'loja' | relative_url }}">Loja</a></li>
-	{% endcomment %}
-	<li><a href="{{ 'feed' | relative_url }}">Feed</a></li>
-	<li><a href="{{ 'links' | relative_url }}">Links</a></li>
-	<li><a href="{{ 'blog' | relative_url }}/">Blog</a></li>
-	<ul>
-		<li><a href="{{ 'blog/categorias' | relative_url }}">Blog · Posts por Categorias</a></li>
-		<li><a href="{{ 'blog/tags' | relative_url }}">Blog · Posts por Tags</a></li>
-		{% comment %}{% for post in site.posts  %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-		{% endfor %}{% endcomment %}
-	</ul>
+    <li><a href="{{ '/' | relative_url }}">Página Inicial</a></li>
+    <li><a href="{{ 'sobre' | relative_url }}">Sobre</a></li>
+    <li><a href="{{ 'contato' | relative_url }}">Contato</a></li>
+    <li><a href="{{ 'keys' | relative_url }}">Chaves Públicas</a></li>
+    <li><a href="{{ 'servicos' | relative_url }}/">Serviços</a></li>
+    {% comment %}
+    <li><a href="{{ 'capital' | relative_url }}">Pagamentos e doações</a></li>
+    {% endcomment %}
+    {% comment %}
+    <li><a href="{{ 'loja' | relative_url }}">Loja</a></li>
+    {% endcomment %}
+    <li><a href="{{ 'feed' | relative_url }}">Feed</a></li>
+    <li><a href="{{ 'links' | relative_url }}">Links</a></li>
+    <li><a href="{{ 'blog' | relative_url }}/">Blog</a></li>
+    <ul>
+        <li><a href="{{ 'blog/categorias' | relative_url }}">Blog · Posts por Categorias</a></li>
+        <li><a href="{{ 'blog/tags' | relative_url }}">Blog · Posts por Tags</a></li>
+        {% comment %}{% for post in site.posts  %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}{% endcomment %}
+    </ul>
 </ul>

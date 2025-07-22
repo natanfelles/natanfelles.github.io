@@ -1,11 +1,11 @@
 [
-	{
-		"id": "1",
-		"name": "Matrix",
-		"price": "6",
-		"description": "Este é um produto teste.",
-		"link": "matrix",
-		"image": "matrix.png",
-		"video": ""
-	}
+    {
+        "id": "1",
+        "name": "Matrix",
+        "price": "6",
+        "description": "Este é um produto teste.",
+        "link": "matrix",
+        "image": "matrix.png",
+        "video": ""
+    }
 ]

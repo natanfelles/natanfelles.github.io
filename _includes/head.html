@@ -1,62 +1,62 @@
 {% capture head %}
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>
-  {% if page.title != site.title %}
-  	{{ page.title }} -
-  	{% if paginator.page > 1 %}
-			Página {{ paginator.page }} -
-		{% endif %}
-	{% endif %}
-
-	{% if page.title == site.title %}
-  	{{ site.title }} - {{ site.description }}
-	{% else %}
-		{{ site.title }}
-	{% endif %}
-	</title>
-  <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author.name }}{% endif %}">
-
-	{% if page.sitemap == false %}
-  	<meta name="robots" content="noindex">
-  {% endif %}
-
-  {% include  meta_social.html %}
-
-   <link rel="apple-touch-icon" href="{{ 'assets/img/apple-touch-icon.png' | relative_url }}">
-  <link rel="icon" type="image/png" href="{{ 'assets/img/favicon.png' | relative_url }}">
-  <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
-
-  <meta name="environment" content="{{ site.env }}">
-
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Open+Sans:300,400,600,700,800">
-
-  {% if site.env == "development" %}
-    <link rel="stylesheet" type="text/css" href="{{ 'assets/external/css/bootstrap.min.css' | relative_url }}">
-    <link rel="stylesheet" type="text/css" href="{{ 'assets/external/css/font-awesome.min.css' | relative_url }}">
-    {% if page.url != '/' %}
-      <link rel="stylesheet" type="text/css" href="{{ 'assets/external/js/highlightjs/styles/atom-one-dark.css' | relative_url }}">
-      <link rel="stylesheet" type="text/css" href="{{ 'assets/external/js/ekko-lightbox/ekko-lightbox.css' | relative_url }}">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+    {% if page.title != site.title %}
+        {{ page.title }} -
+        {% if paginator.page > 1 %}
+            Página {{ paginator.page }} -
+        {% endif %}
     {% endif %}
-    <link rel="stylesheet" type="text/css" href="{{ 'assets/styles.css' | relative_url }}">
-  {% else %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    {% if page.url != '/' %}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css" />
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
-    {% endif %}
-    <link rel="stylesheet" type="text/css" href="{{ 'assets/styles.min.css' | relative_url }}">
-  {% endif %}
 
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ 'feed.xml' | relative_url }}">
+    {% if page.title == site.title %}
+        {{ site.title }} - {{ site.description }}
+    {% else %}
+        {{ site.title }}
+    {% endif %}
+    </title>
+    <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author.name }}{% endif %}">
+
+    {% if page.sitemap == false %}
+        <meta name="robots" content="noindex">
+    {% endif %}
+
+    {% include  meta_social.html %}
+
+    <link rel="apple-touch-icon" href="{{ 'assets/img/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ 'assets/img/favicon.png' | relative_url }}">
+    <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
+
+    <meta name="environment" content="{{ site.env }}">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Open+Sans:300,400,600,700,800">
+
+    {% if site.env == "development" %}
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/external/css/bootstrap.min.css' | relative_url }}">
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/external/css/font-awesome.min.css' | relative_url }}">
+        {% if page.url != '/' %}
+            <link rel="stylesheet" type="text/css" href="{{ 'assets/external/js/highlightjs/styles/atom-one-dark.css' | relative_url }}">
+            <link rel="stylesheet" type="text/css" href="{{ 'assets/external/js/ekko-lightbox/ekko-lightbox.css' | relative_url }}">
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/styles.css' | relative_url }}">
+    {% else %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        {% if page.url != '/' %}
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css" />
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/styles.min.css' | relative_url }}">
+    {% endif %}
+
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ 'feed.xml' | relative_url }}">
 </head>
 {% endcapture %}
 
 {% if site.env == 'development' %}
-	{{ head }}
+    {{ head }}
 {% else %}
-	{{ head | normalize_whitespace }}
+    {{ head | normalize_whitespace }}
 {% endif %}

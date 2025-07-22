@@ -3,9 +3,9 @@ layout: content
 ---
 
 {% for data in site.data.products %}
-	{% if data.id == page.id %}
-		{% assign product = data %}
-	{% endif %}
+    {% if data.id == page.id %}
+        {% assign product = data %}
+    {% endif %}
 {% endfor %}
 
 <div id="shop"></div>
@@ -13,35 +13,35 @@ layout: content
 <h1>{{ page.title }}</h1>
 
 {% if product.video != "" and product.video != null %}
-	<div class="embed-responsive embed-responsive-16by9">
-	    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ product.video }}?autoplay=1" autoplay="autoplay"></iframe>
-	</div>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ product.video }}?autoplay=1" autoplay="autoplay"></iframe>
+    </div>
 {% else %}
-	<p>
-		<img src="{{ 'assets/img_products/' | append: product.image | relative_url }}" alt="{{ page.title }}" />
-	</p>
+    <p>
+        <img src="{{ 'assets/img_products/' | append: product.image | relative_url }}" alt="{{ page.title }}" />
+    </p>
 {% endif %}
 
 <div class="well well-sm">
-	<div class="row">
-		<div class="col-md-6"><h3 class="price-header">U$ {{ product.price }}</h3></div>
-		<div class="col-md-6 text-right">
-			<a href="#" class="btn btn-success to-cart" data-id="{{ product.id }}" data-price="{{ product.price }}" data-name="{{ product.name }}">Adicionar ao Carrinho</a>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-md-6"><h3 class="price-header">U$ {{ product.price }}</h3></div>
+        <div class="col-md-6 text-right">
+            <a href="#" class="btn btn-success to-cart" data-id="{{ product.id }}" data-price="{{ product.price }}" data-name="{{ product.name }}">Adicionar ao Carrinho</a>
+        </div>
+    </div>
 </div>
 
 {{ content }}
 
 <div class="well text-center">
-	<a class="btn btn-icon btn-primary" href="https://twitter.com/share?text={{ page.title }}&url={{ site.url }}{{ page.url  }}" target="_blank">
-    	<i class="fa fa-twitter"></i>
+    <a class="btn btn-icon btn-primary" href="https://twitter.com/share?text={{ page.title }}&url={{ site.url }}{{ page.url  }}" target="_blank">
+        <i class="fa fa-twitter"></i>
     </a>
     <a class="btn btn-icon btn-primary" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url  }}" target="_blank">
-    	<i class="fa fa-facebook"></i>
+        <i class="fa fa-facebook"></i>
     </a>
     <a class="btn btn-icon btn-primary" href="https://plus.google.com/share?url={{ site.url }}{{ page.url  }}" target="_blank">
-    	<i class="fa fa-google-plus"></i>
+        <i class="fa fa-google-plus"></i>
     </a>
 </div>
 

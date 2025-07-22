@@ -9,41 +9,41 @@ layout: content
 {% capture contato %}
 
 <form action="https://formspree.io/f/{{ site.formspree }}" method="POST" role="form" id="contact-form" data-toggle="validator">
-	<div class="row">
-		<div class="col-md-6">
-			<div class="form-group">
-				<label for="Nome">Nome</label>
-				<input type="text" class="form-control" id="nome" name="Nome" placeholder="Seu nome" minlength="5" maxlength="32" required>
-				<div class="help-block with-errors"></div>
-			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="form-group">
-				<label for="E-mail">E-mail</label>
-				<input type="email" class="form-control" id="email" name="E-mail" placeholder="Seu e-mail" required>
-				<div class="help-block with-errors"></div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<div class="form-group">
-				<label for="Mensagem">Mensagem</label>
-				<textarea name="Mensagem" class="form-control" rows="5" placeholder="Sua mensagem" minlength="20" maxlength="2048" required></textarea>
-				<div class="help-block with-errors"></div>
-			</div>
-			<div class="form-group">
-				<button type="submit" class="btn btn-primary pull-right">Enviar</button>
-			</div>
-		</div>
-	</div>
-	<div class="alert" style="display: none; margin-top: 10px"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="Nome" placeholder="Seu nome" minlength="5" maxlength="32" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="E-mail">E-mail</label>
+                <input type="email" class="form-control" id="email" name="E-mail" placeholder="Seu e-mail" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="Mensagem">Mensagem</label>
+                <textarea name="Mensagem" class="form-control" rows="5" placeholder="Sua mensagem" minlength="20" maxlength="2048" required></textarea>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary pull-right">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <div class="alert" style="display: none; margin-top: 10px"></div>
 </form>
 
 {% endcapture %}
 
 {% if site.env == 'development' %}
-	{{ contato }}
+    {{ contato }}
 {% else %}
-	{{ contato | normalize_whitespace }}
+    {{ contato | normalize_whitespace }}
 {% endif %}

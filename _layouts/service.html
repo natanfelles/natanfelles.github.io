@@ -7,57 +7,57 @@ layout: content
 {{ content }}
 
 <form action="https://formspree.io/f/{{ site.formspree }}" method="POST" role="form" id="service-form" data-toggle="validator">
-	<input type="hidden" name="_format" value="plain" />
-	<input type="hidden" name="_subject" value="Solicitação de Serviço" />
-	<input type="hidden" name="_replyto" value="" />
-	<legend>Contato</legend>
-	<div class="row">
-		<div class="col-md-6">
-			<div class="form-group">
-				<label for="Nome">Nome</label>
-				<input type="text" class="form-control" id="nome" name="Nome" placeholder="Seu nome" minlength="5" maxlength="32" required>
-				<div class="help-block with-errors"></div>
-			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="form-group">
-				<label for="E-mail">E-mail</label>
-				<input type="email" class="form-control" id="email" name="E-mail" placeholder="Seu e-mail" required>
-				<div class="help-block with-errors"></div>
-			</div>
-		</div>
-	</div>
-	<div id="service_type"></div>
-	<div id="service-confirm" style="display: none">
-		<legend>Opções</legend>
-		<div id="service-options"></div>
-		<legend>Observações</legend>
-		<div class="form-group">
-			<textarea name="Observação" class="form-control" rows="5" placeholder="Observações que você acredita serem relevantes a este serviço..." minlength="20" maxlength="2048" required></textarea>
-			<div class="help-block with-errors"></div>
-		</div>
-		{% comment %}
-			<legend>Método de Pagamento</legend>
-			<div class="form-group">
-				<label for="provedor_de_pagamentos">Provedor de Pagamentos Preferencial</label>
-				<select class="form-control" name="provedor_de_pagamentos">
-					<option value="paypal">PayPal</option>
-					<option value="pagseguro">PagSeguro</option>
-					<option value="ted">Transferência Bancária</option>
-				</select>
-			</div>
-		{% endcomment %}
-		<p><small>* Sua solicitação será analisada e você receberá uma resposta no e-mail informado com detalhes sobre os procedimentos a serem tomados.</small></p>
-		<div class="form-group">
-			<button type="submit" class="btn btn-primary">Enviar</button>
-		</div>
-	</div>
-	<div class="alert" style="display: none;"></div>
+    <input type="hidden" name="_format" value="plain" />
+    <input type="hidden" name="_subject" value="Solicitação de Serviço" />
+    <input type="hidden" name="_replyto" value="" />
+    <legend>Contato</legend>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="Nome" placeholder="Seu nome" minlength="5" maxlength="32" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="E-mail">E-mail</label>
+                <input type="email" class="form-control" id="email" name="E-mail" placeholder="Seu e-mail" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+    </div>
+    <div id="service_type"></div>
+    <div id="service-confirm" style="display: none">
+        <legend>Opções</legend>
+        <div id="service-options"></div>
+        <legend>Observações</legend>
+        <div class="form-group">
+            <textarea name="Observação" class="form-control" rows="5" placeholder="Observações que você acredita serem relevantes a este serviço..." minlength="20" maxlength="2048" required></textarea>
+            <div class="help-block with-errors"></div>
+        </div>
+        {% comment %}
+            <legend>Método de Pagamento</legend>
+            <div class="form-group">
+                <label for="provedor_de_pagamentos">Provedor de Pagamentos Preferencial</label>
+                <select class="form-control" name="provedor_de_pagamentos">
+                    <option value="paypal">PayPal</option>
+                    <option value="pagseguro">PagSeguro</option>
+                    <option value="ted">Transferência Bancária</option>
+                </select>
+            </div>
+        {% endcomment %}
+        <p><small>* Sua solicitação será analisada e você receberá uma resposta no e-mail informado com detalhes sobre os procedimentos a serem tomados.</small></p>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+    <div class="alert" style="display: none;"></div>
 </form>
 {% endcapture %}
 
 {% if site.env == 'development' %}
-	{{ service }}
+    {{ service }}
 {% else %}
-	{{ service | normalize_whitespace }}
+    {{ service | normalize_whitespace }}
 {% endif %}

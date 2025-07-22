@@ -1,48 +1,48 @@
 {% capture search %}
 {% comment %}<!-- <form id="search-form">
-	<div class="input-group">
-	  <input type="text" name="q" class="form-control" placeholder="Pesquisar guias...">
-	  <span class="input-group-btn">
-	    <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#search-results"><i class="fa fa-search"></i></button>
-	  </span>
-	</div>
+    <div class="input-group">
+      <input type="text" name="q" class="form-control" placeholder="Pesquisar guias...">
+      <span class="input-group-btn">
+        <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#search-results"><i class="fa fa-search"></i></button>
+      </span>
+    </div>
 </form> -->{% endcomment %}
 
 <div class="modal fade" id="search-results">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Pesquisar</h4>
-			</div>
-			<div class="modal-body">
-				<form id="search-modal">
-					<div class="form-group">
-						<div class="input-group">
-					      <input type="text" name="q" class="form-control" placeholder="O que você procura?">
-					      <span class="input-group-btn">
-					        <button class="btn btn-primary" type="submit">
-					        	<i class="fa fa-search"></i>
-					        </button>
-					      </span>
-					    </div>
-					</div>
-				</form>
-				<div id="search-box">
-					<p class="text-muted text-right sr-benchmark"></p>
-					<div class="list-group sr-results"></div>
-					<nav class="text-center sr-pages">
-						<ul class="pagination"></ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Pesquisar</h4>
+            </div>
+            <div class="modal-body">
+                <form id="search-modal">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="O que você procura?">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <div id="search-box">
+                    <p class="text-muted text-right sr-benchmark"></p>
+                    <div class="list-group sr-results"></div>
+                    <nav class="text-center sr-pages">
+                        <ul class="pagination"></ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endcapture %}
 
 {% if site.env == 'development' %}
-	{{ search }}
+    {{ search }}
 {% else %}
-	{{ search | normalize_whitespace }}
+    {{ search | normalize_whitespace }}
 {% endif %}
