@@ -8,444 +8,444 @@ keywords: servidor, servidor web, linux, servidor linux, centos, debian, ubuntu,
 <h1 class="page-header">Serviços <small>Instalação</small></h1>
 
 <div id="service_type-content" class="hide">
-	<legend>Tipo de Instalação</legend>
-	<input type="hidden" name="Tipo de Serviço" value="Instalação">
-	<div class="form-group">
-		<label>Serviço</label>
-		<select class="form-control" name="Serviço" id="service" required>
-			<option value="" selected>Selecione um serviço...</option>
-			<option value="Servidor" data-service="servidor">Servidor</option>
-			<option value="Painel de Controle" data-service="painel_de_controle">Servidor com Painel de Controle</option>
-			<option value="Sistema de Gerenciamento de Conteúdo - CMS" data-service="cms">Sistema de Gerenciamento de Conteúdo (CMS)</option>
-		</select>
-		<div class="help-block with-errors"></div>
-	</div>
+    <legend>Tipo de Instalação</legend>
+    <input type="hidden" name="Tipo de Serviço" value="Instalação">
+    <div class="form-group">
+        <label>Serviço</label>
+        <select class="form-control" name="Serviço" id="service" required>
+            <option value="" selected>Selecione um serviço...</option>
+            <option value="Servidor" data-service="servidor">Servidor</option>
+            <option value="Painel de Controle" data-service="painel_de_controle">Servidor com Painel de Controle</option>
+            <option value="Sistema de Gerenciamento de Conteúdo - CMS" data-service="cms">Sistema de Gerenciamento de Conteúdo (CMS)</option>
+        </select>
+        <div class="help-block with-errors"></div>
+    </div>
 </div>
 
 <div id="service-servidor" class="hide">
-	<div class="alert alert-warning">
-	  <strong><i class="fa fa-warning"></i> Atenção!</strong><br>
-	  O gerenciamento do servidor deverá ser feito via linha de comando.<br>
-	  Se você deseja gerenciar seu servidor por uma interface web, selecione o serviço <strong>Servidor com Painel de Controle</strong>.
-	</div>
-	<div class="form-group">
-		<label>Provedor de Hospedagem</label>
-		<select class="form-control" name="Provedor de Hospedagem" required>
-			<option value="Digital Ocean">Digital Ocean</option>
-			<option value="Linode" selected>Linode</option>
-			<option value="Locaweb">Locaweb</option>
-			<option value="Não Sei. Me indique uma">Não sei. Me indique uma.</option>
-			<option value="Outra">Outra. Coloque o nome do seu provedor no campo Observações.</option>
-		</select>
-		<div class="help-block with-errors"></div>
-	</div>
-	<div class="form-group">
-		<label>Distribuição Linux</label>
-		<select class="form-control" name="Distribuição Linux" required>
-			<option value="CentOS">CentOS</option>
-			<option value="Debian" selected>Debian</option>
-			<option value="Ubuntu">Ubuntu</option>
-		</select>
-		<div class="help-block with-errors"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-6">
-			<div class="form-group">
-				<label>Hostname (Nome do servidor)</label>
-				<input type="text" class="form-control" name="Hostname" placeholder="Ex: server-1" minlength="2" maxlength="32" pattern="^[_\-A-z0-9]{1,}$" data-pattern-error="Por favor, insira apenas letras, números, hífens e underlines." required>
-				<div class="help-block with-errors"></div>
-			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="form-group">
-				<label>Domínio</label>
-				<input type="text" class="form-control" name="Domínio" placeholder="Ex: dominio.com.br" minlength="5" maxlength="255" required>
-				<div class="help-block with-errors"></div>
-			</div>
-		</div>
-	</div>
-	<div class="form-group">
-		<label>Pacotes</label>
-		<div class="checkbox">
-			<button type="button" class="btn btn-xs btn-default" title="SSH" data-toggle="popover" data-content="Ssh (Secure Shell) is a program for logging into a remote machine
+    <div class="alert alert-warning">
+      <strong><i class="fa fa-warning"></i> Atenção!</strong><br>
+      O gerenciamento do servidor deverá ser feito via linha de comando.<br>
+      Se você deseja gerenciar seu servidor por uma interface web, selecione o serviço <strong>Servidor com Painel de Controle</strong>.
+    </div>
+    <div class="form-group">
+        <label>Provedor de Hospedagem</label>
+        <select class="form-control" name="Provedor de Hospedagem" required>
+            <option value="Digital Ocean">Digital Ocean</option>
+            <option value="Linode" selected>Linode</option>
+            <option value="Locaweb">Locaweb</option>
+            <option value="Não Sei. Me indique uma">Não sei. Me indique uma.</option>
+            <option value="Outra">Outra. Coloque o nome do seu provedor no campo Observações.</option>
+        </select>
+        <div class="help-block with-errors"></div>
+    </div>
+    <div class="form-group">
+        <label>Distribuição Linux</label>
+        <select class="form-control" name="Distribuição Linux" required>
+            <option value="CentOS">CentOS</option>
+            <option value="Debian" selected>Debian</option>
+            <option value="Ubuntu">Ubuntu</option>
+        </select>
+        <div class="help-block with-errors"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Hostname (Nome do servidor)</label>
+                <input type="text" class="form-control" name="Hostname" placeholder="Ex: server-1" minlength="2" maxlength="32" pattern="^[_\-A-z0-9]{1,}$" data-pattern-error="Por favor, insira apenas letras, números, hífens e underlines." required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Domínio</label>
+                <input type="text" class="form-control" name="Domínio" placeholder="Ex: dominio.com.br" minlength="5" maxlength="255" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Pacotes</label>
+        <div class="checkbox">
+            <button type="button" class="btn btn-xs btn-default" title="SSH" data-toggle="popover" data-content="Ssh (Secure Shell) is a program for logging into a remote machine
  and for executing commands on a remote machine. It provides secure encrypted communications between two untrusted hosts over an insecure network. X11 connections and arbitrary TCP/IP ports can also be forwarded over the secure channel. It can be used to provide applications with a secure communication channel.
 ">?</button>
-			<label>
-		      <input type="checkbox" name="SSH" checked disabled> SSH <small>+ regras de acesso por Usuário, IP, Chave Pública ou ambas</small>
-		    </label>
-		</div>
-		<div class="radio">
-			<button type="button" class="btn btn-xs btn-default" title="Apache" data-toggle="popover" data-content="The Apache HTTP Server Project's goal is to build a secure, efficient and extensible HTTP server as standards-compliant open source software. The result has long been the number one web server on the Internet.">?</button>
-			<label>
-		      <input type="radio" name="Servidor HTTP" value="Apache"> Apache <small>+ módulos Rewrite, Security e, opcionalmente, PageSpeed</small>
-		    </label>
-		</div>
-		<div class="radio">
-			<button type="button" class="btn btn-xs btn-default" title="Nginx" data-toggle="popover" data-content="small, powerful, scalable web/proxy server
+            <label>
+              <input type="checkbox" name="SSH" checked disabled> SSH <small>+ regras de acesso por Usuário, IP, Chave Pública ou ambas</small>
+            </label>
+        </div>
+        <div class="radio">
+            <button type="button" class="btn btn-xs btn-default" title="Apache" data-toggle="popover" data-content="The Apache HTTP Server Project's goal is to build a secure, efficient and extensible HTTP server as standards-compliant open source software. The result has long been the number one web server on the Internet.">?</button>
+            <label>
+              <input type="radio" name="Servidor HTTP" value="Apache"> Apache <small>+ módulos Rewrite, Security e, opcionalmente, PageSpeed</small>
+            </label>
+        </div>
+        <div class="radio">
+            <button type="button" class="btn btn-xs btn-default" title="Nginx" data-toggle="popover" data-content="small, powerful, scalable web/proxy server
  Nginx (engine X) is a high-performance web and reverse proxy server created by Igor Sysoev. It can be used both as a standalone web server and as a proxy to reduce the load on back-end HTTP or mail servers.">?</button>
-			<label>
-		      <input type="radio" name="Servidor HTTP" value="Nginx" checked> Nginx <small>+ versão mais completa do Nginx</small>
-		    </label>
-		</div>
-		<div class="checkbox">
-			<button type="button" class="btn btn-xs btn-default" title="PHP" data-toggle="popover" data-content="PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.">?</button>
-			<label>
-		      <input type="checkbox" name="PHP" checked> PHP <small>+ módulos mais utilizados por frameworks e CMSs</small>
-		    </label>
-		</div>
-		<div class="checkbox">
-			<button type="button" class="btn btn-xs btn-default" title="MySQL" data-toggle="popover" data-content="MySQL database server binaries and system database setup MySQL is a fast, stable and true multi-user, multi-threaded SQL database server. SQL (Structured Query Language) is the most popular database query language in the world. The main goals of MySQL are speed, robustness and ease of use.">?</button>
-			<label>
-		      <input type="checkbox" name="MySQL" checked> MySQL <small>+ otimizações de segurança e performance</small>
-		    </label>
-		</div>
-		<div class="checkbox">
-			<button type="button" class="btn btn-xs btn-default" title="UFW" data-toggle="popover" data-content="program for managing a Netfilter firewall The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
+            <label>
+              <input type="radio" name="Servidor HTTP" value="Nginx" checked> Nginx <small>+ versão mais completa do Nginx</small>
+            </label>
+        </div>
+        <div class="checkbox">
+            <button type="button" class="btn btn-xs btn-default" title="PHP" data-toggle="popover" data-content="PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.">?</button>
+            <label>
+              <input type="checkbox" name="PHP" checked> PHP <small>+ módulos mais utilizados por frameworks e CMSs</small>
+            </label>
+        </div>
+        <div class="checkbox">
+            <button type="button" class="btn btn-xs btn-default" title="MySQL" data-toggle="popover" data-content="MySQL database server binaries and system database setup MySQL is a fast, stable and true multi-user, multi-threaded SQL database server. SQL (Structured Query Language) is the most popular database query language in the world. The main goals of MySQL are speed, robustness and ease of use.">?</button>
+            <label>
+              <input type="checkbox" name="MySQL" checked> MySQL <small>+ otimizações de segurança e performance</small>
+            </label>
+        </div>
+        <div class="checkbox">
+            <button type="button" class="btn btn-xs btn-default" title="UFW" data-toggle="popover" data-content="program for managing a Netfilter firewall The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 ">?</button>
-			<label>
-		      <input type="checkbox" name="UFW" checked> UFW <small>+ regras no Firewall para liberar acesso público somente ao que for necessário</small>
-		    </label>
-		</div>
-		<div class="checkbox">
-			<button type="button" class="btn btn-xs btn-default" title="Monit" data-toggle="popover" data-content="Utility for monitoring and managing daemons or similar programs monit is a utility for monitoring and managing daemons or similar programs running on a Unix system. It will start specified programs if they are not running and restart programs not responding.">?</button>
-			<label>
-		      <input type="checkbox" name="Monit"> Monit <small>+ regras de monitoramento com avisos automáticos via e-mail</small>
-		    </label>
-		</div>
-	</div>
+            <label>
+              <input type="checkbox" name="UFW" checked> UFW <small>+ regras no Firewall para liberar acesso público somente ao que for necessário</small>
+            </label>
+        </div>
+        <div class="checkbox">
+            <button type="button" class="btn btn-xs btn-default" title="Monit" data-toggle="popover" data-content="Utility for monitoring and managing daemons or similar programs monit is a utility for monitoring and managing daemons or similar programs running on a Unix system. It will start specified programs if they are not running and restart programs not responding.">?</button>
+            <label>
+              <input type="checkbox" name="Monit"> Monit <small>+ regras de monitoramento com avisos automáticos via e-mail</small>
+            </label>
+        </div>
+    </div>
 </div>
 
 <div id="service-painel_de_controle" class="hide">
-	<div class="form-group">
-		<label>Provedor de Hospedagem</label>
-		<select class="form-control" name="Provedor de Hospedagem">
-			<option value="Digital Ocean">Digital Ocean</option>
-			<option value="Linode" selected>Linode</option>
-			<option value="Locaweb">Locaweb</option>
-			<option value="Não sei. Me indique uma">Não sei. Me indique uma</option>
-			<option value="Outra">Outra. Coloque o nome do seu provedor no campo Observações.</option>
-		</select>
-	</div>
-	<div class="form-group">
-		<label>Distribuição Linux</label>
-		<select class="form-control" name="Distribuição Linux">
-			<option value="CentOS">CentOS</option>
-			<option value="Debian" selected>Debian</option>
-			<option value="Ubuntu">Ubuntu</option>
-		</select>
-	</div>
-	<div class="row">
-		<div class="col-md-6">
-			<div class="form-group">
-				<label>Hostname (Nome do servidor)</label>
-				<input type="text" class="form-control" name="Hostname" placeholder="Ex: server-1" minlength="2" maxlength="32" pattern="^[_\-A-z0-9]{1,}$" data-pattern-error="Por favor, insira apenas letras, números, hífens e underlines." required>
-				<div class="help-block with-errors"></div>
-			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="form-group">
-				<label>Domínio</label>
-				<input type="text" class="form-control" name="Domínio" placeholder="Ex: dominio.com.br" minlength="5" maxlength="255" required>
-				<div class="help-block with-errors"></div>
-			</div>
-		</div>
-	</div>
-	<div class="form-group">
-		<button class="btn btn-default btn-block" data-toggle="modal" data-target="#cp-images"><i class="fa fa-image"></i> Clique aqui para ver as interfaces acessíveis pelo seu navegador</button>
-	</div>
-	<label>Serviços da Máquina</label>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Servidor SSH" checked disabled> Servidor SSH
-		</label>
-	</div>
-	<div class="radio">
-		<label>
-		  <input type="radio" name="Servidor HTTP" value="Apache"> Servidor Web Apache <small>+ módulo PageSpeed</small>
-		</label>
-	</div>
-	<div class="radio">
-		<label>
-		  <input type="radio" name="Servidor HTTP" value="Nginx" checked> Servidor Web Nginx
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="PHP" checked disabled> Interpretadores PHP <small>+ versões 5 e 7</small>
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Servidor de Banco de Dados MariaDB (MySQL)" checked disabled> Servidor de Banco de Dados MariaDB (MySQL) <small>+ cliente web PhpMyAdmin</small>
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Servidor de Arquivos FTP" checked> Servidor de Arquivos FTP
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Servidor de E-mails"> Servidor de E-mails <small>+ cliente web Roundcube e antivírus ClamAV</small>
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Servidor DNS"> Servidor DNS
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Servidor de Mensagens XMPP"> Servidor de Mensagens XMPP
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Estatísticas e Backups por Sites" checked disabled> Estatísticas e Backups por Sites
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Monit e Munin"> Monitoramento de Serviços com Monit e Munin <small>+ interface web  e regras de aviso via e-mail</small>
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Interface Web ISPConfig" checked disabled> Interface Web ISPConfig <small>+ o painel de controle mais completo</small>
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Módulo de Faturas"> Módulo de Faturas <small>+ cobrança e gerenciamento automático de clientes e recursos</small>
-		</label>
-	</div>
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" name="Certificado SSL Comercial"> Certificado SSL Comercial <small>+ aceito na maioria dos navegadores</small>
-		</label>
-	</div>
+    <div class="form-group">
+        <label>Provedor de Hospedagem</label>
+        <select class="form-control" name="Provedor de Hospedagem">
+            <option value="Digital Ocean">Digital Ocean</option>
+            <option value="Linode" selected>Linode</option>
+            <option value="Locaweb">Locaweb</option>
+            <option value="Não sei. Me indique uma">Não sei. Me indique uma</option>
+            <option value="Outra">Outra. Coloque o nome do seu provedor no campo Observações.</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Distribuição Linux</label>
+        <select class="form-control" name="Distribuição Linux">
+            <option value="CentOS">CentOS</option>
+            <option value="Debian" selected>Debian</option>
+            <option value="Ubuntu">Ubuntu</option>
+        </select>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Hostname (Nome do servidor)</label>
+                <input type="text" class="form-control" name="Hostname" placeholder="Ex: server-1" minlength="2" maxlength="32" pattern="^[_\-A-z0-9]{1,}$" data-pattern-error="Por favor, insira apenas letras, números, hífens e underlines." required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Domínio</label>
+                <input type="text" class="form-control" name="Domínio" placeholder="Ex: dominio.com.br" minlength="5" maxlength="255" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default btn-block" data-toggle="modal" data-target="#cp-images"><i class="fa fa-image"></i> Clique aqui para ver as interfaces acessíveis pelo seu navegador</button>
+    </div>
+    <label>Serviços da Máquina</label>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Servidor SSH" checked disabled> Servidor SSH
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+          <input type="radio" name="Servidor HTTP" value="Apache"> Servidor Web Apache <small>+ módulo PageSpeed</small>
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+          <input type="radio" name="Servidor HTTP" value="Nginx" checked> Servidor Web Nginx
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="PHP" checked disabled> Interpretadores PHP <small>+ versões 5 e 7</small>
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Servidor de Banco de Dados MariaDB (MySQL)" checked disabled> Servidor de Banco de Dados MariaDB (MySQL) <small>+ cliente web PhpMyAdmin</small>
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Servidor de Arquivos FTP" checked> Servidor de Arquivos FTP
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Servidor de E-mails"> Servidor de E-mails <small>+ cliente web Roundcube e antivírus ClamAV</small>
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Servidor DNS"> Servidor DNS
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Servidor de Mensagens XMPP"> Servidor de Mensagens XMPP
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Estatísticas e Backups por Sites" checked disabled> Estatísticas e Backups por Sites
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Monit e Munin"> Monitoramento de Serviços com Monit e Munin <small>+ interface web  e regras de aviso via e-mail</small>
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Interface Web ISPConfig" checked disabled> Interface Web ISPConfig <small>+ o painel de controle mais completo</small>
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Módulo de Faturas"> Módulo de Faturas <small>+ cobrança e gerenciamento automático de clientes e recursos</small>
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+          <input type="checkbox" name="Certificado SSL Comercial"> Certificado SSL Comercial <small>+ aceito na maioria dos navegadores</small>
+        </label>
+    </div>
 </div>
 
 <div id="service-cms" class="hide">
-	<div class="alert alert-warning">
-	  <strong><i class="fa fa-warning"></i> Atenção!</strong><br>
-	  Para este tipo de serviço é necessário que você possua um local para hospedar o sistema.<br>
-	  Se você deseja ter seu própio local para hospedar suas aplicações web, selecione o serviço <strong>Servidor</strong> ou <strong>Servidor com Painel de Controle</strong>.
-	</div>
-	<div class="form-group">
-		<label>Hospedagem</label>
-		<select class="form-control" name="Hospedagem" required>
-			<option value="Compartilhada">Compartilhada</option>
-			<option value="VPS">VPS</option>
-			<option value="Não possuo" selected>Ainda não tenho um serviço de hospedagem</option>
-		</select>
-	</div>
-	<div class="form-group">
-		<label>Endereço Web</label>
-		<input type="text" class="form-control" name="Endereço Web" placeholder="Ex: https://loja.dominio.com.br" required>
-	</div>
-	<label>Sistema</label>
-	<div class="radio">
-		<label>
-		  <input type="radio" name="CMS" value="WordPress" checked> WordPress <small>+ recomendado para blogs, portfolios, startups e pequenas empresas</small>
-		</label>
-	</div>
-	<div class="radio">
-		<label>
-		  <input type="radio" name="CMS" value="Magento"> Magento <small>+ recomendado para grandes empresas focadas em e-commerce (comércio online)</small>
-		</label>
-	</div>
-	<div class="radio">
-		<label>
-		  <input type="radio" name="CMS" value="Joomla"> Joomla <small>+ recomendado para grandes portais de notícias</small>
-		</label>
-	</div>
-	<div class="form-group">
-		<label>Tema</label>
-		<select class="form-control" name="Tema">
-			<option value="Já possuo. Basta instalá-lo">Já possuo. Basta instalá-lo</option>
-			<option value="Não preciso que instale um tema">Não preciso que instale um tema</option>
-			<option value="Me indique alguns" selected>Me indique alguns</option>
-		</select>
-	</div>
-	<div class="form-group">
-		<label>Nicho de Mercado</label>
-		<input type="text" class="form-control" name="Nicho de Mercado" placeholder="Ex: venda de roupas">
-	</div>
+    <div class="alert alert-warning">
+      <strong><i class="fa fa-warning"></i> Atenção!</strong><br>
+      Para este tipo de serviço é necessário que você possua um local para hospedar o sistema.<br>
+      Se você deseja ter seu própio local para hospedar suas aplicações web, selecione o serviço <strong>Servidor</strong> ou <strong>Servidor com Painel de Controle</strong>.
+    </div>
+    <div class="form-group">
+        <label>Hospedagem</label>
+        <select class="form-control" name="Hospedagem" required>
+            <option value="Compartilhada">Compartilhada</option>
+            <option value="VPS">VPS</option>
+            <option value="Não possuo" selected>Ainda não tenho um serviço de hospedagem</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Endereço Web</label>
+        <input type="text" class="form-control" name="Endereço Web" placeholder="Ex: https://loja.dominio.com.br" required>
+    </div>
+    <label>Sistema</label>
+    <div class="radio">
+        <label>
+          <input type="radio" name="CMS" value="WordPress" checked> WordPress <small>+ recomendado para blogs, portfolios, startups e pequenas empresas</small>
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+          <input type="radio" name="CMS" value="Magento"> Magento <small>+ recomendado para grandes empresas focadas em e-commerce (comércio online)</small>
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+          <input type="radio" name="CMS" value="Joomla"> Joomla <small>+ recomendado para grandes portais de notícias</small>
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Tema</label>
+        <select class="form-control" name="Tema">
+            <option value="Já possuo. Basta instalá-lo">Já possuo. Basta instalá-lo</option>
+            <option value="Não preciso que instale um tema">Não preciso que instale um tema</option>
+            <option value="Me indique alguns" selected>Me indique alguns</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Nicho de Mercado</label>
+        <input type="text" class="form-control" name="Nicho de Mercado" placeholder="Ex: venda de roupas">
+    </div>
 </div>
 
 <!-- Modal -->
 <div class="modal fade" id="cp-images" tabindex="-1" role="dialog" aria-labelledby="Imagens">
-	<div class="modal-dialog modal-lg" role="document">
-		<div class="modal-content">
-			<div class="modal-body">
-				<div id="carousel-images" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-images" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-images" data-slide-to="1"></li>
-						<li data-target="#carousel-images" data-slide-to="2"></li>
-						<li data-target="#carousel-images" data-slide-to="3"></li>
-						<li data-target="#carousel-images" data-slide-to="4"></li>
-						<li data-target="#carousel-images" data-slide-to="5"></li>
-						<li data-target="#carousel-images" data-slide-to="6"></li>
-						<li data-target="#carousel-images" data-slide-to="7"></li>
-						<li data-target="#carousel-images" data-slide-to="8"></li>
-						<li data-target="#carousel-images" data-slide-to="9"></li>
-						<li data-target="#carousel-images" data-slide-to="10"></li>
-						<li data-target="#carousel-images" data-slide-to="11"></li>
-						<li data-target="#carousel-images" data-slide-to="12"></li>
-						<li data-target="#carousel-images" data-slide-to="13"></li>
-						<li data-target="#carousel-images" data-slide-to="14"></li>
-						<li data-target="#carousel-images" data-slide-to="15"></li>
-						<li data-target="#carousel-images" data-slide-to="16"></li>
-						<li data-target="#carousel-images" data-slide-to="17"></li>
-						<li data-target="#carousel-images" data-slide-to="18"></li>
-					</ol>
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<img src="{{ 'assets/img_services/ispconfig-login.png' | relative_url }}" alt="ISPConfig Login">
-							<div class="carousel-caption">
-								<h3>ISPConfig</h3>
-								<p>Login</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/ispconfig-inicio.png' | relative_url }}" alt="ISPConfig Início">
-							<div class="carousel-caption">
-								<h3>ISPConfig</h3>
-								<p>Início</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/ispconfig-clientes.png' | relative_url }}" alt="ISPConfig Clientes">
-							<div class="carousel-caption">
-								<h3>ISPConfig</h3>
-								<p>Clientes</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/ispconfig-sites.png' | relative_url }}" alt="ISPConfig Sites">
-							<div class="carousel-caption">
-								<h3>ISPConfig</h3>
-								<p>Sites</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/ispconfig-emails.png' | relative_url }}" alt="ISPConfig E-mails">
-							<div class="carousel-caption">
-								<h3>ISPConfig</h3>
-								<p>E-mails</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/ispconfig-dns.png' | relative_url }}" alt="ISPConfig DNS">
-							<div class="carousel-caption">
-								<h3>ISPConfig</h3>
-								<p>DNS</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/ispconfig-monitor.png' | relative_url }}" alt="ISPConfig Monitor">
-							<div class="carousel-caption">
-								<h3>ISPConfig</h3>
-								<p>Monitor</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/ispconfig-ajuda.png' | relative_url }}" alt="ISPConfig Ajuda">
-							<div class="carousel-caption">
-								<h3>ISPConfig</h3>
-								<p>Ajuda</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/ispconfig-extras.png' | relative_url }}" alt="ISPConfig Extras">
-							<div class="carousel-caption">
-								<h3>ISPConfig</h3>
-								<p>Extras</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/ispconfig-sistema.png' | relative_url }}" alt="ISPConfig Sistema">
-							<div class="carousel-caption">
-								<h3>ISPConfig</h3>
-								<p>Sistema</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/phpmyadmin-login.png' | relative_url }}" alt="PhpMyAdmin Login">
-							<div class="carousel-caption">
-								<h3>PhpMyAdmin</h3>
-								<p>Login</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/phpmyadmin-inicio.png' | relative_url }}" alt="PhpMyAdmin Início">
-							<div class="carousel-caption">
-								<h3>PhpMyAdmin</h3>
-								<p>Início</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/phpmyadmin-registros.png' | relative_url }}" alt="PhpMyAdmin Registros">
-							<div class="carousel-caption">
-								<h3>PhpMyAdmin</h3>
-								<p>Registros</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/roundcube-login.png' | relative_url }}" alt="Roundcube Login">
-							<div class="carousel-caption">
-								<h3>Roundcube</h3>
-								<p>Login</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/roundcube-entrada.png' | relative_url }}" alt="Roundcube Entrada">
-							<div class="carousel-caption">
-								<h3>Roundcube</h3>
-								<p>Caixa de Entrada</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/roundcube-novo-email.png' | relative_url }}" alt="Roundcube Novo E-mail">
-							<div class="carousel-caption">
-								<h3>Roundcube</h3>
-								<p>Novo E-mail</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/roundcube-contato.png' | relative_url }}" alt="Roundcube Contato">
-							<div class="carousel-caption">
-								<h3>Roundcube</h3>
-								<p>Contato</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/roundcube-preferencias.png' | relative_url }}" alt="Roundcube Preferências">
-							<div class="carousel-caption">
-								<h3>Roundcube</h3>
-								<p>Preferências</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="{{ 'assets/img_services/roundcube-ispconfig.png' | relative_url }}" alt="Roundcube Integração com o ISPConfig">
-							<div class="carousel-caption">
-								<h3>Roundcube</h3>
-								<p>Integração com o ISPConfig</p>
-							</div>
-						</div>
-					</div>
-					<a class="left carousel-control" href="#carousel-images" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						<span class="sr-only">Anterior</span>
-					</a>
-					<a class="right carousel-control" href="#carousel-images" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						<span class="sr-only">Próximo</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="carousel-images" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-images" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-images" data-slide-to="1"></li>
+                        <li data-target="#carousel-images" data-slide-to="2"></li>
+                        <li data-target="#carousel-images" data-slide-to="3"></li>
+                        <li data-target="#carousel-images" data-slide-to="4"></li>
+                        <li data-target="#carousel-images" data-slide-to="5"></li>
+                        <li data-target="#carousel-images" data-slide-to="6"></li>
+                        <li data-target="#carousel-images" data-slide-to="7"></li>
+                        <li data-target="#carousel-images" data-slide-to="8"></li>
+                        <li data-target="#carousel-images" data-slide-to="9"></li>
+                        <li data-target="#carousel-images" data-slide-to="10"></li>
+                        <li data-target="#carousel-images" data-slide-to="11"></li>
+                        <li data-target="#carousel-images" data-slide-to="12"></li>
+                        <li data-target="#carousel-images" data-slide-to="13"></li>
+                        <li data-target="#carousel-images" data-slide-to="14"></li>
+                        <li data-target="#carousel-images" data-slide-to="15"></li>
+                        <li data-target="#carousel-images" data-slide-to="16"></li>
+                        <li data-target="#carousel-images" data-slide-to="17"></li>
+                        <li data-target="#carousel-images" data-slide-to="18"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="{{ 'assets/img_services/ispconfig-login.png' | relative_url }}" alt="ISPConfig Login">
+                            <div class="carousel-caption">
+                                <h3>ISPConfig</h3>
+                                <p>Login</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/ispconfig-inicio.png' | relative_url }}" alt="ISPConfig Início">
+                            <div class="carousel-caption">
+                                <h3>ISPConfig</h3>
+                                <p>Início</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/ispconfig-clientes.png' | relative_url }}" alt="ISPConfig Clientes">
+                            <div class="carousel-caption">
+                                <h3>ISPConfig</h3>
+                                <p>Clientes</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/ispconfig-sites.png' | relative_url }}" alt="ISPConfig Sites">
+                            <div class="carousel-caption">
+                                <h3>ISPConfig</h3>
+                                <p>Sites</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/ispconfig-emails.png' | relative_url }}" alt="ISPConfig E-mails">
+                            <div class="carousel-caption">
+                                <h3>ISPConfig</h3>
+                                <p>E-mails</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/ispconfig-dns.png' | relative_url }}" alt="ISPConfig DNS">
+                            <div class="carousel-caption">
+                                <h3>ISPConfig</h3>
+                                <p>DNS</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/ispconfig-monitor.png' | relative_url }}" alt="ISPConfig Monitor">
+                            <div class="carousel-caption">
+                                <h3>ISPConfig</h3>
+                                <p>Monitor</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/ispconfig-ajuda.png' | relative_url }}" alt="ISPConfig Ajuda">
+                            <div class="carousel-caption">
+                                <h3>ISPConfig</h3>
+                                <p>Ajuda</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/ispconfig-extras.png' | relative_url }}" alt="ISPConfig Extras">
+                            <div class="carousel-caption">
+                                <h3>ISPConfig</h3>
+                                <p>Extras</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/ispconfig-sistema.png' | relative_url }}" alt="ISPConfig Sistema">
+                            <div class="carousel-caption">
+                                <h3>ISPConfig</h3>
+                                <p>Sistema</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/phpmyadmin-login.png' | relative_url }}" alt="PhpMyAdmin Login">
+                            <div class="carousel-caption">
+                                <h3>PhpMyAdmin</h3>
+                                <p>Login</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/phpmyadmin-inicio.png' | relative_url }}" alt="PhpMyAdmin Início">
+                            <div class="carousel-caption">
+                                <h3>PhpMyAdmin</h3>
+                                <p>Início</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/phpmyadmin-registros.png' | relative_url }}" alt="PhpMyAdmin Registros">
+                            <div class="carousel-caption">
+                                <h3>PhpMyAdmin</h3>
+                                <p>Registros</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/roundcube-login.png' | relative_url }}" alt="Roundcube Login">
+                            <div class="carousel-caption">
+                                <h3>Roundcube</h3>
+                                <p>Login</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/roundcube-entrada.png' | relative_url }}" alt="Roundcube Entrada">
+                            <div class="carousel-caption">
+                                <h3>Roundcube</h3>
+                                <p>Caixa de Entrada</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/roundcube-novo-email.png' | relative_url }}" alt="Roundcube Novo E-mail">
+                            <div class="carousel-caption">
+                                <h3>Roundcube</h3>
+                                <p>Novo E-mail</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/roundcube-contato.png' | relative_url }}" alt="Roundcube Contato">
+                            <div class="carousel-caption">
+                                <h3>Roundcube</h3>
+                                <p>Contato</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/roundcube-preferencias.png' | relative_url }}" alt="Roundcube Preferências">
+                            <div class="carousel-caption">
+                                <h3>Roundcube</h3>
+                                <p>Preferências</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ 'assets/img_services/roundcube-ispconfig.png' | relative_url }}" alt="Roundcube Integração com o ISPConfig">
+                            <div class="carousel-caption">
+                                <h3>Roundcube</h3>
+                                <p>Integração com o ISPConfig</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-images" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-images" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

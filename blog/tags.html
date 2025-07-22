@@ -7,27 +7,27 @@ title: Blog · Posts por Tags
 <h1 class="page-header">Blog <small>Posts por Tags</small></h1>
 
 <div class="tags-cloud">
-	{% for tag in site.tags %}
-		<a href="#{{ tag[0] }}" class="btn btn-sm btn-primary">{{ tag[0] }}</a>
-	{% endfor %}
+    {% for tag in site.tags %}
+        <a href="#{{ tag[0] }}" class="btn btn-sm btn-primary">{{ tag[0] }}</a>
+    {% endfor %}
 </div>
 
 <div id="post">
-	{% for tag in site.tags %}
-		<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
-		<ul>
-			{% for post in site.posts  %}
-				{% if post.tags contains tag[0] %}
-					<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endif %}
-			{% endfor %}
-		</ul>
-	{% endfor %}
+    {% for tag in site.tags %}
+        <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+        <ul>
+            {% for post in site.posts  %}
+                {% if post.tags contains tag[0] %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endfor %}
 </div>
 {% endcapture %}
 
 {% if jekyll.environment == 'development' %}
-	{{ blog_tags }}
+    {{ blog_tags }}
 {% else %}
-	{{ blog_tags | normalize_whitespace }}
+    {{ blog_tags | normalize_whitespace }}
 {% endif %}

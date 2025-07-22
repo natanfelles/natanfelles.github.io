@@ -6,57 +6,57 @@ image: /assets/img/social.png
 ---
 {% capture shopping %}
 <div class="products" id="shop">
-	<h1 class="page-header">{{ page.title }}</h1>
+    <h1 class="page-header">{{ page.title }}</h1>
 
-	<div class="well">
-		Para serviços personalizados veja a página <a href="{{ 'servicos' | relative_url}}">Serviços</a>.
-	</div>
+    <div class="well">
+        Para serviços personalizados veja a página <a href="{{ 'servicos' | relative_url}}">Serviços</a>.
+    </div>
 
-	{% comment %}
-	<div class="well well-sm text-right">
-		<div class="form-inline">
-			<div class="form-group">
-				<label for="sort">Ordenar por</label>
-				<select name="sort" id="sort" class="form-control" onchange="setProducts(this.value)">
-					<option value="Name">Nome</option>
-					<option value="LowPrice">Menor Preço</option>
-					<option value="HighPrice">Maior Preço</option>
-				</select>
-			</div>
-		</div>
-	</div>
-	{% endcomment %}
+    {% comment %}
+    <div class="well well-sm text-right">
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="sort">Ordenar por</label>
+                <select name="sort" id="sort" class="form-control" onchange="setProducts(this.value)">
+                    <option value="Name">Nome</option>
+                    <option value="LowPrice">Menor Preço</option>
+                    <option value="HighPrice">Maior Preço</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    {% endcomment %}
 
-	<div class="row" id="products">
+    <div class="row" id="products">
 
-		{% for product in site.data.products %}
+        {% for product in site.data.products %}
 
-			<div class="col-md-6">
-				<div class="thumbnail">
-					<span class="price"><sup>U$</sup>{{ product.price }}</span>
-					<img src="{{ 'assets/img_products/' | append: product.image | relative_url }}" alt="{{ product.name }}">
-					<div class="caption text-center">
-						<h3>{{ product.name }}</h3>
-						<p>{{ product.description }}</p>
-						<div class="btn-group btn-group-justified">
-							<a href="#" class="btn btn-success to-cart" data-id="{{ product.id }}" data-price="{{ product.price }}" data-name="{{ product.name }}">Adicionar</a>
-							<a href="{{ 'loja/' | append: product.link | relative_url }}" class="btn btn-default">Saber Mais</a>
-						</div>
-					</div>
-				</div>
-			</div>
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <span class="price"><sup>U$</sup>{{ product.price }}</span>
+                    <img src="{{ 'assets/img_products/' | append: product.image | relative_url }}" alt="{{ product.name }}">
+                    <div class="caption text-center">
+                        <h3>{{ product.name }}</h3>
+                        <p>{{ product.description }}</p>
+                        <div class="btn-group btn-group-justified">
+                            <a href="#" class="btn btn-success to-cart" data-id="{{ product.id }}" data-price="{{ product.price }}" data-name="{{ product.name }}">Adicionar</a>
+                            <a href="{{ 'loja/' | append: product.link | relative_url }}" class="btn btn-default">Saber Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-		{% endfor %}
+        {% endfor %}
 
-	</div>
+    </div>
 
 
 </div>
 {% endcapture %}
 {% if site.env == 'development' %}
-	{{ shopping }}
+    {{ shopping }}
 {% else %}
-	{{ shopping | normalize_whitespace }}
+    {{ shopping | normalize_whitespace }}
 {% endif %}
 
 {% include cart.html %}

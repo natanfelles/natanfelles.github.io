@@ -17,7 +17,7 @@ google:
   analytics: UA-75463090-1 #OK
   translate: false
   cse-cx: 007355044916868045354:yoso7zf_dnw #OK
-  api-key:  AIzaSyCKn6VsmdF0mLCyN6gpmi-C-GDj43DljnU #OK
+  api-key: AIzaSyCKn6VsmdF0mLCyN6gpmi-C-GDj43DljnU #OK
 disqus_shortname: natanfelles
 commits_url: https://github.com/natanfelles/natanfelles.github.io/commits/master
 edit_url: https://github.com/natanfelles/natanfelles.github.io/edit/master
@@ -40,7 +40,7 @@ markdown: kramdown
 highlighter: false
 kramdown:
   syntax_highlighter_opts:
-    disable : true
+    disable: true
 plugins:
   - jekyll-paginate
   - jekyll-feed
@@ -60,18 +60,15 @@ paginate: 5
 paginate_path: /blog/:num
 
 defaults:
-  -
-    values:
+  - values:
       author: Natan Felles
       image: /assets/img/social.png
-  -
-    scope:
+  - scope:
       type: posts
     values:
       layout: post
       image: post.png
-  -
-    scope:
+  - scope:
       path: loja
     values:
       layout: product

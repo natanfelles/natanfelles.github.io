@@ -7,21 +7,21 @@ title: Blog · Posts por Categorias
 <h1 class="page-header">Blog <small>Posts por Categorias</small></h1>
 
 <div id="post">
-	{% for category in site.categories %}
-		<h2 id="{{ category[0] }}">{{ category[0] }}</h2>
-		<ul>
-			{% for post in site.posts  %}
-				{% if post.categories contains category[0] %}
-					<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endif %}
-			{% endfor %}
-		</ul>
-	{% endfor %}
+    {% for category in site.categories %}
+        <h2 id="{{ category[0] }}">{{ category[0] }}</h2>
+        <ul>
+            {% for post in site.posts  %}
+                {% if post.categories contains category[0] %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endfor %}
 </div>
 {% endcapture %}
 
 {% if jekyll.environment == 'development' %}
-	{{ blog_categorias }}
+    {{ blog_categorias }}
 {% else %}
-	{{ blog_categorias | normalize_whitespace }}
+    {{ blog_categorias | normalize_whitespace }}
 {% endif %}

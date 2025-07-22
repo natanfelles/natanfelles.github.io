@@ -7,30 +7,30 @@ sitemap: false
 {% capture blog_index %}
 <h1 class="page-header">{{ page.title }}
 {% if paginator.page > 1 %}
-	<small>Página {{ paginator.page }}</small>
+    <small>Página {{ paginator.page }}</small>
 {% endif %}
 </h1>
 <div class="list-group posts-list">
-	{% for post in paginator.posts %}
-		<div class="list-group-item">
-			<h2 class="list-group-item-heading">
-				<a>{{ post.title }}</a>
-			</h2>
-			<div class="well well-sm text-capitalize small">
-				{% for category in post.categories %}
-					{% if category != post.categories[0] %}·{% endif %}
-					<a href="{{ 'blog/categorias#' | append: category | relative_url }}">{{ category }}</a>
-				{% endfor %}
-				<time class="pull-right" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d.%m.%Y" }}</time>
-			</div>
-			<a class="thumbnail">
-				<img alt="{{ post.title }}" src="{{ 'assets/img_posts/' | append: post.image | relative_url }}" class="img-responsive">
-			</a>
-			<p class="list-group-item-text">
-				<a class="btn btn-primary" href="{{ post.url }}">Saber mais</a>
-			</p>
-		</div>
-	{% endfor %}
+    {% for post in paginator.posts %}
+        <div class="list-group-item">
+            <h2 class="list-group-item-heading">
+                <a>{{ post.title }}</a>
+            </h2>
+            <div class="well well-sm text-capitalize small">
+                {% for category in post.categories %}
+                    {% if category != post.categories[0] %}·{% endif %}
+                    <a href="{{ 'blog/categorias#' | append: category | relative_url }}">{{ category }}</a>
+                {% endfor %}
+                <time class="pull-right" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d.%m.%Y" }}</time>
+            </div>
+            <a class="thumbnail">
+                <img alt="{{ post.title }}" src="{{ 'assets/img_posts/' | append: post.image | relative_url }}" class="img-responsive">
+            </a>
+            <p class="list-group-item-text">
+                <a class="btn btn-primary" href="{{ post.url }}">Saber mais</a>
+            </p>
+        </div>
+    {% endfor %}
 </div>
 
 {% include pagination.html %}
@@ -38,7 +38,7 @@ sitemap: false
 {% endcapture %}
 
 {% if jekyll.environment == 'development' %}
-	{{ blog_index }}
+    {{ blog_index }}
 {% else %}
-	{{ blog_index | normalize_whitespace }}
+    {{ blog_index | normalize_whitespace }}
 {% endif %}
