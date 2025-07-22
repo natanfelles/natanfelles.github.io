@@ -447,9 +447,9 @@ dark .content .list-group-item {
 .dark .open>.dropdown-toggle.btn-default,
 .dark .btn-default.active:hover,
 .dark .open>.dropdown-toggle.btn-default:hover {
-    color: #bbb;
+    color: #0093cb;
     background-color: #111;
-    border-color: #bbb;
+    border-color: #0093cb;
 }
 
 .navbar-toggle {
